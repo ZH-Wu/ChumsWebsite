@@ -1,0 +1,460 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+
+
+
+/*eric css reset*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    /*不累加邊框與內距*/
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, "Helvetica neue", Helvetica,
+        sans-serif, hel, "蘋方-繁", "Noto sans TC", "PingFang TC", "黑體-繁", "微軟正黑體", "Heiti TC", Oxygen, Ubuntu,
+        Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+html {
+    height: 100%;
+    position: fixed;
+    /*固定頁面不跑*/
+}
+
+body {
+    background: linear-gradient(to bottom, #ffffff, #F5DEA8);
+
+}
+
+/* header */
+.header {
+    position: fixed;
+    /* margin-top: 0; */
+    /*position會將寬度轉換為內容等寬*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    /* z-index: 1; */
+    background-color: #F5DFA5;
+}
+
+.menu {
+    width: 5%;
+    height: 5%;
+    position: fixed;
+    top: 10px;
+}
+
+.logo {
+    height: 100%;
+    width: 14%;
+    top: 0;
+    left: 43%;
+    position: fixed;
+    text-align: center;
+}
+
+.wrap {
+    max-width: 960px;
+    margin: 10px 5% 0 auto;
+    height: 100px;
+    display: flex;
+}
+
+.search {
+    position: relative;
+    width: 80%;
+    float: left;
+    margin: 10px;
+    display: block;
+}
+
+.search-bar {
+    width: 320px;
+    height: 60px;
+    font-size: 20px;
+    border: 3px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 50px;
+}
+
+.search-btn {
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    /* color: #efe9e7; */
+    outline: none;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 40px;
+}
+
+.search-cart li img {
+    float: right;
+    margin: 10px 15px;
+    /* margin-left: 10px; */
+    /* padding-top:0; */
+    line-height: 45px;
+}
+
+.car li img {
+    float: right;
+    margin: 10px 15px;
+    /* margin-left: 10px; */
+    /* padding-top:0; */
+    line-height: 45px;
+}
+
+/* body */
+main>* {
+    height: 24vh;
+}
+
+h1 {
+    height: 50px;
+    font-size: xx-large;
+    margin: 9% 0 0.5px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.list_box {
+    display: flex;
+    padding: 0px 20px;
+}
+
+.list_box2 {
+    display: block;
+    padding: 20px 20px;
+    flex-direction: column;
+}
+
+section {
+    margin: 30px 100px;
+    display: flex;
+    /* flex-direction: column; */
+    /* 設定主軸為垂直 */
+    justify-content: center;
+    /* 設定主軸垂直置中 */
+    /* align-items: center; */
+    /* 設定幅軸(水平置中) */
+    z-index: 2;
+}
+
+.list_item {
+    background-color: #ffffff;
+    width: 400px;
+    height: 230px;
+    padding: 0;
+    display: flex;
+    float: left;
+    align-items: left;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.img {
+    display: block;
+    float: left;
+    width: 150px;
+    height: 150px;
+    /* justify-self: center; */
+    padding: 20px;
+}
+
+.img img {
+    display: block;
+    width: 100%;
+
+}
+
+.img {
+    overflow: clip;
+}
+
+h2 {
+    font-size: larger;
+    display: block;
+    margin: 10px 50px;
+    font-weight: bold;
+}
+
+.list_box .info {
+    display: block;
+    /* position: fixed; */
+    float: right;
+    width: 200px;
+    padding: 20px 20px 20px 20px;
+}
+
+.info p {
+    display: block;
+    margin-top: 30px;
+}
+
+
+
+
+.footer .img {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 0%;
+    position: absolute;
+    z-index: -1;
+}
+
+.footer .bird {
+    width: 150px;
+    z-index: 1;
+    right: 0%;
+    bottom: 0%;
+    position: absolute;
+    margin: 20px;
+}
+
+/*FAQ*/
+
+
+/*News*/
+.list_box2 {
+    display: flex;
+    padding: 0px 20px;
+}
+
+.list_box2 {
+    display: block;
+    padding: 0px 20px;
+    flex-direction: column;
+}
+
+.news {
+    margin: 0px 100px 50px 100px;
+    height: 10%;
+    /* margin-top: 8%; */
+    display: flex;
+    /* flex-direction: column; */
+    /* 設定主軸為垂直 */
+    justify-content: center;
+    /* 設定主軸垂直置中 */
+    /* align-items: center; */
+    /* 設定幅軸(水平置中) */
+    z-index: 2;
+}
+
+.news2 {
+    margin: 0px 100px 50px 100px;
+    height: 10%;
+    display: flex;
+    /* flex-direction: column; */
+    /* 設定主軸為垂直 */
+    justify-content: center;
+    /* 設定主軸垂直置中 */
+    /* align-items: center; */
+    /* 設定幅軸(水平置中) */
+    z-index: 2;
+}
+
+.news3 {
+    margin: 0px 100px 0px 100px;
+    height: 10%;
+    display: flex;
+    /* flex-direction: column; */
+    /* 設定主軸為垂直 */
+    justify-content: center;
+    /* 設定主軸垂直置中 */
+    /* align-items: center; */
+    /* 設定幅軸(水平置中) */
+    z-index: 2;
+}
+
+.list_item2 {
+    background-color: #ffffff;
+    width: 600px;
+    height: 150px;
+    padding: 0;
+    display: flex;
+    float: left;
+    align-items: left;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.img2 {
+    display: block;
+    float: left;
+    width: 100px;
+    height: 100px;
+    /* justify-self: center; */
+    /* padding: 25px; */
+    margin: 25px;
+
+}
+
+.img2 img {
+    display: block;
+    width: 100%;
+
+}
+
+/* .img {
+    overflow: clip;
+} */
+
+h3 {
+    font-size: medium;
+    display: block;
+    margin: 0px;
+    font-weight: bold;
+    float: right;
+    color: #B61C31;
+    /* bottom: 0%; */
+}
+
+.list_box2 .info2 {
+    display: block;
+    /* position: fixed; */
+    float: right;
+    width: 400px;
+    /* padding: 20px 20px 20px 20px; */
+    margin: 20px;
+}
+
+.info2 p {
+    display: block;
+    margin-top: 30px;
+}
