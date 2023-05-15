@@ -14,7 +14,7 @@
 /* CSS共用區 */
 header img,
 footer img {
-  position: absolute;
+  /* position: absolute; */
   display: block;
 }
 
@@ -59,32 +59,55 @@ footer img {
 /* 頁首區 */
 
 header {
-  height: 750px;
+  height: 120vh;
   position: relative;
-    
+
+
+}
+
+div.upperPart {
+  position: relative;
+  height: 85%;
+  background: linear-gradient(180deg, rgba(243,250,255,1) 0%, rgba(210,231,253,1) 35%);
+}
+
+header #logo {
+  position: fixed;
+  top: 0;
+  right: 50%;
+}
+
+div.lowerPart {
+  height: 15%;
+  background: url(../img/img-noise-1440x1000\ \(5\).png);
+  background-size: cover;
+  background-repeat: no-repeat;
   
 }
 
-#menu {
+div.upperPart a {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  display: block;
   width: 100px;
-  right: 0px;
-  z-index: 6;
+  height: 100px;
 }
 
-
 .cloud {
-  width: 150px;
+  position: absolute;
+  width: 10%;
 }
 
 #deg {
-  top: 330px;
+  top: 200px;
   left: 170px;
   transform: rotate(-20deg);
 }
 
 .cloud1 {
-  top: 500px;
-  left: -50px;
+  top: 150px;
+  right: 100px;
 }
 
 .cloud2 {
@@ -105,30 +128,35 @@ header {
 }
 
 #mountain {
+  position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 0px;
+  z-index: 3;
   width: 101%;
+  
 }
 
-#bird_left {
-  width: 10%;
-  top: 600px;
-  left: 450px;
-  z-index: 2;
+div.centerpic {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  padding: 0 20px;
+  position: absolute;
+  bottom: 0;
+  left: 28%;
+  z-index: 5;
+
+
 }
 
-#fire {
-  width: 10%;
-  top: 600px;
-  left: 600px;
-  z-index: 2;
+#bird_left, #fire {
+  width: 20%;
 }
 
 #bird_right {
-  width: 11%;
-  top: 580px;
-  right: 380px;
-  z-index: 2;
+  width: 22%;
 }
 
 /* 主要內容區 */
@@ -137,9 +165,6 @@ main {
   height: 460vh;
   position: relative;
   background-image: url(../img/img-noise-1440x1000\ \(5\).png);
-
-
-
 
 }
 
