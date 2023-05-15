@@ -1,0 +1,103 @@
+/* background: linear-gradient(rgba(215, 235, 254, 0.1) 10%, rgba(215, 235, 254, 0.5) 20%, 
+  rgba(215, 235, 254, 0.7) 30%); */
+
+
+<!-- <img src="/img/svg0504/cloud.svg" alt="" class="cloud" id="deg">
+      <img src="/img/svg0504/cloud.svg" alt="" class="cloud cloud1">
+      <img src="/img/svg0504/cloud.svg" alt="" class="cloud cloud2">
+      <img src="/img/svg0504/cloud.svg" alt="" class="cloud cloud3">
+      <img src="/img/svg0504/cloud.svg" alt="" class="cloud cloud4">
+      <img src="/img/svg0504/cloud.svg" alt="" class="cloud cloud5">
+      <img src="/img/svg0504/mountain.svg" alt="" id="mountain">
+      <img src="/img/svg0504/tent.svg" alt="" id="tent">
+      <img src="/img/svg0504/forest_left.svg" alt="" id="forest_left">
+      <img src="/img/svg0504/forest_left2.svg" alt="" id="forest_left2">
+      <img src="/img/svg0504/forest_left3.svg" alt="" id="forest_left3">
+      <img src="/img/svg0504/forest_right.svg" alt="" id="forest_right">
+      <img src="/img/svg0504/forest_right 2.svg" alt="" id="forest_right2"> -->
+
+
+
+
+
+/* .cloud {
+  width: 150px;
+}
+
+#deg {
+  top: 330px;
+  left: 170px;
+  transform: rotate(-20deg);
+}
+
+.cloud1 {
+  top: 500px;
+  left: -50px;
+}
+
+.cloud2 {
+  width: 100px;
+  top: 170px;
+  left: 10px;
+  transform: rotate(45deg);
+}
+
+.cloud3 {
+  top: 420px;
+  right: 0px;
+}
+
+.cloud4 {
+  top: 320px;
+  right: 250px;
+}
+
+#mountain {
+  width: 102%;
+  top: 313px;
+}
+
+#tent {
+  width: 200px;
+  height: 700px;
+  top: 350px;
+  left: 200px;
+  z-index: 3;
+}
+
+#forest_left {
+  width: 20vw;
+  top: 580px;
+  left: 0px;
+  z-index: 2;
+}
+
+#forest_left2 {
+  width: 20vw;
+  top: 610px;
+  left: 0px;
+  z-index: 4;
+}
+
+#forest_left3 {
+  width: 200px;
+  top: 560px;
+  left: 250px;
+  z-index: 2;
+}
+
+#forest_right {
+  width: 250px;
+  top: 640px;
+  right: -20px;
+  z-index: 2;
+  
+}
+
+#forest_right2 {
+  width: 250px;
+  top: 650px;
+  right: 80px;
+  z-index: 3;
+  
+} */

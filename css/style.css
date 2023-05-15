@@ -1,0 +1,460 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: GenSenRounded;
+  src: url(../webfonts/ttc/GenSenRounded-R.ttc);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* CSS共用區 */
+header img,
+footer img {
+  position: absolute;
+  display: block;
+}
+
+.title {
+  font-size: 3rem;
+  color: #EB664C;
+  font-family: "GenSenRounded", sans-serif;
+  text-shadow: 2px 1px #fff, -2px -1px #fff, 4px 1px #CC4058, -4px -1px #CC4058;
+}
+
+#flag_news,
+#flag_shop {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+}
+
+/* Top按鈕 */
+
+#fixedTop {
+  display: none;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  background-image: url(/img/top.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 10;
+}
+
+/* 大框架 */
+#box {
+  width: 100vw;
+  margin: auto;
+  overflow: hidden;
+
+}
+
+/* 頁首區 */
+
+header {
+  height: 750px;
+  position: relative;
+    
+  
+}
+
+#menu {
+  width: 100px;
+  right: 0px;
+  z-index: 6;
+}
+
+
+.cloud {
+  width: 150px;
+}
+
+#deg {
+  top: 330px;
+  left: 170px;
+  transform: rotate(-20deg);
+}
+
+.cloud1 {
+  top: 500px;
+  left: -50px;
+}
+
+.cloud2 {
+  width: 100px;
+  top: 170px;
+  left: 10px;
+  transform: rotate(45deg);
+}
+
+.cloud3 {
+  top: 420px;
+  right: 0px;
+}
+
+.cloud4 {
+  top: 320px;
+  right: 250px;
+}
+
+#mountain {
+  left: 0;
+  bottom: 0;
+  width: 101%;
+}
+
+#bird_left {
+  width: 10%;
+  top: 600px;
+  left: 450px;
+  z-index: 2;
+}
+
+#fire {
+  width: 10%;
+  top: 600px;
+  left: 600px;
+  z-index: 2;
+}
+
+#bird_right {
+  width: 11%;
+  top: 580px;
+  right: 380px;
+  z-index: 2;
+}
+
+/* 主要內容區 */
+
+main {
+  height: 460vh;
+  position: relative;
+  background-image: url(../img/img-noise-1440x1000\ \(5\).png);
+
+
+
+
+}
+
+.aboutUs {
+  width: 400px;
+  height: 420px;
+  position: absolute;
+  right: 100px;
+  top: 50px;
+  background-image: url(/img/branches.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.aboutUs h2 {
+  margin-bottom: 10px;
+
+}
+
+.aboutUs p {
+  font-family: GenSenRounded;
+  width: 70%;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.aboutUs button {
+  font-family: GenSenRounded;
+  background: #CC4058;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  box-shadow: 2px 2px 2px #fff;
+  cursor: pointer;
+
+}
+
+#birdOnthePath {
+  position: absolute;
+  width: 20%;
+  top: 300px;
+  left: 150px;
+}
+
+#logo_2 {
+  position: absolute;
+  width: 15%;
+  transform: rotate(-10deg);
+  top: 200px;
+  left: 150px;
+}
+
+.product {
+  position: absolute;
+  top: 750px;
+  left: 500px;
+}
+
+#birdWithGuitar {
+  position: absolute;
+  width: 15%;
+  top: 930px;
+  right: 80px;
+}
+
+.magnifier {
+  position: absolute;
+  width: 5%;
+}
+
+.n1 {
+  top: 900px;
+  left: 500px;
+}
+
+.n2 {
+  top: 800px;
+  right: 150px;
+}
+
+.n3 {
+  top: 1300px;
+  left: 500px;
+}
+
+.n4 {
+  top: 1100px;
+  right: 400px;
+}
+
+.n5 {
+  top: 1200px;
+  right: 50px;
+}
+
+/* 最新消息區 */
+
+#flag_news {
+  bottom: 790px;
+  left: 40px;
+}
+
+.news {
+  position: absolute;
+  bottom: 550px;
+  left: 90px;
+  display: flex;
+  width: 1000px;
+  justify-content: space-between;
+}
+
+.imgbox {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  box-shadow: 10px 10px #CC4058;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: relative;
+
+}
+
+figure {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+
+}
+
+.imgbox a {
+  display: block;
+  width: 0px;
+  height: 250px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  line-height: 250px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0);
+  font-family: Arial;
+  position: absolute;
+  transition: all 1s;
+  top: 0;
+  left: 0;
+
+
+}
+
+.imgbox:hover a {
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 1);
+}
+
+/* 門市資訊區 */
+
+#flag_shop {
+  bottom: 330px;
+  right: 30px;
+}
+
+.shop {
+  position: absolute;
+  bottom: 100px;
+  right: 90px;
+  display: flex;
+  width: 1000px;
+  justify-content: space-between;
+}
+
+.imgbox {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  box-shadow: 10px 10px #CC4058;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: relative;
+
+}
+
+figure {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+
+}
+
+.imgbox a {
+  display: block;
+  width: 0px;
+  height: 250px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  line-height: 250px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0);
+  font-family: Arial;
+  position: absolute;
+  transition: all 1s;
+  top: 0;
+  left: 0;
+
+
+}
+
+.imgbox:hover a {
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 1);
+}
+
+
+
+/* 頁尾區 */
+
+footer {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  background: url(../img/img-noise-1440x1000\ \(5\).png);
+
+}
+
+
+#bird_end {
+  top: 150px;
+  left: 250px;
+  width: 150px;
+  height: 150px;
+}
+
+li {
+  list-style: none;
+}
+
+
+.sitemap {
+  position: absolute;
+  top: 200px;
+  left: 414px;
+  display: flex;
+}
+
+.link a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  text-shadow: 1px 1px #CC4058, -1px -1px #CC4058;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "GenSenRounded", sans-serif;
+  letter-spacing: 3px;
+  border-bottom: 2px solid #fff;
+}
+
+.share {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  position: absolute;
+  bottom: 50px;
+  left: 550px;
+}
+
+.share a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-indent: 101%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#fb {
+  background-image: url(/img/fb.svg);
+}
+
+#fb:hover {
+  background-image: url(/img/fb_2.svg);
+}
+
+#line {
+  background-image: url(/img/line.svg);
+}
+
+#line:hover {
+  background-image: url(/img/line_2.svg);
+}
+
+#ig {
+  background-image: url(/img/ig.svg);
+}
+
+#ig:hover {
+  background-image: url(/img/ig_2.svg);
+}
+
+#yt {
+  background-image: url(/img/yt.svg);
+}
+
+#yt:hover {
+  background-image: url(/img/yt_2.svg);
+}

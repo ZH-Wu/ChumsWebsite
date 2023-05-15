@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: GenSenRounded;
+  src: url(../webfonts/ttc/GenSenRounded-R.ttc);
+}
+
+.box {
+  width: 100vw;
+  
+}
+
+.box > * {
+  box-sizing: border-box;
+  font-family: GenSenRounded;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  background-color: #F5DEA8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+}
+
+header a {
+  display: block;
+}
+
+.menu {
+  display: flex;
+  
+}
+
+.menu li {
+  width: 80px;
+  
+  text-align: center;
+}
+
+.menu a {
+  padding: 10px 0;
+  font-family: GensenRounded;
+  text-decoration: none;
+  color: #B61C31;
+
+}
+
+.menu li:hover {
+  border-bottom: 2px solid #B61C31;
+}
+
+
+.logo {
+  width: 100px;
+  position: fixed;
+  top: 3px;
+  left: 570px;
+}
+
+nav {
+  display: flex;
+  width: 320px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.search {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 130px;
+  top: 8px;
+  background-image: url(../img/magnifier.svg);
+}
+
+input {
+  width: 200px;
+  height: 45px;
+  border-radius: 18px;
+  padding: 10px 20px;
+  backdrop-filter: blur(5px);
+  /*要搭配rgba的背景色語法*/
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(254, 232, 229, 0.5);
+  box-shadow: inset -1px -1px 1px rgba(255, 255, 255, 0.3);
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  
+}
+
+.login {
+  width: 45px;
+  height: 45px;
+  background-image: url(../img/login.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cart {
+  width: 35px;
+  height: 35px;
+  background-image: url(../img/cart.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* 主要內容區 */
+
+main {
+  height: 850px;
+  background: linear-gradient(179.57deg, #FFFFFF 5.41%, #F8E9C5 78.63%, #F5DEA8 101.34%);
+  position: relative;
+  
+}
+
+
+.item {
+  width: 456px;
+  height: 547px;
+  background-color: #FFFFFF;
+  border-radius: 250px 250px 45px 45px;
+  position: absolute;
+  top: 281px;
+  left: 216px;
+  position: relative;
+}
+
+.item h3 {
+  position: absolute;
+  top: 70px;
+  left: 110px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.item p {
+  position: absolute;
+  top: 110px;
+  left: 110px;
+  font-weight: 700;
+}
+
+.item span {
+  position: absolute;
+  top: 150px;
+  left: 110px;
+  color: #B61C31;
+}
+
+.item img {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: -120px; 
+}
+
