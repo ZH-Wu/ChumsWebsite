@@ -65,17 +65,24 @@ header {
 
 }
 
+
+
 div.upperPart {
   position: relative;
   height: 85%;
   background: linear-gradient(180deg, rgba(243,250,255,1) 0%, rgba(210,231,253,1) 35%);
 }
 
-header #logo {
-  position: fixed;
+.upperPart #logo {
+  position: absolute;
+  width: 100px;
+  height: 100px;
   top: 0;
-  right: 50%;
+  right: 550px;
+  
 }
+
+
 
 div.lowerPart {
   height: 15%;
@@ -402,14 +409,11 @@ footer {
 
 
 #bird_end {
+  position: absolute;
   top: 150px;
   left: 250px;
   width: 150px;
   height: 150px;
-}
-
-li {
-  list-style: none;
 }
 
 
