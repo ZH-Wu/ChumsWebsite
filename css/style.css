@@ -27,8 +27,8 @@ footer img {
 #flag_news,
 #flag_shop {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
 }
 
 /* Top按鈕 */
@@ -164,7 +164,7 @@ div.centerpic {
 /* 主要內容區 */
 
 main {
-  height: 460vh;
+  height: 420vh;
   position: relative;
   background-image: url(../img/noise_background.png);
 
@@ -278,6 +278,133 @@ main {
 
 /* 最新消息區 */
 
+#flag_news {
+  bottom: 1100px;
+  left: 20px;
+}
+
+.news {
+  position: absolute;
+  bottom: 800px;
+  left: 100px;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  
+}
+
+.imgbox {
+  width: 450;
+  border-radius: 20px;
+  box-shadow: 15px 15px #CC4058;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: relative;
+
+}
+
+figure {
+  width: 450px;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.imgbox a {
+  display: block;
+  width: 0px;
+  height: 450px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  line-height: 450px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0);
+  font-family: Arial;
+  position: absolute;
+  transition: all 1s;
+  top: 0;
+  left: 0;
+
+
+}
+
+.imgbox:hover a {
+  width: 450px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 1);
+}
+
+/* 門市資訊區 */
+
+#flag_shop {
+  bottom: 400px;
+  right: 0px;
+}
+
+.shop {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.imgbox {
+  width: 450px;
+  border-radius: 20px;
+  box-shadow: 15px 15px #CC4058;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: relative;
+
+}
+
+figure {
+  width: 450px;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.imgbox a {
+  display: block;
+  width: 0px;
+  height: 450px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  line-height: 450px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0);
+  font-family: Arial;
+  position: absolute;
+  transition: all 1s;
+  top: 0;
+  left: 0;
+
+
+}
+
+.imgbox:hover a {
+  width: 450px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 1);
+}
+
 
 
 
@@ -288,7 +415,7 @@ footer {
   width: 100%;
   height: 60vh;
   position: relative;
-  background: url(../img/img-noise-1440x1000\ \(5\).png);
+  background: url(../img/noise_background.png);
 
 }
 
