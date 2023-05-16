@@ -14,7 +14,6 @@
 /* CSS共用區 */
 header img,
 footer img {
-  /* position: absolute; */
   display: block;
 }
 
@@ -279,125 +278,7 @@ main {
 
 /* 最新消息區 */
 
-#flag_news {
-  bottom: 790px;
-  left: 40px;
-}
 
-.news {
-  position: absolute;
-  bottom: 550px;
-  left: 90px;
-  display: flex;
-  width: 80%;
-  justify-content: space-evenly;
-  border: 1px solid #000;
-}
-
-.imgbox {
-  width: 500px;
-  height: 500px;
-  border-radius: 20px;
-  box-shadow: 10px 10px #CC4058;
-  margin-top: 10px;
-  margin-left: 10px;
-  position: relative;
-
-}
-
-figure {
-  width: 500px;
-  height: 500px;
-  border-radius: 20px;
-  overflow: hidden;
-
-}
-
-.imgbox a {
-  display: block;
-  width: 0px;
-  height: 500px;
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0);
-  text-align: center;
-  line-height: 250px;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0);
-  font-family: Arial;
-  position: absolute;
-  transition: all 1s;
-  top: 0;
-  left: 0;
-
-
-}
-
-.imgbox:hover a {
-  width: 500px;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: rgba(0, 0, 0, 1);
-}
-
-/* 門市資訊區 */
-
-#flag_shop {
-  bottom: 330px;
-  right: 30px;
-}
-
-.shop {
-  border: 1px solid #000;
-  position: absolute;
-  bottom: 100px;
-  right: 90px;
-  display: flex;
-  width: 1000px;
-  justify-content: space-between;
-}
-
-.imgbox {
-  width: 250px;
-  height: 250px;
-  border-radius: 20px;
-  box-shadow: 10px 10px #CC4058;
-  margin-top: 10px;
-  margin-left: 10px;
-  position: relative;
-
-}
-
-figure {
-  width: 250px;
-  height: 250px;
-  border-radius: 20px;
-  overflow: hidden;
-
-}
-
-.imgbox a {
-  display: block;
-  width: 0px;
-  height: 250px;
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0);
-  text-align: center;
-  line-height: 250px;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0);
-  font-family: Arial;
-  position: absolute;
-  transition: all 1s;
-  top: 0;
-  left: 0;
-
-
-}
-
-.imgbox:hover a {
-  width: 250px;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: rgba(0, 0, 0, 1);
-}
 
 
 
