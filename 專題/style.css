@@ -362,7 +362,7 @@ h2 {
 }
 
 .news {
-    margin: 0px 100px 50px 100px;
+    margin: 0px 200px 50px 0px;
     height: 10%;
     /* margin-top: 8%; */
     display: flex;
@@ -373,10 +373,11 @@ h2 {
     /* align-items: center; */
     /* 設定幅軸(水平置中) */
     z-index: 2;
+    float: right;
 }
 
 .news2 {
-    margin: 0px 100px 50px 100px;
+    margin: 0px 200px 50px 0px;
     height: 10%;
     display: flex;
     /* flex-direction: column; */
@@ -386,10 +387,11 @@ h2 {
     /* align-items: center; */
     /* 設定幅軸(水平置中) */
     z-index: 2;
+    float: right;
 }
 
 .news3 {
-    margin: 0px 100px 0px 100px;
+    margin: 0px 200px 0px 0px;
     height: 10%;
     display: flex;
     /* flex-direction: column; */
@@ -399,6 +401,7 @@ h2 {
     /* align-items: center; */
     /* 設定幅軸(水平置中) */
     z-index: 2;
+    float: right;
 }
 
 .list_item2 {
@@ -457,4 +460,125 @@ h3 {
 .info2 p {
     display: block;
     margin-top: 30px;
+}
+
+.cloud {
+    float: left;
+    display: block;
+    /* margin: 20px; */
+    /* padding: 20px; */
+    width: 400px;
+    height: 400px;
+}
+
+.cloud img {
+    width: 350px;
+    height: 150px;
+}
+
+.img2_c {
+    display: block;
+    float: left;
+    width: 250px;
+    height: 150px;
+    /* justify-self: center; */
+    /* padding: 25px; */
+    margin: 15px 15px 15px 40px;
+    position: relative;
+}
+
+.h1_cloud {
+    height: 50px;
+    font-size: xx-large;
+    margin: 0 0.5px 0;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    color: #4C4C4C;
+}
+
+/*store區*/
+.list_box3 {
+    margin: 50px;
+    height: 200px;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 1px solid #000000;
+    height: 200px;
+    width: 900px;
+    background-image: url(https://www.upmedia.mg/upload/article/20230221133709275280.jpg);
+    background-position: top;
+    background-size: cover;
+}
+.list_box4 {
+    margin: 50px;
+    height: 200px;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 1px solid #000000;
+    height: 200px;
+    width: 900px;
+    background-image: url(https://cdntwrunning.biji.co/600_bd1253f3d998baacbbe138a9a4652375.jpg);
+    background-position: right 50% top 40%;
+    background-size: cover;
+}
+.list_box3.img {
+    height: 200px;
+    width: 900px;
+}
+
+.store {
+    /* margin: 0px 0px 50px 0px; */
+    height: 10%;
+    /* margin-top: 8%; */
+    display: block;
+    position: relative;
+}
+
+.store_info{
+    float: right;
+    background-color: #F2DBC0;
+    right: 0%;
+    width: 500px;
+    height: 900px;
+    z-index: 1;
+    position: absolute;
+    top: 0%;
+}
+.cloud1 {
+    float: left;
+    display: block;
+    /* margin: 20px; */
+    /* padding: 20px; */
+    width: 400px;
+    height: 400px;
+}
+
+.cloud1 img {
+    width: 350px;
+    height: 150px;
+}
+
+.img3_c {
+    display: block;
+    float: left;
+    width: 250px;
+    height: 150px;
+    /* justify-self: center; */
+    /* padding: 25px; */
+    margin: 5px 15px 0 40px;
+    position: relative;
+}
+.h2_cloud {
+    height: 50px;
+    font-size: xx-large;
+    margin: 0 0.5px 0;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    color: #4C4C4C;
 }
