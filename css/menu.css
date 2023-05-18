@@ -1,0 +1,135 @@
+@font-face {
+  font-family: GenSenRounded;
+  src: url(../webfonts/ttc/GenSenRounded-R.ttc);
+}
+
+
+.box {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(245, 222, 168, .5);
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: GenSenRounded;
+  
+
+}
+
+.upper {
+  height: 40%;
+  /* border: 1px solid #000; */
+  padding-top: 100px;
+  
+}
+
+
+.upper h2 {
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  /* border: 1px solid #000; */
+  
+}
+
+.upper ul {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  /* border: 1px solid #000; */
+}
+
+.upper ul li {
+  width: 200px;
+  height: 200px;
+  line-height: 220px;
+  text-align: center;
+  background-image: url(../img/foot.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* border: 1px solid #000; */
+    
+}
+
+.upper ul li a {
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  /* border: 1px solid #000; */
+  
+}
+
+.lower {
+  width: 100%;
+  height: 50%;
+  /* position: absolute; */
+  background-image: url(../img/footer.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* border: 1px solid #000; */
+}
+
+.lower ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 300px;
+  margin: auto;
+  width: 30%;
+  font-size: 1.5rem;
+  
+}
+
+.lower a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-indent: 101%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fb {
+  background-image: url(../img/fb.svg);
+}
+
+.fb:hover {
+  background-image: url(../img/fb_2.svg);
+}
+
+.line {
+  background-image: url(../img/line.svg);
+}
+
+.line:hover {
+  background-image: url(../img/line_2.svg);
+}
+
+.ig {
+  background-image: url(../img/ig.svg);
+}
+
+.ig:hover {
+  background-image: url(../img/ig_2.svg);
+}
+
+.yt {
+  background-image: url(/img/yt.svg);
+}
+
+.yt:hover {
+  background-image: url(/img/yt_2.svg);
+}
+
+
+
+
+
+
+
+

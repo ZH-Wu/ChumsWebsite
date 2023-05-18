@@ -5,26 +5,26 @@
   src: url(../webfonts/ttc/GenSenRounded-R.ttc);
 }
 
-.box {
-  width: 100vw;
-  
-}
+
+html, body { margin: 0; padding: 0; overflow-x: clip;}
 
 .box > * {
   box-sizing: border-box;
   font-family: GenSenRounded;
+  margin: auto;
 }
 
 header {
-  width: 100%;
   height: 60px;
   padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;  
   background-color: #F5DEA8;
+  /* position sticky to top */
   position: sticky;
   top: 0;
+  z-index: 10;
   
 }
 
@@ -85,6 +85,7 @@ input {
 .search {
   width: 30px;
   height: 30px;
+  /* position relative to <nav> */
   position: relative;
   right: 50px;
   cursor: pointer;
@@ -107,69 +108,68 @@ input {
 /* 主要內容區 */
 
 main {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(179.57deg, #FFFFFF 5.41%, #F8E9C5 78.63%, #F5DEA8 101.34%);
+  height: 90vh;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(245,222,168,1) 58%);
+  /* border: 1px solid #000; */
+  z-index: 4;
+  position: relative;
   
 }
 
 .cloud {
   width: 150px;
-  position: relative;
-  top: 300px;
+  /* position relative to <main> */
+  position: absolute;
   z-index: 1;
-}
-
-.cloud1 {
-  left: 300px;
-}
-
-.cloud2 {
-  left: 750px;
-
-}
-
-.cloud3 {
-  left: 1200px;
+  top: 30px;
+  left: -120px;
+  
 }
 
 .content {
-  width: 100%;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
   height: 70vh;
-  /* border: 1px solid #000; */
-  position: absolute;
-  bottom: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-end;
+  flex: 1;
+  /* border: 1px solid #000; */
   
 
 }
 
 .item {
-  /* border: 1px solid #000; */
   width: 456px;
   height: 547px;
   background-color: #FFFFFF;
   border-radius: 250px 250px 45px 45px;
+  /* position relative to div.content */
   position: relative;
-  margin: 0 100px;
-  z-index: 1;
+  z-index: 3;
+  transition: all .5s;
 }
 
-.item2 {
-  height: 602px;
+.item:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.item h2 {
-  font-size: 3rem;
-  letter-spacing: 10px;
+.ranking  {
+  /* position relative to div.item */
   position: absolute;
-  right: 20px;
-  top: 0px;
+  right: 10px;
+  top: -20px;
+  z-index: 2;
+
 }
 
-.content .item .info {
+
+.item .info {
+  /* position relative to div.item */
   position: absolute;
   top: 80px;
   left: 120px;
@@ -190,6 +190,7 @@ main {
 }
 
 .item img {
+  /* position relative to div.item */
   position: absolute;
   
 }
@@ -207,14 +208,47 @@ main {
   left: -153px;
 }
 
-.lawn {
-  width: 100vw;
-  position: absolute;
-  bottom: -110px;
-  left: 0;
+footer {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  background-color: #F5DEA8;
+}
 
+.lawn {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  object-position: bottom;
   
 }
+
+.tree {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -150px;
+  z-index: 5;
+  
+  
+}
+
+.footprint {
+  width: 150px;
+  height: 200px;
+  position: absolute;
+  z-index: 2;
+  right: 0px;
+  bottom: 100px;
+  transform: rotate(-20deg);
+  z-index: 2;
+}
+
+
+
+
+
+
 
 
 
