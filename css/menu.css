@@ -119,11 +119,11 @@
 }
 
 .yt {
-  background-image: url(/img/yt.svg);
+  background-image: url(../img/yt.svg);
 }
 
 .yt:hover {
-  background-image: url(/img/yt_2.svg);
+  background-image: url(../img/yt_2.svg);
 }
 
 
