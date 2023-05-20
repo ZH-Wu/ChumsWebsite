@@ -6,9 +6,12 @@
 }
 
 
-/* html, body {overflow-x: clip;} */
+html,
+body {
+  overflow-x: clip;
+}
 
-.box > * {
+.box>* {
   box-sizing: border-box;
   font-family: GenSenRounded;
   margin: auto;
@@ -24,18 +27,18 @@ header {
   padding: 0px 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;  
+  justify-content: space-between;
   background-color: #F5DEA8;
   /* position sticky to top */
   position: sticky;
   top: 0;
   z-index: 10;
-  
+
 }
 
 .menu {
   display: flex;
-    
+
 }
 
 .menu li {
@@ -59,7 +62,7 @@ header {
 .logo {
   display: inline-block;
   width: 100px;
-  
+
 }
 
 .searchbar {
@@ -86,7 +89,7 @@ input {
   border: 1px solid rgba(254, 232, 229, 0.2);
   box-shadow: inset -1px -1px 1px rgba(255, 255, 255, 0.3);
   box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  
+
 }
 
 .search_btn {
@@ -98,7 +101,7 @@ input {
   right: 3px;
   margin: 2px 0;
   cursor: pointer;
-  
+
 }
 
 .icon {
@@ -114,54 +117,62 @@ input {
   height: 45px;
 }
 
-
-
 /* 主要內容區 */
 
 main {
-  height: 90vh;
-  background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(245,222,168,1) 58%);
-  /* border: 1px solid #000; */
-  z-index: 4;
+  padding-top: 230px;
+  height: 93vh;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(245, 222, 168, 1) 58%);
   position: relative;
-  
+
 }
 
 .cloud {
   width: 150px;
-  /* position relative to <main> */
+  /* 絕對定位於main */
   position: absolute;
   z-index: 1;
-  top: 30px;
-  left: -120px;
   
 }
 
+.cloud1 {
+  top: 150px;
+  right: 550px;
+}
+
+.cloud2 {
+  top: 100px;
+  right: 200px;
+}
+
+.cloud3 {
+  top: 50px;
+  right: 400px;
+}
+
+
+
 .content {
-  margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-  height: 70vh;
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  flex: 1;
-  /* border: 1px solid #000; */
-  
+
+
 
 }
 
 .item {
   width: 456px;
-  height: 547px;
-  background-color: #FFFFFF;
+  height: 546px;
+  background-color: rgba(255, 255, 255, 1);
   border-radius: 250px 250px 45px 45px;
-  /* position relative to div.content */
   position: relative;
-  z-index: 3;
   transition: all .5s;
+  /* border: 1px solid #000; */
+  z-index: 3;
 }
 
 .item:hover {
@@ -169,99 +180,118 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.ranking  {
-  /* position relative to div.item */
-  position: absolute;
-  right: 10px;
-  top: -20px;
-  z-index: 2;
-
-}
-
-
-.item .info {
-  /* position relative to div.item */
-  position: absolute;
-  top: 80px;
-  left: 120px;
-}
-
-.item .info {
-  height: 100px;
+.color {
   display: flex;
-  flex-direction: column;
+  width: 108px;
   justify-content: space-between;
+  margin-left: 300px;
+  
+}
+
+.color li {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  
+}
+
+.color1 {
+  background-image: url(../img/color1.svg);
+}
+
+.color2 {
+  background-image: url(../img/color2.svg);
+}
+
+.color3 {
+  background-image: url(../img/color3.svg);
+}
+
+.list {
+  margin-top: 20px;
+  margin-left: 285px;
+}
+
+.list li a{
+  display: block;
+  width: 140px;
+  height: 50px;
+  border-radius: 25px;
+  line-height: 50px;
+  text-align: center;
+  background-color: rgba(120, 179, 187, .7);
+  margin-bottom: 6px;
+  text-decoration: none;
+  color: #000;
+  
+}
+
+.ranking {
+  /* 絕對定位於.item */
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 0%;
+  top: -50px;
+}
+
+.info {
+  margin-left: 100px;
+  margin-top: 100px;
+  width: 50%;
   color: #000;
   font-size: 20px;
   font-weight: 700;
 }
 
-.item .info span {
+.info>* {
+  padding-bottom: 20px;
+}
+
+.info span {
   color: #f00;
 }
 
-.item img {
-  /* position relative to div.item */
+.tent {
+  /* 絕對定位於.item */
   position: absolute;
-  
+
 }
 
-
-.item .tent_1 {
-  width: 100%;
-  top: 208px;
-  left: -130px; 
+.tent_1 {
+  left: -150px;
+  margin-top: 20px;
 }
 
-.item .tent_2 {
-  width: 110%;
-  top: 239px;
-  left: -153px;
+.tent_2,
+.tent_3 {
+  width: 105%;
+  left: -130px;
+  margin-top: 30px;
 }
 
-footer {
-  width: 100%;
-  height: 100px;
-  position: relative;
-  background-color: #F5DEA8;
+.forest,
+.lawn {
+  position: absolute;
+
+}
+
+.forest {
+  bottom: 180px;
+  z-index: 2;
 }
 
 .lawn {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: bottom;
-  
-}
-
-.tree {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: -150px;
-  z-index: 5;
-  object-fit: cover;
-  object-position: top;
-  
-  
+  bottom: 0px;
+  z-index: 1;
 }
 
 .footprint {
   width: 150px;
-  height: 200px;
+  height: 180px;
   position: absolute;
-  z-index: 2;
-  right: 0px;
-  bottom: 100px;
+  right: 0;
+  bottom: 30px;
   transform: rotate(-20deg);
   z-index: 2;
 }
-
-
-
-
-
-
-
-
-

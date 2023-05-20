@@ -11,6 +11,7 @@
   box-sizing: border-box;
   overflow: hidden;
   font-family: GenSenRounded;
+  position: relative;
   
 
 }
@@ -19,7 +20,7 @@
   height: 40%;
   /* border: 1px solid #000; */
   padding-top: 100px;
-  
+  z-index: 3;
 }
 
 
@@ -50,10 +51,15 @@
   background-position: center;
   background-size: cover;
   /* border: 1px solid #000; */
+  transition: all .5s;
     
 }
 
-.upper ul li a {
+.upper li:hover {
+  transform: translateY(-20px);
+}
+
+.upper li a {
   padding: 10px 20px;
   color: #fff;
   text-decoration: none;
@@ -62,15 +68,26 @@
   
 }
 
+.deco {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bird_hi.svg);
+  background-repeat: no-repeat;
+  bottom: 100px;
+  right: 100px;
+  z-index: 50;
+}
+
 .lower {
   width: 100%;
   height: 50%;
-  /* position: absolute; */
   background-image: url(../img/footer.svg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* border: 1px solid #000; */
+  
+  
 }
 
 .lower ul {
@@ -92,6 +109,11 @@
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: all .5s;
+}
+
+.lower a:hover {
+  transform: translateY(-15px);
 }
 
 .fb {

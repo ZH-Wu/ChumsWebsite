@@ -134,6 +134,11 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: GenSenRounded;
+  src: url(../webfonts/ttc/GenSenRounded-R.ttc);
+}
+
 
 img {
   display: block;
@@ -142,42 +147,52 @@ img {
 
 header {
   height: 70px;
+  line-height: 70px;
+  background-color: #F5DEA8;
   padding: 0px 10px;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
-  background-color: #F5DEA8;
-  /* position sticky to top */
   position: sticky;
   top: 0;
   z-index: 10;
+  font-family: GenSenRounded;
 
 }
 
 .menu {
   display: flex;
-
-}
-
-.menu li {
-  flex: 1;
-  margin: 0 10px;
-  text-align: center;
+  
 }
 
 .menu a {
-  padding: 10px 0;
+  display: inline-block;
   text-decoration: none;
+  padding: 0 10px;
   font-size: 1.2rem;
   color: #B61C31;
-
+  text-align: center;
+  /* border: 1px solid #000; */
 }
 
-.menu a:hover {
+.menu a:hover, .active {
   border-bottom: 2px solid #B61C31;
 }
 
+.menu ul {
+  display: none;
+  background-color: #F5DEA8;
+}
+
+.menu ul li a{
+  display: block;
+  text-decoration: none;
+  color: #B61C31;
+  text-align: center;
+}
+
 .logo {
+  margin-top: 10px;
   display: inline-block;
   width: 100px;
 
@@ -216,6 +231,7 @@ input {
   width: 45px;
   height: 45px;
   position: absolute;
+  top: 9px;
   right: 3px;
   margin: 2px 0;
   cursor: pointer;
