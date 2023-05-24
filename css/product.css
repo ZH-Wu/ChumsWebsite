@@ -231,8 +231,8 @@ main {
   position: absolute;
   width: 100px;
   height: 100px;
-  right: 0%;
-  top: -50px;
+  right: 12%;
+  top: 50px;
 }
 
 .info {
@@ -248,8 +248,15 @@ main {
   padding-bottom: 20px;
 }
 
+.info p {
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
 .info span {
-  color: #f00;
+  color: #B61C31;
+  font-size: 1.5rem;
+  
 }
 
 .tent {

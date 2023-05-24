@@ -19,3 +19,16 @@ $(function () {
     }
   });
 });
+
+$(function () {
+  $('.magnifier').click(() => {
+    event.preventDefault();
+    $('.product-box').toggle(500);
+  })
+  $('.enter').click(() => {
+    $('.floatbox').addClass('active');
+  });
+  $('.return').click(() => {
+    $('.floatbox').removeClass('active');
+  });
+});
