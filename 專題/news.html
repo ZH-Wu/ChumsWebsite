@@ -5,45 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>露營小常識</title>
+    <title>最新消息</title>
     <link rel="icon" href="./image/腳印menu-2.svg">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <!-- header -->
-    <div class="header">
-        <div class="menu">
-            <a href="">
-                <img src="./image/腳印menu-2.svg" alt="打開菜單">
-            </a>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">關於我們</a></li>
+                <li><a href="#">商品資訊</a></li>
+                <li><a href="#">最新消息</a></li>
+                <li><a href="#">門市資訊</a></li>
+                <li><a href="#">會員中心</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="logo"><img src="./image/logo.svg" alt="logo"></a>
+        <div class="searchbar">
+            <form name="search" id="search" role="search">
+                <input type="search" placeholder="找找看">
+                <button class="search_btn" type="submit"><img src="./image/資產 60.svg" alt="搜尋"></button>
+            </form>
+            <ul class="icon">
+                <li><a href="#"><img src="./image/資產 1.svg" alt="登入圖示" class="login"></a></li>
+                <li><a href="#"><img src="./image/資產 2.svg" alt="購物車圖示" class="cart"></a></li>
+            </ul>
         </div>
-        <div class="logo">
-            <a href="">
-                <img src="./image/資產 81.svg" alt="返回首頁">
-            </a>
-        </div>
-        <div class="wrap">
-            <div class="search">
-                <input class="search-bar" type="text" name="search" id="search" placeholder="輸入關鍵字">
-                <button class="search-btn">
-                    <img src="./image/資產 60.svg" alt="" width="50px" height="50px">
-                </button>
-            </div>
-            <div class="search-cart">
-                <ul>
-                    <li><img src="./image/資產 1.svg" alt="" width="80px" height="80px"></li>
-                </ul>
-            </div>
-            <div class="car">
-                <ul>
-                    <li>
-                        <img src="./image/資產 2.svg" alt="" width="70px" height="70px">
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    </header>
     <!-- <nav>
             <ul class="icon">
                 <a>
@@ -59,89 +49,106 @@
     <!-- 內容區 -->
     <main>
         <h1> </h1>
-        <div class="news">
-
-            <div class="list_box2">
-                <div class="list_item2">
-                    <div class="img2"><img src="./image/三角旗.jpg" alt="" width="100px" height="100px">
-                    </div>
-                    <div class="info2">
-                        <h3>2023.04.29</h3>
-
-                        <p>Keystone Lace Up Dress短袖洋裝，可愛的正面繫帶設計，100%純棉質地輕盈柔軟落肩設計修飾身形，祝福全天下偉大的媽媽母親節快樂。</p>
-                        <h3>more</h3>
-                    </div>
-                </div>
+        <div class="cloud">
+            <div class="img2_c"><img src="./image/資產 10.svg" alt="" width="250px" height="150px">
+                <h1 class="h1_cloud">新品上市</h1>
             </div>
-            <div class="list_box2">
-                <div class="list_item2">
-                    <div class="img2"><img src="./image/三角旗.jpg" alt="" width="100px" height="100px">
-                    </div>
-                    <div class="info2">
-                        <h3>2023.04.20</h3>
-
-                        <p>Recycle CHUMS Compact Case收納包，100%再生聚酯RENU®，選用舊衣或製成剩餘布料製成輕巧而堅韌，不只好搭還很耐用隨身攜帶超方便，日常或戶外使用都很適合!
-                        </p>
-                        <h3>more</h3>
-                    </div>
-                </div>
+            <div class="img2_c"><img src="./image/資產 10.svg" alt="" width="250px" height="150px">
+                <h1 class="h1_cloud">優惠情報</h1>
             </div>
+            <div class="img2_c"><img src="./image/資產 10.svg" alt="" width="250px" height="150px">
+                <h1 class="h1_cloud">促銷活動</h1>
+            </div>
+
         </div>
-        <div class="news2">
-            <div class="list_box2">
-                <div class="list_item2">
-                    <div class="img2"><img src="./image/三角旗.jpg" alt="" width="100px" height="100px">
-                    </div>
-                    <div class="info2">
-                        <h3>2023.04.15</h3>
+        <section>
+            <div class="news">
 
-                        <p>戶外咖最熟悉的好夥伴40歲啦! 穿上最舒適的短T到戶外郊遊帶上最有質感的用具去露營、野餐快召集你的固定班底跟CHUMS一起來慶祝。</p>
-                        <h3>more</h3>
+                <div class="list_box2">
+                    <div class="list_item2">
+                        <div class="img2"><img src="./image/三角旗.jpg" alt="" width="100px" height="100px">
+                        </div>
+                        <div class="info2">
+                            <h3>2023.04.29</h3>
+
+                            <p>Keystone Lace Up Dress短袖洋裝，可愛的正面繫帶設計，100%純棉質地輕盈柔軟落肩設計修飾身形，祝福全天下偉大的媽媽母親節快樂。</p>
+                            <h3>more</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_box2">
+                    <div class="list_item2">
+                        <div class="img2"><img src="./image/三角旗.jpg" alt="" width="100px" height="100px">
+                        </div>
+                        <div class="info2">
+                            <h3>2023.04.20</h3>
+
+                            <p>Recycle CHUMS Compact
+                                Case收納包，100%再生聚酯RENU®，選用舊衣或製成剩餘布料製成輕巧而堅韌，不只好搭還很耐用隨身攜帶超方便，日常或戶外使用都很適合!
+                            </p>
+                            <h3>more</h3>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="list_box2">
-                <div class="list_item2">
-                    <div class="img2"><img src="./image/三角旗.jpg" alt="" width="100px" height="100px">
-                    </div>
-                    <div class="info2">
-                        <h3>2023.03.28</h3>
+        </section>
+        <section>
+            <div class="news2">
+                <div class="list_box2">
+                    <div class="list_item2">
+                        <div class="img2"><img src="./image/三角旗.jpg" alt="" width="100px" height="100px">
+                        </div>
+                        <div class="info2">
+                            <h3>2023.04.15</h3>
 
-                        <p>謝謝鐵粉們陪CHUMS一路走來，4/5前消費滿千即贈Masking Tape紙膠帶限量100組，要買要快，贈完為止!</p>
-                        <h3>more</h3>
+                            <p>戶外咖最熟悉的好夥伴40歲啦! 穿上最舒適的短T到戶外郊遊帶上最有質感的用具去露營、野餐快召集你的固定班底跟CHUMS一起來慶祝。</p>
+                            <h3>more</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_box2">
+                    <div class="list_item2">
+                        <div class="img2"><img src="./image/三角旗.jpg" alt="" width="100px" height="100px">
+                        </div>
+                        <div class="info2">
+                            <h3>2023.03.28</h3>
+
+                            <p>謝謝鐵粉們陪CHUMS一路走來，4/5前消費滿千即贈Masking Tape紙膠帶限量100組，要買要快，贈完為止!</p>
+                            <h3>more</h3>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="news3">
-            <div class="list_box2">
-                <div class="list_item2">
-                    <div class="img2"><img src="./image/三角旗.jpg" alt="" width="100px" height="100px">
-                    </div>
-                    <div class="info2">
-                        <h3>2023.03.27</h3>
+        </section>
+        <section class="section_news">
+            <div class="news3">
+                <div class="list_box2">
+                    <div class="list_item2">
+                        <div class="img2"><img src="./image/三角旗.jpg" alt="" width="100px" height="100px">
+                        </div>
+                        <div class="info2">
+                            <h3>2023.03.27</h3>
 
-                        <p>凡走過不要留痕跡，帶走山林的美好記憶就好，讓我們成為更好的露營人! 請不要把垃圾留在山上，裝進Logo Pop Up Trash Can 快收式收納筒，一起帶下山!</p>
-                        <h3>more</h3>
+                            <p>凡走過不要留痕跡，帶走山林的美好記憶就好，讓我們成為更好的露營人! 請不要把垃圾留在山上，裝進Logo Pop Up Trash Can 快收式收納筒，一起帶下山!</p>
+                            <h3>more</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_box2">
+                    <div class="list_item2">
+                        <div class="img2"><img src="./image/三角旗.jpg" alt="" width="100px" height="100px">
+                        </div>
+                        <div class="info2">
+                            <h3>2023.03.28</h3>
+
+                            <p>超卡哇伊 かわいい～Booby Rope Shoulder Sweat側背包! 調節式抽繩背袋、網格袋設計、萌萌Booby造型背上它，憂鬱去～去～去～療癒你的一整天!</p>
+                            <h3>more</h3>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="list_box2">
-                <div class="list_item2">
-                    <div class="img2"><img src="./image/三角旗.jpg" alt="" width="100px" height="100px">
-                    </div>
-                    <div class="info2">
-                        <h3>2023.03.28</h3>
-
-                        <p>超卡哇伊 かわいい～Booby Rope Shoulder Sweat側背包! 調節式抽繩背袋、網格袋設計、萌萌Booby造型背上它，憂鬱去～去～去～療癒你的一整天!</p>
-                        <h3>more</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-            <img src="./image/草皮.svg" alt="" width="1920px">
-        </div>
+        </section>
+        <div class="footer_news"></div>
     </main>
 </body>
 
