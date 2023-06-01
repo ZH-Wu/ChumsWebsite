@@ -70,14 +70,16 @@
 }
 
 #bg {
+  width: 100%;
   position: absolute;
   z-index: 2;
 }
 
 #booby {
+  width: 20%;
   position: absolute;
-  bottom: 200px;
-  right: 100px;
+  bottom: 100px;
+  right: 50px;
   z-index: 1;
 }
 
@@ -126,7 +128,7 @@
 }
 
 .line:hover {
-  background-image: url(../img/line_2.svg);
+  background-image: url(../img/line-y.svg);
 }
 
 .ig {
@@ -134,7 +136,7 @@
 }
 
 .ig:hover {
-  background-image: url(../img/ig_2.svg);
+  background-image: url(../img/ig-y.svg);
 }
 
 .yt {

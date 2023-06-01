@@ -175,7 +175,7 @@ header {
   /* border: 1px solid #000; */
 }
 
-.menu a:hover, .active {
+.menu .dropdown:hover, .menu .dropdown.active {
   border-bottom: 2px solid #B61C31;
 }
 
@@ -192,8 +192,8 @@ header {
 }
 
 .logo {
-  margin-top: 10px;
-  display: inline-block;
+  margin-top: 12px;
+  margin-right: 170px;
   width: 100px;
 
 }
@@ -219,10 +219,16 @@ input {
   backdrop-filter: blur(2px);
   /*要搭配rgba的背景色語法*/
   background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(254, 232, 229, 0.2);
-  box-shadow: inset -1px -1px 1px rgba(255, 255, 255, 0.3);
+  border: none;
   box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: width .35s ease-in-out;
+  transition: width .35s ease-in-out;
 
+}
+
+input:focus {
+  width: 300px;
+  outline: none;
 }
 
 .search_btn {

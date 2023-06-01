@@ -1,18 +1,13 @@
 $(function () {
-  $('.aboutus').click(() => {
-    $('.aboutus').toggleClass('active');
-    $('.aboutus-item').slideToggle();
+  $('.dropdown').click(function() {
+    $(this).toggleClass('active').parent().siblings().find('.dropdown').removeClass('active').siblings().slideUp();
+    $(this).siblings().slideToggle();
   });
-  $('.product').click(() => {
-    $('.product').toggleClass('active');
-    $('.product-item').slideToggle();
-  });
-  $('.news').click(() => {
-    $('.news').toggleClass('active');
-    $('.news-item').slideToggle();
-  });
-  $('.store').click(() => {
-    $('.store').toggleClass('active');
-    $('.store-item').slideToggle();
-  });
+
+  // 簡化前的程式碼
+  // $('.dropdown').click(function() {
+  //   $(this).toggleClass('active').parent().siblings().find('.dropdown').removeClass('active');
+  //   $(this).siblings().slideToggle();
+  //   $(this).parent().siblings().find('.dropdown-item').slideUp();
+  // });
 });
