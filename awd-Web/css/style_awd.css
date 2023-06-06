@@ -1,0 +1,765 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&family=Montserrat&family=Noto+Sans+TC:wght@900&family=Roboto:wght@700&display=swap');
+
+
+@font-face {
+  font-family: 'Courgette', cursive;
+  src: url('https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&family=Montserrat&family=Noto+Sans+TC:wght@900&family=Roboto:wght@700&display=swap');
+}
+
+@font-face {
+  font-family: GenSenRounded;
+  src: url(../webFonts/ttc/GenSenRounded-L.ttc);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+}
+
+/* 大框架 */
+.box {
+  max-width: 390px;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: GenSenRounded;
+
+}
+
+/* CSS共用區 */
+img {
+  max-width: 100%;
+  display: block;
+
+}
+
+.title {
+  font-size: 1rem;
+  color: #EB664C;
+  font-family: 'Courgette', cursive;
+  text-shadow: 4px 4px #fff, -4px 4px #fff, 5px 5px #CC4058, -5px 5px #CC4058;
+}
+
+.flag_news,
+.flag_shop {
+  width: 18%;
+}
+
+/* Top按鈕 */
+
+#fixedTop {
+  display: none;
+  cursor: pointer;
+  width: 5%;
+  height: 100px;
+  background-image: url(../images/top.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 10;
+
+}
+
+
+
+/* 頁首區 */
+
+header {
+  height: 30vh;
+  position: relative;
+
+}
+
+.upperPart {
+  position: relative;
+  height: 77%;
+  background: linear-gradient(180deg, rgba(243, 250, 255, 1) 0%, rgba(210, 231, 253, 1) 35%);
+
+}
+
+.nav {
+  height: 50px;
+  padding: 15px 20px;
+  background-color: #F0DAA5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.nav .menu {
+  width: 12%;
+}
+
+.nav .logo {
+  width: 15%;
+}
+
+.nav .magXs {
+  width: 5%;
+  padding-top: 5px;
+  transform: rotate(-20deg);
+}
+
+
+#slogan {
+  position: absolute;
+  width: 60%;
+  left: 85px;
+  top: 70px;
+  z-index: 4;
+  animation-name: rising;
+  animation-duration: 1s;
+}
+
+@keyframes rising {
+  from {
+    left: 85px;
+    top: 120px;
+    opacity: 0;
+  }
+
+  to {
+    left: 85px;
+    top: 70px;
+    opacity: 1;
+  }
+}
+
+.lowerPart {
+  height: 31%;
+  background: url(../images/noise_background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.cloud {
+  position: absolute;
+  width: 20%;
+  z-index: 3;
+
+}
+
+.cloud0 {
+  transform: scale(0.55);
+  animation: cloud0 60s infinite linear;
+
+}
+
+@keyframes cloud0 {
+  from {
+    left: 170px;
+    top: 60px;
+  }
+
+  to {
+    left: 100%;
+    top: 60px;
+  }
+}
+
+.cloud1 {
+  transform: scale(0.5);
+  animation: cloud1 60s infinite linear;
+  animation-delay: 1s;
+
+}
+
+@keyframes cloud1 {
+  from {
+    right: 0px;
+    top: 80px;
+  }
+
+  to {
+    right: 100%;
+    top: 80px;
+  }
+}
+
+
+.cloud2 {
+  transform: scale(0.5);
+  animation: cloud2 40s infinite linear;
+  animation-delay: 2s;
+}
+
+@keyframes cloud2 {
+  from {
+    left: 0px;
+    top: 90px;
+  }
+
+  to {
+    left: 100%;
+    top: 90px;
+  }
+}
+
+
+.cloud3 {
+  transform: scale(0.5);
+  animation: cloud3 60s infinite linear;
+  animation-delay: 2.35s;
+
+}
+
+@keyframes cloud3 {
+  from {
+    right: 0px;
+    top: 100px;
+  }
+
+  to {
+    right: 100%;
+    top: 100px;
+  }
+}
+
+.cloud4 {
+  transform: scale(0.45);
+  animation: cloud4 60s infinite linear;
+  animation-delay: 2.55s;
+
+}
+
+@keyframes cloud4 {
+  from {
+    left: 0px;
+    top: 150px;
+  }
+
+  to {
+    left: 100%;
+    top: 150px;
+  }
+}
+
+.cloud5 {
+  transform: scale(0.5);
+  animation: cloud5 60s infinite linear;
+  animation-delay: 2.75s;
+}
+
+@keyframes cloud5 {
+  from {
+    right: 0px;
+    top: 180px;
+  }
+
+  to {
+    right: 100%;
+    top: 180px;
+  }
+}
+
+.mountain {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+
+}
+
+.centerPic {
+  width: 65%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  padding: 0 20px;
+  position: absolute;
+  bottom: 0;
+  left: 18%;
+  z-index: 5;
+
+}
+
+.bird_left,
+.fire {
+  width: 20%;
+}
+
+.bird_right {
+  width: 22%;
+}
+
+/* 主要內容區 */
+main {
+  height: 110vh;
+  position: relative;
+  background: url(../images/path15.svg), url(../images/noise_background.png);
+  background-size: cover;
+  background-repeat: no-repeat, repeat-x;
+  
+
+}
+
+.about {
+  position: relative;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.aboutUs {
+  width: 68%;
+  height: 90%;
+  background-image: url(/images/branches.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 3rem;
+  /* opacity: 0; */
+
+}
+
+.animate__bounceInDown {
+  animation-duration: 1500ms;
+}
+
+.aboutUs>* {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.aboutUs h2 {
+  width: 4rem;
+  font-size: .8rem;
+  margin-bottom: .8rem;
+
+}
+
+.aboutUs p {
+  font-size: .2rem;
+  color: #364F0B;
+  font-weight: bold;
+  width: 70%;
+  line-height: 1.2;
+  margin-bottom: .5rem;
+
+}
+
+.aboutUs .btn {
+  display: block;
+  color: #fff;
+  font-family: 'Courgette', cursive;
+  text-decoration: none;
+  font-size: .5rem;
+  background: #CC4058;
+  width: 100px;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, .5);
+  cursor: pointer;
+  position: relative;
+  top: 0px;
+  transition: all .3s;
+
+}
+
+.aboutUs .btn:hover,
+.aboutUs .btn:active {
+  box-shadow: none;
+  top: 3px;
+}
+
+.bird {
+  width: 30%;
+  height: 100%;
+
+}
+
+.logo_2 {
+  position: absolute;
+  left: 20px;
+  top: 50px;
+  width: 20%;
+  transform: rotate(344deg);
+
+}
+
+.welcomeBird {
+  position: absolute;
+  bottom: 60px;
+  left: 20px;
+  width: 25%;
+}
+
+.animate__tada {
+  animation-duration: 1200ms;
+  animation-iteration-count: 2;
+
+}
+
+.footprint {
+  position: absolute;
+  bottom: 20px;
+  left: 90px;
+  width: 12%;
+  transform: rotate(156deg);
+
+}
+
+/*產品資訊區*/
+
+.product {
+  height: 50%;
+  position: relative;
+
+}
+
+.product h2 {
+  position: absolute;
+  top: 0%;
+  left: 25%;
+}
+
+@keyframes sliding {
+  0% {
+    right: 0%;
+  }
+
+  25% {
+    right: 10%;
+    rotate: -50deg;
+  }
+
+  50% {
+    right: 10%;
+    rotate: -30deg
+  }
+
+  100% {
+    right: 0%;
+  }
+}
+
+.birdWithGuitar {
+  position: absolute;
+  top: 64%;
+  width: 15%;
+  animation-name: sliding;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.chatBox {
+  position: absolute;
+  z-index: 10;
+  width: 40%;
+  height: 80px;
+  background-image: url(../images/chatbox.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  text-align: center;
+  padding-top: 30px;
+
+}
+
+.chatBox p {
+  font-size: .6rem;
+  letter-spacing: 5px;
+  color: #B61C31;
+  font-weight: 600;
+}
+
+.c1 {
+  bottom: 42%;
+  left: 5%;
+}
+
+.c2 {
+  top: -3%;
+  right: 5%;
+
+}
+
+
+.magnifier {
+  position: absolute;
+  width: 10%;
+}
+
+
+.m1 {
+  top: 55%;
+  left: 40%;
+}
+
+.m2 {
+  top: 13%;
+  right: 2%;
+}
+
+
+
+.product-box {
+  width: 40%;
+  height: 40%;
+  border-radius: 100px 100px 0 0;
+  background-color: #FBFFF5;
+  border: 2px solid #B61C31;
+  position: relative;
+  overflow: hidden;
+  display: none;
+  position: absolute;
+
+}
+
+.jacket {
+  top: 20%;
+  right: 8%;
+}
+
+.tent {
+  bottom: 2%;
+  left: 2%;
+}
+
+.product-box img {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.jacket img {
+  width: 70%;
+  margin-top: 20px;
+
+}
+
+.tent img {
+  margin-top: 20px;
+
+}
+
+.product-box h3 {
+  font-size: .5rem;
+  color: #B61C31;
+  padding-left: 20px;
+  padding-bottom: 1px;
+
+}
+
+.product-box p {
+  font-size: .5rem;
+  color: #B61C31;
+  font-weight: 900;
+  padding-left: 20px;
+  padding-bottom: 5px;
+}
+
+
+.enter {
+  display: block;
+  width: 80%;
+  background: #B61C31;
+  font-size: .8rem;
+  padding: 2px 3px;
+  border-style: none;
+  border-radius: 10px;
+  color: #fff;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  cursor: pointer;
+  position: relative;
+}
+
+.enter::after {
+  content: url(../images/white_foot.svg);
+  width: 8%;
+  position: absolute;
+  top: 3px;
+  right: 7px;
+  transform: rotate(10deg);
+}
+
+
+.floatBox {
+  width: 100%;
+  height: 100%;
+  border-radius: 100px 100px 0 0;
+  position: absolute;
+  top: -100%;
+  transition: all .5s;
+  background-color: #FBFFF5;
+  cursor: pointer;
+  z-index: 3;
+
+}
+
+.floatBox.active {
+  top: 0%;
+  z-index: 3;
+
+}
+
+.floatBox ul {
+  width: 80%;
+  height: 100%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+
+.floatBox ul li {
+  width: 120px;
+  height: 30px;
+  border-radius: 20px;
+  border: .5px solid #8e8e8e;
+  margin-bottom: 5px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: center;
+
+}
+
+.floatBox li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.enter:focus,
+.return:focus {
+  box-shadow: 2px 2px 3px rgba(76, 76, 76, .5), -2px -2px 3px rgba(76, 76, 76, .5);
+}
+
+#shopee {
+  background-color: #EE4E2E;
+  background-image: url(../images/shopee.svg);
+}
+
+#momentum {
+  background-image: url(../images/momentum.svg);
+}
+
+#books {
+  background-image: url(../images/books.svg);
+}
+
+#pcHome {
+  background-image: url(../images/pchome.svg);
+  margin-bottom: 20px;
+}
+
+/* 熱銷商品 */
+
+#billboard {
+  width: 25%;
+  height: 20%;
+  background-image: url(../images/billboard.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: 5px;
+  right: 8%;
+  padding-top: 30px;
+  text-align: center;
+  transition: all .5s;
+  z-index: 1;
+
+}
+
+#billboard a {
+  display: inline-block;
+  width: 95px;
+  color: #fff;
+  text-decoration: none;
+  font-size: .5rem;
+  letter-spacing: 5px;
+  position: relative;
+}
+
+#billboard a::after {
+  content: url(../images/white\ arrow.svg);
+  width: 6%;
+  position: absolute;
+  right: 3px;
+
+}
+
+#hill {
+  width: 30%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: 2;
+
+}
+
+.flip {
+  height: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card {
+  width: 160px;
+  height: 140px;
+
+}
+
+figure {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 5px 5px #CC4058;
+
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.gowild {
+  background-color: #fff;
+}
+
+footer {
+  height: 10vh;
+  background-color: #B61C31;
+  
+}
+
+footer ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+
+footer li {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer li img {
+  width: 38px;
+  
+}
+
+footer li p {
+  padding-top: 10px;
+  color: #fff;
+  
+}
