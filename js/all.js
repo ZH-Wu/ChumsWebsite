@@ -35,6 +35,7 @@ $(function () {
     $(this).siblings('.floatBox').toggleClass('active');
     
   });
+
   $('.return').click(function() {
     $(this).parent().toggleClass('active');
   });
@@ -84,20 +85,65 @@ var swiper = new Swiper(".slide-content", {
   
 });
 
+// RWD js
+
 var swiper = new Swiper(".pSwiper>.slide-content", {
   slidesPerView: 1,
   spaceBetween: 20,
   freeMode: true,
   loop: true,
+  fade: true,
   grabCursor: true,
-  allowTouchMove: true,
-  followFinger: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
   autoplay: {
     delay: 2000,
+    pauseOnMouseEnter:true,
     disableOnInteraction:false,
+    
   }  
   
 });
+
+var swiper = new Swiper(".newsM .slide-content", {
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  freeMode: true,
+  loop: true,
+  fade: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 2000,
+    pauseOnMouseEnter:true,
+    disableOnInteraction:false,
+    
+  }  
+  
+});
+
+var swiper = new Swiper(".shopM .slide-content", {
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  freeMode: true,
+  loop: true,
+  fade: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 2000,
+    pauseOnMouseEnter:true,
+    disableOnInteraction:false,
+    
+  }  
+  
+});
+
 
 
 
