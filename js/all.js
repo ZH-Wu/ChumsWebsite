@@ -84,6 +84,21 @@ var swiper = new Swiper(".slide-content", {
   
 });
 
+var swiper = new Swiper(".pSwiper>.slide-content", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  freeMode: true,
+  loop: true,
+  grabCursor: true,
+  allowTouchMove: true,
+  followFinger: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction:false,
+  }  
+  
+});
+
 
 
 

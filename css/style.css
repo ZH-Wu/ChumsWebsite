@@ -72,13 +72,6 @@ img {
 header {
   height: 120vh;
   position: relative;
-
-}
-
-@media (max-width: 576px) {
-  header {
-    height: 30vh;
-  }
 }
 
 .upperPart {
@@ -88,13 +81,6 @@ header {
 
 }
 
-@media (max-width: 576px) {
-  .upperPart {
-    height: 75%;
-    
-  }
-}
-
 .upperPart .logo {
   width: 7%;
   z-index: 2;
@@ -102,25 +88,11 @@ header {
   padding: 10px 0;
 }
 
-@media (max-width: 576px) {
-  .upperPart .logo {
-    width: 10%;
-  }
-}
-
 #ribbon {
   position: absolute;
   top: -10px;
   z-index: 1;
 }
-
-@media (max-width: 576px) {
-  #ribbon {
-    top: 0;
-  }
-}
-
-
 
 @keyframes rising {
   from {
@@ -144,26 +116,6 @@ header {
 
 }
 
-@media (max-width: 576px) {
-  @keyframes rising {
-    from {
-      top: 100px;
-      opacity: 0;
-    }
-  
-    to {
-      top: 60px;
-      opacity: 1;
-    }
-  }
-  
-  #slogan {
-    width: 80%;
-    left: 50px;
-    top: 60px;
-  }
-  
-}
 
 .upperPart .menu {
   position: absolute;
@@ -173,34 +125,18 @@ header {
   z-index: 2;
 }
 
-@media (max-width: 576px) {
-  .upperPart .menu {
-    width: 40px;
-
-  }
-}
-
 .lowerPart {
   height: 15%;
   background: url(../images/noise_background.png);
   background-size: cover;
   background-repeat: no-repeat;
+  border: 1px solid #000;
 
 }
-
-@media (max-width: 576px) {
-  .lowerPart {
-    height: 31%;
-    
-  }
-}
-
-
 
 .cloud {
   position: absolute;
   width: 20%;
-
 }
 
 .cloud0 {
@@ -240,19 +176,6 @@ header {
   }
 }
 
-@media (max-width: 576px) {
-  @keyframes cloud1 {
-    from {
-      right: 0px;
-      top: 80px;
-    }
-  
-    to {
-      right: 100%;
-      top: 80px;
-    }
-  }
-}
 
 .cloud2 {
   transform: scale(0.5);
@@ -273,19 +196,6 @@ header {
   }
 }
 
-@media (max-width: 576px) {
-  @keyframes cloud2 {
-    from {
-      left: 0px;
-      top: 50px;
-    }
-  
-    to {
-      left: 100%;
-      top: 50px;
-    }
-  }
-}
 
 .cloud3 {
   transform: scale(0.5);
@@ -353,7 +263,6 @@ header {
   position: absolute;
   left: 0;
   bottom: 0px;
-  width: 101%;
 
 }
 
@@ -368,15 +277,15 @@ header {
   bottom: 0;
   left: 28%;
   z-index: 5;
-
-
 }
 
 @media (max-width: 576px) {
   .centerPic {
-    width: 65%;
-    left: 18%;
-    
+    width: 90%;
+    left: 6%;
+    bottom: 0%;
+    justify-content: center;
+
   }
 }
 
@@ -389,14 +298,158 @@ header {
   width: 22%;
 }
 
+@media (min-width: 577px) {
+  .nav2 {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    height: 35vh;
+    /* border: 1px solid #000; */
+  }
+
+  .upperPart {
+    height: 85%;
+  }
+
+  .lowerPart {
+    height: 25%;
+  }
+
+  .nav1 {
+    display: none;
+  }
+
+  .nav2 {
+    height: 50px;
+    padding: 15px 20px;
+    background-color: #F0DAA5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav2 .menuL {
+    width: 12%;
+  }
+
+  .nav2 .logo {
+    width: 15%;
+  }
+
+  .nav2 .magXs {
+    width: 5%;
+    padding-top: 5px;
+    transform: rotate(-20deg);
+  }
+
+  @keyframes rising {
+    from {
+      top: 100px;
+      opacity: 0;
+    }
+
+    to {
+      top: 60px;
+      opacity: 1;
+    }
+  }
+
+  #slogan {
+    width: 80%;
+    left: 50px;
+    top: 60px;
+  }
+
+  @keyframes cloud0 {
+    from {
+      left: 170px;
+      top: 60px;
+    }
+
+    to {
+      left: 100%;
+      top: 60px;
+    }
+  }
+
+  @keyframes cloud1 {
+    from {
+      right: 0px;
+      top: 80px;
+    }
+
+    to {
+      right: 100%;
+      top: 80px;
+    }
+  }
+
+  @keyframes cloud2 {
+    from {
+      left: 0px;
+      top: 50px;
+    }
+
+    to {
+      left: 100%;
+      top: 50px;
+    }
+  }
+
+  @keyframes cloud3 {
+    from {
+      right: 0px;
+      top: 100px;
+    }
+
+    to {
+      right: 100%;
+      top: 100px;
+    }
+  }
+
+  @keyframes cloud4 {
+    from {
+      left: 0px;
+      top: 150px;
+    }
+
+    to {
+      left: 100%;
+      top: 150px;
+    }
+  }
+
+  @keyframes cloud5 {
+    from {
+      right: 0px;
+      top: 180px;
+    }
+
+    to {
+      right: 100%;
+      top: 180px;
+    }
+  }
+}
+
 /* 主要內容區 */
 main {
   height: 450vh;
   position: relative;
   background: url(../images/path15.svg), url(../images/noise_background.png);
   background-repeat: no-repeat, repeat;
-  /* background-position: top center, center; */
+  border: 1px solid #f00;
 
+}
+
+@media (max-width: 576px) {
+  main {
+    height: 150vh;
+  }
 }
 
 .about {
@@ -404,7 +457,6 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
 
 .aboutUs {
@@ -518,7 +570,66 @@ main {
 
 }
 
+@media (max-width: 576px) {
+  .about {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 40%;
+  }
 
+  .aboutUs {
+    width: 100%;
+    height: 70%;
+    padding-top: 70px;
+    opacity: 1;
+  }
+
+  .aboutUs h2 {
+    width: 16rem;
+    font-size: 3rem;
+    margin-bottom: .8rem;
+  }
+
+  .aboutUs p {
+    font-size: .8rem;
+    color: #CC4058;
+    font-weight: bold;
+    width: 70%;
+    margin-bottom: .8rem;
+    text-shadow: 2px 2px #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+
+  }
+  .aboutUs .btn {
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, .5);
+    padding: 8px;
+  }
+  .aboutUs .btn::after {
+    top: 7px;
+  }
+  .bird {
+    position: relative;
+    height: 30%;
+    margin-left: 100%;
+  }
+  .logo_2 {
+    left: 10px;
+    top: 0px;
+    width: 70%;
+  }
+  .welcomeBird {
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+  }
+  .footprint {
+    display: none;
+  }
+}
 
 /*產品資訊區*/
 
@@ -565,7 +676,6 @@ main {
 }
 
 
-
 .chatBox {
   display: none;
   position: absolute;
@@ -590,47 +700,25 @@ main {
 .c1 {
   top: 25%;
   left: 10%;
-  /* animation: slideInUp;
-  animation-duration: 2s;
-  animation-iteration-count: 3; */
-
-
 }
-
-/* @keyframes slideInUp {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-} */
 
 .c2 {
   right: 35%;
-  /* animation: slideInUp;
-  animation-duration: 2s;
-  animation-iteration-count: 3; */
 }
 
 .c3 {
   right: 42%;
   bottom: 52%;
-  /* animation: slideInUp;
-  animation-duration: 2s;
-  animation-iteration-count: 3; */
 }
 
 .c4 {
   bottom: 15%;
   left: 18%;
-  /* animation: slideInUp;
-  animation-duration: 2s;
-  animation-iteration-count: 3; */
 }
 
 .c5 {
   right: 10%;
   bottom: 48%;
-  /* animation: slideInUp;
-  animation-duration: 2s;
-  animation-iteration-count: 3; */
 }
 
 .magnifier {
@@ -677,10 +765,8 @@ main {
   border: 4px solid #B61C31;
   position: relative;
   overflow: hidden;
-  display: none;
   position: absolute;
-
-
+  display: none;
 }
 
 .jacket {
@@ -874,6 +960,97 @@ main {
   margin-bottom: 20px;
 }
 
+@media (min-width: 577px) {
+  .pSwiper {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .product {
+    height: 40%;
+  }
+  .product h2 {
+    left: 17%;
+    top: 1%;
+  }
+  @keyframes sliding {
+    0% {
+      right: 5%;
+    }
+  
+    25% {
+      right: 15%;
+      rotate: -50deg;
+    }
+  
+    50% {
+      right: 15%;
+      rotate: -30deg
+    }
+  
+    100% {
+      right: 5%;
+    }
+  }
+  .birdWithGuitar {
+    top: 130%;
+    right: 0%;
+  }
+  .chatbox,
+  .magnifier {
+    display: none;
+  }
+  .group1,
+  .group2,
+  .group3,
+  .group4,
+  .group5 {
+    display: none;
+  }
+  .pSwiper .slide-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    margin: 0;
+    border-radius: 0px;
+  }
+  .card0 {
+    max-width: 390px;
+    margin: 0;
+  }
+  .product-box {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+  }  
+  .tentM {
+    padding-top: 65px;
+  }
+  .tentM img{
+    height: 60%;
+    margin-bottom: 30px;
+  }
+  .chairM img {
+    height: 75%;
+  }
+  .hatM img {
+    height: 60%;
+    padding-top: 80px;
+    margin-bottom: 55px;
+  }
+  .floatBox {
+    width: 100%;
+    height: 100%;
+    top: -101%;
+  }  
+}
+
+
 /* 熱銷商品 */
 
 #billboard {
@@ -920,6 +1097,23 @@ main {
   bottom: 50px;
   right: 15px;
   z-index: 2;
+
+}
+
+@media (max-width: 576px) {
+  #billboard {
+    width: 210px;
+    height: 175px;
+    bottom: -40%;
+    left: 0%;
+    line-height: 160px;
+  }
+  #hill {
+    width: 80%;
+    bottom: -49%;
+    left: -10%;
+  }
+
 
 }
 
@@ -1007,32 +1201,6 @@ figure img {
   z-index: 1;
 
 }
-
-/* .card a {
-  display: block;
-  width: 100%;
-  height: 0%;
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0);
-  text-align: center;
-  line-height: 400px;
-  font-family: 'Courgette', cursive;
-  font-size: 2rem;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0);
-  transition: all 1s;
-  position: absolute;
-  top: 0;
-  left: 0;
-  
-
-}
-
-.card:hover a {
-  height: 10%;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: rgba(0, 0, 0, 1);
-} */
 
 .swiper-navBtn {
   --swiper-navigation-size: 60px;
