@@ -1,13 +1,14 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&family=Montserrat&family=Noto+Sans+TC:wght@900&family=Roboto:wght@700&display=swap');
 
-
+/* 英文字體 */
 @font-face {
   font-family: 'Courgette', cursive;
   src: url('https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&family=Montserrat&family=Noto+Sans+TC:wght@900&family=Roboto:wght@700&display=swap');
   unicode-range: U+000-5FF, U+1e00-1fff, U+2000-2300;
 }
 
+/* 中文字體 */
 @font-face {
   font-family: GenSenRounded;
   src: url(../webFonts/ttc/GenSenRounded-R.ttc);
@@ -20,7 +21,7 @@
 
 }
 
-/* 大框架 */
+/* 最外圍容器設定 */
 .box {
   max-width: 1920px;
   margin: 0 auto;
@@ -31,7 +32,7 @@
 
 /* CSS共用區 */
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
 
 }
@@ -45,30 +46,11 @@ img {
 
 .flag_news,
 .flag_shop {
-  max-width: 18%;
+  width: 18%;
+  position: absolute;
 }
-
-/* Top按鈕 */
-
-#fixedTop {
-  display: none;
-  cursor: pointer;
-  width: 5%;
-  height: 100px;
-  background-image: url(../images/top.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-  z-index: 10;
-
-}
-
-
 
 /* 頁首區 */
-
 header {
   height: 120vh;
   position: relative;
@@ -81,20 +63,276 @@ header {
 
 }
 
-.upperPart .logo {
+.nav .logo {
   width: 7%;
-  z-index: 2;
   margin: 0 auto;
   padding: 10px 0;
+  z-index: 2;
 }
 
-#ribbon {
+.nav figure {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 5.2%;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.nav .ribbon {
   position: absolute;
   top: -10px;
-  z-index: 1;
+  z-index: 4;
 }
 
-@keyframes rising {
+/* OffCanvas 主選單 */
+.slide-menu  {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(245, 222, 168, 1);
+  z-index: 20;
+}
+@media (min-width: 577px) {
+  .slide-menuM {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .slide-menu {
+    display: none;
+  }
+  .slide-menuM {
+  position: absolute;
+  top: 50px;
+  right: -100%;
+  width: 100%;
+  height: 794px;
+  background-color: rgba(245, 222, 168, 1);
+  z-index: 20;
+  transition: .5s;
+  }
+  .slide-menuM.active {
+    right: 0%;
+  }
+}
+
+.slide-menu span {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  display: block;
+  font-size: 3rem;
+  cursor: pointer;
+  color: #B61C31;
+}
+
+.upper {
+  height: 50%;
+  padding-top: 30px;
+}
+@media (max-width: 576px) {
+  .slide-menuM .upper {
+    height: 70%;
+    padding-top: 50px;
+  }
+  
+}
+
+.upper h2 {
+  width: 6%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+}
+
+.upper ul {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  
+}
+@media (max-width: 576px) {
+  .slide-menuM .upper ul {
+    width: 100%;
+    justify-content: center;
+    margin: 20px 0;
+  }
+}
+
+.upper li{
+  width: 200px;
+  height: 200px;
+  padding-top: 105px;
+  color: #fff;
+  text-align: center;
+  transition: all .5s;
+  background-image: url(../images/foot.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media (max-width: 576px) {
+  .slide-menuM .upper ul li {
+    width: 130px;
+    height: 130px;
+    padding-top: 65px;
+    background-size: contain;
+    font-size: .8rem;
+  }
+}
+
+.upper li:hover {
+  transform: translateY(-20px);
+}
+
+.upper li a {
+  text-decoration: none;
+  color: #fff;
+  padding-bottom: 10px;
+}
+.upper li a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.lower {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  
+}
+@media (max-width: 576px) {
+  .slide-menuM .lower {
+    height: 30%;
+  }
+}
+
+#bg {
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+#booby {
+  width: 20%;
+  position: absolute;
+  bottom: 150px;
+  right: 50px;
+  z-index: 1;
+}
+@media (max-width: 576px) {
+  #booby {
+    width: 40%;
+    bottom: 100%;
+    right: 25px;
+    transform: rotate(25deg);
+  }
+}
+
+.lower ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 285px;
+  width: 30%;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 35%;
+  z-index: 3;
+  
+}
+@media (max-width: 576px) {
+  .slide-menuM .lower ul {
+    width: 80%;
+    bottom: 15%;
+    left: 10%;
+    padding-top: 0;
+  }
+}
+
+.CTA {
+  font-family: 'Courgette', cursive;
+}
+@media (max-width: 576px) {
+  .slide-menuM .lower .CTA {
+    position: absolute;
+    left: 35%;
+    top: 40%;
+    font-size: 1.5rem;
+    z-index: 3;
+  }
+}
+
+.lower a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-indent: 101%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all .5s;
+}
+@media (max-width: 576px) {
+  .slide-menuM .lower a {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.lower a:hover {
+  transform: translateY(-15px);
+}
+
+.fb {
+  background-image: url(../images/fb.svg);
+}
+
+.fb:hover {
+  background-image: url(../images/fb_2.svg);
+}
+
+.line {
+  background-image: url(../images/line.svg);
+}
+
+.line:hover {
+  background-image: url(../images/line-y.svg);
+}
+
+.ig {
+  background-image: url(../images/ig.svg);
+}
+
+.ig:hover {
+  background-image: url(../images/ig-y.svg);
+}
+
+.yt {
+  background-image: url(../images/yt.svg);
+}
+
+.yt:hover {
+  background-image: url(../images/yt_2.svg);
+}
+
+
+
+#slogan {
+  width: 50%;
+  position: absolute;
+  left: 27%;
+  top: 280px;
+  z-index: 4;
+  animation-name: slogan;
+  animation-duration: 1.5s;
+
+}
+
+@keyframes slogan {
   from {
     top: 500px;
     opacity: 0;
@@ -104,25 +342,6 @@ header {
     top: 280px;
     opacity: 1;
   }
-}
-
-#slogan {
-  position: absolute;
-  left: 700px;
-  top: 280px;
-  z-index: 3;
-  animation-name: rising;
-  animation-duration: 1.5s;
-
-}
-
-
-.upperPart .menu {
-  position: absolute;
-  top: 0;
-  right: 10px;
-  width: 100px;
-  z-index: 2;
 }
 
 .lowerPart {
@@ -136,6 +355,7 @@ header {
 .cloud {
   position: absolute;
   width: 20%;
+  z-index: 3;
 }
 
 .cloud0 {
@@ -175,12 +395,11 @@ header {
   }
 }
 
-
 .cloud2 {
   transform: scale(0.5);
   animation: cloud2 40s infinite linear;
   animation-delay: 2s;
-  z-index: 3;
+
 }
 
 @keyframes cloud2 {
@@ -195,12 +414,11 @@ header {
   }
 }
 
-
 .cloud3 {
   transform: scale(0.5);
   animation: cloud3 60s infinite linear;
   animation-delay: 2.35s;
-  z-index: 3;
+
 
 }
 
@@ -220,7 +438,6 @@ header {
   transform: scale(0.45);
   animation: cloud4 60s infinite linear;
   animation-delay: 2.55s;
-  z-index: 3;
 
 
 }
@@ -243,7 +460,7 @@ header {
   transform: scale(0.5);
   animation: cloud5 60s infinite linear;
   animation-delay: 2.75s;
-  z-index: 1;
+
 }
 
 @keyframes cloud5 {
@@ -267,13 +484,13 @@ header {
 
 .centerPic {
   width: 50%;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
   padding: 0 20px;
   position: absolute;
-  bottom: 0;
+  bottom: 0%;
   left: 28%;
   z-index: 5;
 }
@@ -298,7 +515,7 @@ header {
 }
 
 @media (min-width: 577px) {
-  .nav2 {
+  .nav_rwd {
     display: none;
   }
 }
@@ -306,7 +523,6 @@ header {
 @media (max-width: 576px) {
   header {
     height: 35vh;
-    /* border: 1px solid #000; */
   }
 
   .upperPart {
@@ -314,52 +530,69 @@ header {
   }
 
   .lowerPart {
-    height: 25%;
+    height: 15%;
   }
 
-  .nav1 {
+  .nav {
     display: none;
   }
 
-  .nav2 {
+  .nav_rwd {
     height: 50px;
-    padding: 15px 20px;
+    padding: 0 20px;
     background-color: #F0DAA5;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .nav2 .menuL {
-    width: 12%;
-  }
 
-  .nav2 .logo {
+  .nav_rwd .menuL {
     width: 15%;
   }
+  .nav_rwd .menuL.active {
+    opacity: 0;
+  }
 
-  .nav2 .magXs {
-    width: 5%;
+  .nav_rwd .back {
+    width: 10%;
+    position: absolute;
+    opacity: 0;
+    
+  }
+  .nav_rwd .back.active {
+    opacity: 1;
+  }
+
+  .nav_rwd .logo {
+    width: 20%;
+  }
+
+  .nav_rwd .magXs {
+    width: 6%;
     padding-top: 5px;
     transform: rotate(-20deg);
   }
 
-  @keyframes rising {
+  #slogan {
+    width: 80%;
+    position: absolute;
+    left: 45px;
+    top: 100px;
+    z-index: 4;
+  
+  }
+
+  @keyframes slogan {
     from {
-      top: 100px;
+      top: 180px;
       opacity: 0;
     }
 
-    to {
-      top: 60px;
+    to {      
+      top: 100px;
       opacity: 1;
     }
-  }
-
-  #slogan {
-    width: 80%;
-    left: 50px;
-    top: 60px;
   }
 
   @keyframes cloud0 {
@@ -457,7 +690,7 @@ main {
 }
 
 .aboutUs {
-  width: 50%;
+  max-width: 960px;
   height: 80vh;
   background-image: url(/images/branches.svg);
   background-repeat: no-repeat;
@@ -478,35 +711,30 @@ main {
   text-align: center;
 }
 
-.aboutUs h2 {
-  width: 15rem;
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-
+.aboutUs h2, .aboutUs p {
+ margin-bottom: 20px;
 }
 
 .aboutUs p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #364F0B;
   width: 70%;
   line-height: 1.5;
   letter-spacing: 2px;
-  margin-bottom: 30px;
-
+  padding: 10px 0;
 }
 
 .aboutUs .btn {
   display: block;
   color: #fff;
-  font-family: 'Courgette', cursive;
   text-decoration: none;
   font-size: 20px;
   background: #CC4058;
-  width: 150px;
-  padding: 20px;
-  border-radius: 18px;
+  width: 200px;
+  padding: 25px 20px 20px 10px;
+  border-radius: 60px;
   border: none;
-  box-shadow: 0px 3px 0px rgba(0, 0, 0, .5);
+  box-shadow: 0px 5px rgba(255, 0, 255, .5);
   cursor: pointer;
   position: relative;
   top: 0px;
@@ -518,13 +746,13 @@ main {
   content: url(../images/white\ arrow.svg);
   width: 5%;
   position: absolute;
-  top: 18px;
-  right: 15px;
+  top: 24px;
+  right: 40px;
 }
 
 .aboutUs .btn:hover,
 .aboutUs .btn:active {
-  box-shadow: none;
+  box-shadow: 0px 0px 10px rgba(255, 0, 255, 1);
   top: 5px;
 }
 
@@ -540,7 +768,7 @@ main {
   position: absolute;
   left: 72px;
   top: 20px;
-  max-width: 50%;
+  width: 50%;
   transform: rotate(344deg);
 
 }
@@ -552,6 +780,7 @@ main {
   width: 80%;
 }
 
+/* 由JavaScript控制的CSS動畫效果 */
 .animate__tada {
   animation-duration: 1200ms;
   animation-iteration-count: 2;
@@ -567,11 +796,16 @@ main {
 
 }
 
+@media (min-width: 577px) {
+  .about .birdWithGuitar {
+    display: none;
+  }
+}
+
 @media (max-width: 576px) {
   .about {
-    flex-direction: column-reverse;
-    justify-content: space-between;
     height: 30%;
+    align-items: start;
   }
 
   .aboutUs {
@@ -582,56 +816,43 @@ main {
   }
 
   .aboutUs h2 {
-    width: 16rem;
-    font-size: 3rem;
-    margin-bottom: .8rem;
+    font-size: 2rem;
+    margin-bottom: .7rem;
   }
 
-  .aboutUs p {
+  .aboutUs .p1 {
+    display: none;
+  } 
+
+  .aboutUs .p2 {
     font-size: .8rem;
     color: #CC4058;
-    font-weight: bold;
+    font-weight: 700;
     width: 70%;
-    margin-bottom: .8rem;
-    text-shadow: 2px 2px #fff;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    margin-bottom: .5rem;
+    padding: 0;
 
   }
 
   .aboutUs .btn {
     box-shadow: 0px 3px 0px rgba(0, 0, 0, .5);
-    padding: 8px;
+    padding: 10px 10px 6px 5px;
   }
 
   .aboutUs .btn::after {
-    top: 7px;
+    top: 9px;
   }
 
   .bird {
-    position: relative;
-    height: 30%;
-    margin-left: 100%;
-  }
-
-  .logo_2 {
-    left: 10px;
-    top: 0px;
-    width: 70%;
-  }
-
-  .welcomeBird {
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-  }
-
-  .footprint {
     display: none;
   }
+
+  .about .birdWithGuitar{
+    display: block;
+    width: 30%;
+    top: 20%;
+  }
+
 }
 
 /*產品資訊區*/
@@ -647,7 +868,7 @@ main {
   left: 30%;
 }
 
-@keyframes sliding {
+@keyframes birdWithGuitar {
   0% {
     right: 10%;
   }
@@ -672,7 +893,7 @@ main {
   top: 20%;
   right: 10%;
   width: 15%;
-  animation-name: sliding;
+  animation-name: birdWithGuitar;
   animation-duration: 3s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -761,17 +982,18 @@ main {
 }
 
 .product-box {
-  width: 310px;
+  max-width: 310px;
   height: 370px;
   border-radius: 150px 150px 0 0;
   background-color: #FBFFF5;
   border: 4px solid #B61C31;
-  position: relative;
   overflow: hidden;
+  /* product-box以div.product作為定位依據 */
   position: absolute;
   display: none;
 }
 
+/* 依個別商品命名的.product-box */
 .jacket {
   top: 10%;
   right: 35%;
@@ -785,7 +1007,6 @@ main {
 .chair {
   top: 50%;
   left: 38%;
-
 }
 
 .hat {
@@ -799,27 +1020,21 @@ main {
 }
 
 .product-box img {
-  margin-left: auto;
-  margin-right: auto;
-  /* border: 1px solid #000; */
-
+  margin: 0 auto;
 }
 
 .jacket img {
   width: 70%;
   margin-top: 40px;
-
 }
 
 .tent img {
   margin-top: 60px;
-
 }
 
 .chair img {
   width: 70%;
-  padding-right: 5px;
-
+  margin: 0 auto;
 }
 
 .hat img {
@@ -835,7 +1050,6 @@ main {
   color: #B61C31;
   padding-left: 20px;
   padding-bottom: 10px;
-  /* border: 1px solid #000; */
 }
 
 .product-box p {
@@ -845,8 +1059,7 @@ main {
   padding-bottom: 10px;
 }
 
-
-.enter {
+.buy {
   display: block;
   width: 80%;
   background: #B61C31;
@@ -857,10 +1070,11 @@ main {
   letter-spacing: 5px;
   margin: 0 auto;
   cursor: pointer;
+  /* 作為偽元素定位使用 */
   position: relative;
 }
 
-.enter::after {
+.buy::after {
   content: url(../images/white_foot.svg);
   width: 8%;
   position: absolute;
@@ -869,45 +1083,32 @@ main {
   transform: rotate(10deg);
 }
 
-
-.floatBox {
-  width: 310px;
-  height: 370px;
-  border-radius: 150px 150px 0 0;
+.slideBox {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
   position: absolute;
-  top: -370px;
+  top: -101%;
   transition: all .5s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: #FBFFF5;
   cursor: pointer;
-  padding-top: 30px;
-  z-index: 3;
+  padding-top: 60px;
 
 }
 
-.floatBox.active {
+.slideBox.active {
   top: 0;
-  z-index: 3;
-
 }
 
-.floatBox ul {
-  width: 240px;
-  height: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
+.slideBox ul {
+  margin: 20px 0;
 }
 
-.floatBox ul li {
-  width: 234px;
+.slideBox ul li {
+  width: 80%;
   height: 50px;
   border-radius: 50px;
+  margin: 6px auto;
   border: .5px solid #8e8e8e;
   background-color: #fff;
   background-repeat: no-repeat;
@@ -916,14 +1117,8 @@ main {
 
 }
 
-.floatBox ul li:hover {
+.slideBox ul li:hover {
   box-shadow: 2px 1px rgba(182, 28, 49, .4), -2px -1px rgba(182, 28, 49, .4);
-}
-
-.floatBox li a {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
 }
 
 .return {
@@ -935,12 +1130,11 @@ main {
   border-radius: 10px;
   color: #fff;
   letter-spacing: 5px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   cursor: pointer;
 }
 
-.enter:focus,
+.buy:focus,
 .return:focus {
   box-shadow: 2px 2px 3px rgba(76, 76, 76, .5), -2px -2px 3px rgba(76, 76, 76, .5);
 }
@@ -960,118 +1154,63 @@ main {
 
 #pcHome {
   background-image: url(../images/pchome.svg);
-  margin-bottom: 20px;
 }
 
 @media (min-width: 577px) {
-  .pSwiper {
+  .productM {
     display: none;
   }
 }
 
 @media (max-width: 576px) {
   .product {
+    display: none;
+  }
+  .productM {
     height: 30%;
   }
 
-  .product h2 {
-    left: 17%;
-    top: 1%;
+  .productM h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
-  @keyframes sliding {
-    0% {
-      right: 0%;
-    }
-
-    25% {
-      right: 10%;
-      rotate: -50deg;
-    }
-
-    50% {
-      right: 10%;
-      rotate: -30deg
-    }
-
-    100% {
-      right: 0%;
-    }
-  }
-
-  .birdWithGuitar {
-    width: 23%;
-    top: 125%;
-    display: none;
-  }
-
-  .chatbox,
-  .magnifier {
-    display: none;
-  }
-
-  .group1,
-  .group2,
-  .group3,
-  .group4,
-  .group5 {
-    display: none;
-  }
-
-  .pSwiper .slide-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+  .productM .swiper {
     height: 80%;
-    margin: 0;
-    border-radius: 0px;
   }
-
-  .card0 {
-    max-width: 390px;
-    margin: 0;
+  .productM .slide-content {
+    width: 100%;
+    height: 100%;
   }
-
-  .product-box {
-    width: 80%;
+  .productM .product-box {
+    width: 100%;
     height: 100%;
     margin: 0 auto;
     position: relative;
+    /* 因.product-box預設是display: none */
     display: block;
   }
-
-  .tentM {
-    padding-top: 65px;
+  .productM .product-box .tentM {
+    transform: scale(1.1);
+    margin-top: 60px;
+    margin-bottom: 45px;
+  } 
+  .productM .product-box .hatM {
+    margin-top: 55px;
+    margin-bottom: 50px;
   }
-
-  .tentM img {
-    height: 60%;
-    margin-bottom: 30px;
-  }
-
-  .chairM img {
+  .productM .product-box .chairM {
     height: 75%;
+    transform: scale(.9);
   }
 
-  .hatM img {
-    height: 60%;
-    padding-top: 80px;
-    margin-bottom: 55px;
-  }
-
-  .floatBox {
-    width: 100%;
-    height: 100%;
-    top: -101%;
-  }
 }
 
 
 /* 熱銷商品 */
-
 #billboard {
-  width: 300px;
+  width: 15.6%;
   height: 250px;
   background-image: url(../images/billboard.svg);
   background-repeat: no-repeat;
@@ -1092,7 +1231,7 @@ main {
 
 #billboard a {
   display: inline-block;
-  width: 150px;
+  width: 60%;
   color: #fff;
   text-decoration: none;
   font-size: 1.5rem;
@@ -1102,10 +1241,9 @@ main {
 
 #billboard a::after {
   content: url(../images/white\ arrow.svg);
-  width: 10%;
+  width: 8%;
   position: absolute;
-  right: -15px;
-
+  right: -10px;
 }
 
 #hill {
@@ -1118,116 +1256,72 @@ main {
 }
 
 @media (max-width: 576px) {
-  #billboard {
-    width: 210px;
-    height: 175px;
-    bottom: -40%;
-    left: 0%;
-    line-height: 160px;
+  #billboard, #hill {
     display: none;
   }
-
-  #hill {
-    width: 80%;
-    bottom: -49%;
-    left: -10%;
-    display: none;
-  }
-
-
 }
 
 
 /* 最新消息區 */
-
-.news {
+.news, .shop {
   position: relative;
-  display: flex;
-  align-items: center;
-  width: 90%;
+  width: 100%;
   height: 80vh;
-  margin: 0 auto;
+  padding-top: 20vh;
 }
-
 .flag_news {
-  position: absolute;
-  transform: scale(0.8);
-  top: 0px;
-  left: 140px;
+  top: -1%;
+  left: 1%;
 }
-
-
-.slide-container {
-  max-width: 1540px;
-  padding: 40px 0;
-  overflow: visible;
-
-
+.news .swiper-slide, .shop .swiper-slide {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 50px;
 }
-
-.slide-content {
-  overflow: hidden;
-  border-radius: 25px;
-  margin: 0 40px;
-
-}
-
-.card {
-  max-width: 400px;
-  height: 400px;
-  border-radius: 25px;
-  margin: 0 80px;
-  border: 5px solid #fff;
-  overflow: hidden;
+.news .slide-content {
+  width: 380px;
+  height: 380px;
   position: relative;
+  overflow: hidden;
+  border-radius: 25px;
 }
-
-figure {
-  width: 100%;
-  height: 100%;
+.news .slide-content figure {
   border-radius: 25px;
   overflow: hidden;
+  border: 5px solid #fff;
 
 }
-
-figure img {
-  width: 100%;
-  height: 100%;
-}
-
-.card:hover a {
-  bottom: 0px;
-}
-
-.card a {
+.news .slide-content a{
   display: block;
-  width: 100%;
+  width: 370px;
   text-decoration: none;
+  border-radius: 0 0 25px 25px;
+  padding: 20px 0;
   background: #000;
   color: #fff;
-  padding: 20px 0;
   text-align: center;
-  /*   margin-left: 30px; */
   position: absolute;
+  left: 5px;
   bottom: -60px;
-  /* h2經過1秒德時間，從bottom: -50px的位置，移動到bottom: 0的位置 */
-  transition: all .5s linear;
-  z-index: 1;
+  transition: .5s linear;
+    
+}
+.news .slide-content:hover a {
+  bottom: 0;  
 }
 
-.swiper-navBtn {
-  --swiper-navigation-size: 60px;
+.news .swiper-navBtn, .shop .swiper-navBtn {
+  --swiper-navigation-size: 50px;
   --swiper-navigation-color: #b61c31;
 
 }
-
-.swiper-navBtn:hover {
+.news .swiper-navBtn:hover, .shop .swiper-navBtn:hover {
   color: #4070F4;
 }
 
 .swiper-button-prev {
-  left: -60px;
-
+  left: var(--swiper-navigation-sides-offset,30px);
 }
 
 .swiper-button-prev::after {
@@ -1237,33 +1331,13 @@ figure img {
 }
 
 .swiper-button-next {
-  right: -60px;
+  right: var(--swiper-navigation-sides-offset,30px);
 }
-
 .swiper-button-next::after {
   content: '\e7cd';
   font-family: Material Symbols Outlined;
   transform: rotate(-90deg);
 
-}
-
-.swiper-pagination-bullet {
-  background-color: #B61C31;
-  opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #B61C31;
-}
-
-@media screen and (max-width: 768px) {
-  .slide-content {
-    margin: 0 10px;
-  }
-
-  .swiper-navBtn {
-    display: none;
-  }
 }
 
 @media (min-width: 577px) {
@@ -1276,92 +1350,76 @@ figure img {
   .news {
     display: none;
   }
-
   .newsM {
     height: 20%;
   }
-
-  .newsM .slide-container {
-    height: 100%;
-    padding: 0;
-    padding: 0;
-  }
-
   .newsM h2.title {
     text-align: center;
-    padding: 10px 0;
+    margin-bottom: 20px;
   }
-
-  .card1 {
-    max-width: 300px;
-    height: 220px;
-    border: 3px solid #fff;
+  .newsM .swiper {
+    height: 190px;
+  }
+  .newsM .swiper-slide {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .newsM .slide-content {
+    width: 45%;
+    position: relative;
     overflow: hidden;
     border-radius: 25px;
   }
-
-  .card1 a {
+  .newsM .slide-content figure {
+    border-radius: 25px;
+    overflow: hidden;
+    border: 5px solid #fff;
+  
+  }
+  .newsM .slide-content a{
     display: block;
-    width: 100%;
+    width: 95%;
     text-decoration: none;
+    border-radius: 0 0 25px 25px;
+    font-size: .8rem;
+    padding: 10px 0;
     background: #000;
     color: #fff;
-    padding: 10px 0;
     text-align: center;
     position: absolute;
-    bottom: 0px;
-    z-index: 1;
-  }
-
-  .swiper-navBtn,
-  .swiper-pagination-bullet {
-    display: none;
-  }
+    left: 5px;
+    bottom: 5px;
+    transition: .5s linear; 
+  }  
 }
 
 /* 門市資訊區 */
 
-.shop {
-  position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 90%;
-  height: 80vh;
-  margin: 0 auto;
-  padding-top: 100px;
-
-}
-
 .flag_shop {
-  position: absolute;
-  top: 0px;
-  right: 155px;
-  transform: scale(0.8);
+  top: -8%;
+  right: 0%;
 }
 
-
-.card2 {
-  max-width: 400px;
-  height: 400px;
+.shop .slide-content {
+  width: 360px;
+  height: 360px;
   border-radius: 25px;
-  margin: 0px 80px 20px;
-  box-shadow: 15px 15px #CC4058;
   background-color: #fff;
-
+  box-shadow: 10px 10px #CC4058;
 }
 
-.gowild {
+.shop .slide-content figure {
   margin: 10px auto;
   width: 90%;
-  height: 160px;
+  height: 35%;
   border-radius: 25px;
   overflow: hidden;
-  border: 1px solid #CC4058;
+  border: 2px solid #CC4058;
 
 }
 
-.gowild img {
+.shop .slide-content figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1375,7 +1433,6 @@ span {
 .info {
   padding: 0px 20px;
   text-align: left;
-  /* border: 1px solid #000; */
 }
 
 .info>* {
@@ -1393,7 +1450,6 @@ span {
 .info a {
   display: inline-block;
   text-decoration: none;
-  /* border: 1px solid #000; */
 
 }
 
@@ -1414,6 +1470,7 @@ span {
     display: none;
   }
 }
+
 @media (max-width: 576px) {
   .shop {
     display: none;
@@ -1422,78 +1479,66 @@ span {
   .shopM {
     height: 20%;
   }
-
-  .shopM .slide-container {
-    height: 100%;
-    padding: 0;
-    padding: 0;
-  }
-
   .shopM h2.title {
     text-align: center;
-    padding: 10px 0;
+    margin-bottom: 20px;
   }
-  .slide-content {
-    border-radius: 15px;
+  .shopM .swiper {
+    height: 190px;
   }
-
-  .card3 {
-    max-width: 300px;
-    height: 220px;
-    overflow: hidden;
-    border-radius: 25px;
-    margin: 0;
-    border: 2px solid #fff;
-    background-color: #b61c31;
+  .shopM .swiper-slide {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
-
-  .gowild {
+  .shopM .slide-content {
+    width: 45%;
+    height: 100%;
+    border-radius: 20px;
+    background: #fff;
+    position: relative;
+  }
+  .shopM .slide-content figure {
     margin: 10px auto;
-    width: 90%;
-    height: 30%;
+    width: 80%;
+    height: 40%;
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid #CC4058;
-    background-color: #fff;
+  
   }
   
-  .gowild img {
+  .shopM .slide-content figure img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
   }
-
-  .info {
+    
+  .shopM .info h2 {
+    font-size: .8rem;
     padding: 0;
-  }
-  .info h2 {
-    font-size: 1rem;
-    padding: 20px 15px;
-    margin-bottom: 7px;
-    color: #fff;
-  }  
-  .info a {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    border-radius: 0 0 25px 25px;
-    text-align: center;
     margin: 0;
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
+  }  
+  
+  .shopM .slide-content .info a{
+    margin: 0;
+    display: block;
+    width: 100%;
     text-decoration: none;
-  }
-  .swiper-navBtn,
-  .swiper-pagination-bullet {
-    display: none;
-  }
+    border-radius: 0 0 20px 20px;
+    padding: 10px 0;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    
+  }  
 }
 
-
 /* 頁尾區 */
-
 footer {
   height: 50vh;
   position: relative;
@@ -1503,12 +1548,50 @@ footer {
   padding-top: 250px;
 }
 
+@media (max-width: 576px) {
+  footer {
+    height: 15vh;
+    padding-top: 15px;
+    background-image: url(../images/grass_rwd.svg),url(../images/noise_background.png);
+  }
+  
+}
+
+/* Top按鈕 */
+#fixedTop {
+  display: none;
+  cursor: pointer;
+  width: 5%;
+  height: 100px;
+  background-image: url(../images/top.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 10;
+
+}
+@media (max-width: 576px) {
+  #fixedTop {
+    width: 17%;
+    height: 10%;
+    right: 0px;
+    bottom: 0px;
+  }
+}
+
 .bird_end {
   position: absolute;
   top: 55%;
   left: 18%;
   width: 150px;
   height: 150px;
+}
+@media (max-width: 576px) {
+  .bird_end {
+    display: none;
+  }
 }
 
 .footer_content {
@@ -1517,13 +1600,19 @@ footer {
   padding: 10px 20px;
 
 }
-
-
 .sitemap {
   display: flex;
   justify-content: center;
-  /* border: 1px solid #000;   */
+}
 
+@media (max-width: 576px) {
+  .footer_content {
+    width: 80%;
+    padding-left: 30px;
+  }
+  .footer_content .sitemap {
+    display: none;
+  }
 }
 
 .link a {
@@ -1550,6 +1639,13 @@ footer {
   width: 52%;
   margin: 0 auto;
 }
+@media (max-width: 576px) {
+  .share {
+    width: 100%;
+    justify-content: space-evenly;
+
+  }
+}
 
 .share a {
   display: block;
@@ -1561,6 +1657,11 @@ footer {
   background-size: cover;
   margin-top: 30px;
   transition: all .5s;
+}
+@media (max-width: 576px) {
+  .share a {
+    transform: scale(.6);
+  }
 }
 
 .share a:hover {

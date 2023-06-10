@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>首頁</title>
   <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
+  <!-- Google Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet"
@@ -15,9 +18,12 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Reset CSS -->
   <link rel="stylesheet" href="./css/reset.css">
+  <!-- Animate.css套件 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <!-- Swiper CSS套件CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -27,15 +33,66 @@
     <!-- 頁首區 -->
     <header>
       <div class="upperPart">
-        <div class="nav1">
+        <div class="nav">
           <img src="./images/logo.svg" alt="Chums logo" class="logo">
-          <a href="menu.html" class="menu"><img src="./images/menu.svg" alt="主選單"></a>
-          <img src="./images/ribbon.svg" alt="" id="ribbon">
+          <figure><img src="./images/menu.svg" alt="menu"></figure>
+          <img src="./images/ribbon.svg" class="ribbon">
         </div>
-        <div class="nav2">
-          <a href="#" class="menuL"><img src="./images/menuL.png" alt="主選單"></a>
+        <div class="nav_rwd">
+          <img src="./images/menuL.png" alt="主選單" class="menuL">
+          <img src="./images/return.png" alt="" class="back">
           <img src="./images/logo.svg" alt="Chums logo" class="logo">
           <a href="#" class="magXs"><img src="./images/magnifierXs.svg" alt="search"></a>
+        </div>
+        <div class="slide-menu">
+          <div class="upper">
+            <span class="material-symbols-outlined">
+              close
+            </span>
+            <h2><a href="index.html"><img src="./images/logo.svg" alt=""></a></h2>
+            <ul class="flex_full">
+              <li><a href="#">關於我們</a></li>
+              <li><a href="#">商品資訊</a></li>
+              <li><a href="#">最新消息</a></li>
+              <li><a href="#">門市資訊</a></li>
+              <li><a href="#">聯絡我們</a></li>
+            </ul>
+          </div>
+          <div class="lower">
+            <img src="./images/footer.png" alt="" id="bg">
+            <img src="./images/bird_hi.svg" alt="" id="booby">
+            <ul>
+              <li class="CTA">Follow Us</li>
+              <li><a href="#" class="fb">facebook</a></li>
+              <li><a href="#" class="line">line</a></li>
+              <li><a href="#" class="yt">Youtube</a></li>
+              <li><a href="#" class="ig">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="slide-menuM">
+          <div class="upper">
+            <ul>
+              <li><a href="#">關於我們</a></li>
+              <li><a href="#">商品資訊</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">最新消息</a></li>
+              <li><a href="#">門市資訊</a></li>
+              <li><a href="#">聯絡我們</a></li>
+            </ul>
+          </div>
+          <div class="lower">
+            <img src="./images/footer.png" alt="" id="bg">
+            <img src="./images/bird_hi.svg" alt="" id="booby">
+            <h3 class="CTA">Follow Us</h3>
+            <ul>
+              <li><a href="#" class="fb">facebook</a></li>
+              <li><a href="#" class="line">line</a></li>
+              <li><a href="#" class="yt">Youtube</a></li>
+              <li><a href="#" class="ig">Instagram</a></li>
+            </ul>
+          </div>
         </div>
         <img src="./images/slogan.svg" alt="" id="slogan">
         <img src="./images/cloud.svg" alt="" class="cloud cloud0">
@@ -64,11 +121,12 @@
           <img src="./images/footprint2.svg" alt="" class="footprint">
         </div>
         <div class="aboutUs animate__animated">
-          <h2 class="title">ABOUT</h2>
-          <p>創辦人Mike Taggett 原是導遊，因常帶團來往觀光，經常丟失昂貴的太陽眼鏡，因緣際會下發明多功能且配戴舒適的眼鏡固定帶後，決定在1983年創立戶外休閒裝備品牌Chums。
-            吉祥物Booby Bird是極少見的紅腳鰹鳥，品牌標誌象徵伙伴、友善、信任和快樂，並傳遞CHUMS對大自然保育的熱誠與尊重。</p>
-          <a href="#" class="btn">See More</a>
+          <h2 class="title">About Us</h2>
+          <p class="p1">創辦人Mike Taggett 原是導遊，<br>在1983年創立戶外休閒裝備品牌Chums。</p>
+          <p class="p2">吉祥物Booby Bird是極少見的紅腳鰹鳥，品牌標誌象徵伙伴、友善、信任和快樂，並傳遞CHUMS對大自然保育的熱誠與尊重。</p>
+          <a href="#" class="btn">品牌故事</a>
         </div>
+        <img src="./images/bird_guitar.svg" alt="" class="birdWithGuitar animate__animated">
       </section>
 
       <!-- 產品資訊區 -->
@@ -83,8 +141,8 @@
             <img src="./images/booby tent.png" alt="tent">
             <h3>Beetle Tent Ⅲ 帳篷</h3>
             <p>NT. 11,800</p>
-            <button type="button" class="enter">立即購買</button>
-            <div class="floatBox">
+            <button type="button" class="buy">立即購買</button>
+            <div class="slideBox">
               <ul>
                 <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
                 <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
@@ -106,9 +164,9 @@
             <img src="./images/Bonding Fleece.png" alt="">
             <h3>Bonding Fleece 刷毛保暖外套</h3>
             <p>NT. 2,880</p>
-            <button type="button" class="enter">立即購買</button>
+            <button type="button" class="buy">立即購買</button>
 
-            <div class="floatBox">
+            <div class="slideBox">
               <ul>
                 <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
                 <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
@@ -131,8 +189,8 @@
             <img src="./images/camp chair red.png" alt="camp chair">
             <h3>Booby Easy Chair 露營椅</h3>
             <p>NT. 1,880</p>
-            <button type="button" class="enter">立即購買</button>
-            <div class="floatBox">
+            <button type="button" class="buy">立即購買</button>
+            <div class="slideBox">
               <ul>
                 <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
                 <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
@@ -153,8 +211,8 @@
             <img src="./images/hat.png" alt="">
             <h3>CHUMS Fes Hat 休閒帽</h3>
             <p>NT. 1,580</p>
-            <button type="button" class="enter">立即購買</button>
-            <div class="floatBox">
+            <button type="button" class="buy">立即購買</button>
+            <div class="slideBox">
               <ul>
                 <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
                 <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
@@ -175,9 +233,9 @@
             <img src="./images/bag.png" alt="bag">
             <h3>Monkey Magic Pack後背包</h3>
             <p>NT. 2,780</p>
-            <button type="button" class="enter">立即購買</button>
+            <button type="button" class="buy">立即購買</button>
             <!-- <img src="./images/white_foot.svg" alt="" class="white_foot"> -->
-            <div class="floatBox">
+            <div class="slideBox">
               <ul>
                 <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
                 <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
@@ -189,112 +247,6 @@
             </div>
           </div>
         </div>
-        <div class="slide-container pSwiper">
-          <div class="slide-content">
-            <div class="card-wrapper swiper-wrapper">
-              <div class="card0 swiper-slide">
-                <div class="product-box tentM">
-                  <img src="./images/booby tent.png" alt="tent">
-                  <h3>Beetle Tent Ⅲ 帳篷</h3>
-                  <p>NT. 11,800</p>
-                  <button type="button" class="enter">立即購買</button>
-                  <div class="floatBox">
-                    <ul>
-                      <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-                      <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums"
-                          target="_blank"></a>
-                      </li>
-                      <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a>
-                      </li>
-                      <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-                    </ul>
-                    <button type="button" class="return">返回</button>
-                  </div>
-                </div>
-              </div>
-              <div class="card0 swiper-slide">
-                <div class="product-box">
-                  <img src="./images/bag.png" alt="bag">
-                  <h3>Monkey Magic Pack後背包</h3>
-                  <p>NT. 2,780</p>
-                  <button type="button" class="enter">立即購買</button>
-                  <div class="floatBox">
-                    <ul>
-                      <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-                      <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums"
-                          target="_blank"></a>
-                      </li>
-                      <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a>
-                      </li>
-                      <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-                    </ul>
-                    <button type="button" class="return">返回</button>
-                  </div>
-                </div>
-              </div>
-              <div class="card0 swiper-slide">
-                <div class="product-box hatM">
-                  <img src="./images/hat.png" alt="">
-                  <h3>CHUMS Fes Hat 休閒帽</h3>
-                  <p>NT. 1,580</p>
-                  <button type="button" class="enter">立即購買</button>
-                  <div class="floatBox">
-                    <ul>
-                      <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-                      <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums"
-                          target="_blank"></a>
-                      </li>
-                      <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a>
-                      </li>
-                      <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-                    </ul>
-                    <button type="button" class="return">返回</button>
-                  </div>
-                </div>
-              </div>
-              <div class="card0 swiper-slide">
-                <div class="product-box">
-                  <img src="./images/Bonding Fleece.png" alt="">
-                  <h3>Bonding Fleece 刷毛保暖外套</h3>
-                  <p>NT. 2,880</p>
-                  <button type="button" class="enter">立即購買</button>
-                  <div class="floatBox">
-                    <ul>
-                      <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-                      <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums"
-                          target="_blank"></a>
-                      </li>
-                      <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a>
-                      </li>
-                      <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-                    </ul>
-                    <button type="button" class="return">返回</button>
-                  </div>
-                </div>
-              </div>
-              <div class="card0 swiper-slide">
-                <div class="product-box chairM">
-                  <img src="./images/camp chair red.png" alt="camp chair">
-                  <h3>Booby Easy Chair 露營椅</h3>
-                  <p>NT. 1,880</p>
-                  <button type="button" class="enter">立即購買</button>
-                  <div class="floatBox">
-                    <ul>
-                      <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-                      <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums"
-                          target="_blank"></a>
-                      </li>
-                      <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a>
-                      </li>
-                      <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-                    </ul>
-                    <button type="button" class="return">返回</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <img src="./images/bird_guitar.svg" alt="" class="birdWithGuitar animate__animated">
         <div id="billboard">
           <a href="product.html">熱銷商品</a>
@@ -302,136 +254,264 @@
         <img src="./images/hill.svg" alt="" id="hill">
       </section>
 
-      <!-- 最新消息區 -->
+      <!-- RWD版本 -->
+      <section class="productM">
+        <h2 class="title">Product</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <div class="product-box">
+                  <img src="./images/booby tent.png" alt="tent" class="tentM">
+                  <h3>Beetle Tent Ⅲ 帳篷</h3>
+                  <p>NT. 11,800</p>
+                  <button type="button" class="buy">立即購買</button>
+                  <div class="slideBox">
+                    <ul>
+                      <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+                      <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums"
+                          target="_blank"></a>
+                      </li>
+                      <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a>
+                      </li>
+                      <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+                    </ul>
+                    <button type="button" class="return">返回</button>
+                  </div>
+                </div>
+              </div>
 
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <div class="product-box">
+                  <img src="./images/bag.png" alt="bag" class="bagM">
+                  <h3>Monkey Magic Pack後背包</h3>
+                  <p>NT. 2,780</p>
+                  <button type="button" class="buy">立即購買</button>
+                  <div class="slideBox">
+                    <ul>
+                      <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+                      <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums"
+                          target="_blank"></a>
+                      </li>
+                      <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a>
+                      </li>
+                      <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+                    </ul>
+                    <button type="button" class="return">返回</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <div class="product-box">
+                  <img src="./images/hat.png" alt="" class="hatM">
+                  <h3>CHUMS Fes Hat 休閒帽</h3>
+                  <p>NT. 1,580</p>
+                  <button type="button" class="buy">立即購買</button>
+                  <div class="slideBox">
+                    <ul>
+                      <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+                      <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums"
+                          target="_blank"></a>
+                      </li>
+                      <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a>
+                      </li>
+                      <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+                    </ul>
+                    <button type="button" class="return">返回</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <div class="product-box">
+                  <img src="./images/Bonding Fleece.png" alt="" class="fleeceM">
+                  <h3>Bonding Fleece 刷毛保暖外套</h3>
+                  <p>NT. 2,880</p>
+                  <button type="button" class="buy">立即購買</button>
+                  <div class="slideBox">
+                    <ul>
+                      <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+                      <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums"
+                          target="_blank"></a>
+                      </li>
+                      <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a>
+                      </li>
+                      <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+                    </ul>
+                    <button type="button" class="return">返回</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <div class="product-box">
+                  <img src="./images/camp chair red.png" alt="camp chair" class="chairM">
+                  <h3>Booby Easy Chair 露營椅</h3>
+                  <p>NT. 1,880</p>
+                  <button type="button" class="buy">立即購買</button>
+                  <div class="slideBox">
+                    <ul>
+                      <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+                      <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums"
+                          target="_blank"></a>
+                      </li>
+                      <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a>
+                      </li>
+                      <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+                    </ul>
+                    <button type="button" class="return">返回</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 最新消息區 -->
       <section class="news">
         <img src="./images/flag_news.svg" alt="" class="flag_news">
-        <div class="slide-container swiper">
-          <div class="slide-content">
-            <div class="card-wrapper swiper-wrapper">
-              <div class="card swiper-slide">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-content">
                 <figure>
                   <img src="./images/news1.png" alt="">
                 </figure>
                 <a href="#">更多介紹</a>
               </div>
-              <div class="card swiper-slide">
+              <div class="slide-content">
                 <figure>
                   <img src="./images/news2.png" alt="">
                 </figure>
                 <a href="#">更多介紹</a>
               </div>
-              <div class="card swiper-slide">
+              <div class="slide-content">
                 <figure>
                   <img src="./images/news3.png" alt="">
                 </figure>
                 <a href="#">更多介紹</a>
               </div>
-              <div class="card swiper-slide">
+              <div class="slide-content">
                 <figure>
                   <img src="./images/news4.png" alt="">
                 </figure>
                 <a href="#">更多介紹</a>
               </div>
-              <div class="card swiper-slide">
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-content">
                 <figure>
                   <img src="./images/news5.png" alt="">
                 </figure>
                 <a href="#">更多介紹</a>
               </div>
-              <div class="card swiper-slide">
+              <div class="slide-content">
                 <figure>
                   <img src="./images/news6.png" alt="">
                 </figure>
                 <a href="#">更多介紹</a>
               </div>
-              <div class="card swiper-slide">
+              <div class="slide-content">
                 <figure>
                   <img src="./images/news7.png" alt="">
                 </figure>
                 <a href="#">更多介紹</a>
               </div>
-              <div class="card swiper-slide">
+              <div class="slide-content">
                 <figure>
                   <img src="./images/news8.png" alt="">
                 </figure>
                 <a href="#">更多介紹</a>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
+        </div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-button-next swiper-navBtn"></div>
       </section>
+      <!-- RWD版本 -->
       <section class="newsM">
-        <div class="slide-container swiper">
-          <h2 class="title">News</h2>
-          <div class="slide-content">
-            <div class="card-wrapper swiper-wrapper">
-              <div class="card1 swiper-slide">
+        <h2 class="title">News</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-content">
                 <figure>
                   <img src="./images/news1.png" alt="">
                 </figure>
                 <a href="#">更多介紹</a>
               </div>
-              <div class="card1 swiper-slide">
+              <div class="slide-content">
                 <figure>
                   <img src="./images/news2.png" alt="">
                 </figure>
                 <a href="#">更多介紹</a>
               </div>
-              <div class="card1 swiper-slide">
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-content">
                 <figure>
                   <img src="./images/news3.png" alt="">
                 </figure>
                 <a href="#">更多介紹</a>
               </div>
-              <div class="card1 swiper-slide">
+              <div class="slide-content">
                 <figure>
                   <img src="./images/news4.png" alt="">
                 </figure>
                 <a href="#">更多介紹</a>
               </div>
-              <div class="card1 swiper-slide">
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-content">
                 <figure>
                   <img src="./images/news5.png" alt="">
                 </figure>
                 <a href="#">更多介紹</a>
               </div>
-              <div class="card1 swiper-slide">
+              <div class="slide-content">
                 <figure>
                   <img src="./images/news6.png" alt="">
                 </figure>
                 <a href="#">更多介紹</a>
               </div>
-              <div class="card1 swiper-slide">
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-content">
                 <figure>
                   <img src="./images/news7.png" alt="">
                 </figure>
                 <a href="#">更多介紹</a>
               </div>
-              <div class="card1 swiper-slide">
+              <div class="slide-content">
                 <figure>
                   <img src="./images/news8.png" alt="">
                 </figure>
                 <a href="#">更多介紹</a>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
+        </div>
       </section>
-
 
       <!-- 門市資訊區 -->
       <section class="shop">
-        <img src="./images/flag_shop.svg" alt="" class="flag_shop">
-        <div class="slide-container swiper">
-          <div class="slide-content">
-            <div class="card-wrapper swiper-wrapper">
-              <div class="card2 swiper-slide">
-                <figure class="gowild">
+        <img src="./images/flag_shop.svg" class="flag_shop">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <figure>
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
                 <div class="info">
@@ -449,8 +529,8 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card2 swiper-slide">
-                <figure class="gowild">
+              <div class="slide-content">
+                <figure>
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
                 <div class="info">
@@ -467,8 +547,8 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card2 swiper-slide">
-                <figure class="gowild">
+              <div class="slide-content">
+                <figure>
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
                 <div class="info">
@@ -485,8 +565,8 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card2 swiper-slide">
-                <figure class="gowild">
+              <div class="slide-content">
+                <figure>
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
                 <div class="info">
@@ -503,8 +583,10 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card2 swiper-slide">
-                <figure class="gowild">
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <figure>
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
                 <div class="info">
@@ -521,8 +603,8 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card2 swiper-slide">
-                <figure class="gowild">
+              <div class="slide-content">
+                <figure>
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
                 <div class="info">
@@ -539,8 +621,8 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card2 swiper-slide">
-                <figure class="gowild">
+              <div class="slide-content">
+                <figure>
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
                 <div class="info">
@@ -557,8 +639,8 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card2 swiper-slide">
-                <figure class="gowild">
+              <div class="slide-content">
+                <figure>
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
                 <div class="info">
@@ -575,8 +657,10 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card2 swiper-slide">
-                <figure class="gowild">
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <figure>
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
                 <div class="info">
@@ -593,8 +677,8 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card2 swiper-slide">
-                <figure class="gowild">
+              <div class="slide-content">
+                <figure>
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
                 <div class="info">
@@ -611,8 +695,8 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card2 swiper-slide">
-                <figure class="gowild">
+              <div class="slide-content">
+                <figure>
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
                 <div class="info">
@@ -629,8 +713,8 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card2 swiper-slide">
-                <figure class="gowild">
+              <div class="slide-content">
+                <figure>
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
                 <div class="info">
@@ -647,8 +731,10 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card2 swiper-slide">
-                <figure class="gowild">
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <figure>
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
                 <div class="info">
@@ -665,8 +751,8 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card2 swiper-slide">
-                <figure class="gowild">
+              <div class="slide-content">
+                <figure>
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
                 <div class="info">
@@ -683,8 +769,8 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card2 swiper-slide">
-                <figure class="gowild">
+              <div class="slide-content">
+                <figure>
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
                 <div class="info">
@@ -701,8 +787,8 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card2 swiper-slide">
-                <figure class="gowild">
+              <div class="slide-content">
+                <figure>
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
                 <div class="info">
@@ -720,17 +806,18 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
+        </div>
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
       </section>
+      <!-- RWD版本 -->
       <section class="shopM">
         <h2 class="title">Store</h2>
-        <div class="slide-container swiper">
-          <div class="slide-content">
-            <div class="card-wrapper swiper-wrapper">
-              <div class="card3 swiper-slide">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-content">
                 <figure class="gowild">
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
@@ -739,7 +826,7 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card3 swiper-slide">
+              <div class="slide-content">
                 <figure class="gowild">
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
@@ -748,7 +835,10 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card3 swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-content">
                 <figure class="gowild">
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
@@ -757,7 +847,7 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card3 swiper-slide">
+              <div class="slide-content">
                 <figure class="gowild">
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
@@ -766,7 +856,10 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card3 swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-content">
                 <figure class="gowild">
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
@@ -775,7 +868,7 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card3 swiper-slide">
+              <div class="slide-content">
                 <figure class="gowild">
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
@@ -784,7 +877,10 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card3 swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-content">
                 <figure class="gowild">
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
@@ -793,7 +889,7 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card3 swiper-slide">
+              <div class="slide-content">
                 <figure class="gowild">
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
@@ -802,7 +898,10 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card3 swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-content">
                 <figure class="gowild">
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
@@ -811,7 +910,7 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card3 swiper-slide">
+              <div class="slide-content">
                 <figure class="gowild">
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
@@ -820,7 +919,10 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card3 swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-content">
                 <figure class="gowild">
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
@@ -829,7 +931,7 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card3 swiper-slide">
+              <div class="slide-content">
                 <figure class="gowild">
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
@@ -838,7 +940,10 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card3 swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-content">
                 <figure class="gowild">
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
@@ -847,7 +952,7 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card3 swiper-slide">
+              <div class="slide-content">
                 <figure class="gowild">
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
@@ -856,7 +961,10 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card3 swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-content">
                 <figure class="gowild">
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
@@ -865,7 +973,7 @@
                   <a href="#" class="more">More</a>
                 </div>
               </div>
-              <div class="card3 swiper-slide">
+              <div class="slide-content">
                 <figure class="gowild">
                   <img src="./images/Go Wild商標.png" alt="">
                 </figure>
@@ -875,10 +983,8 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
+        </div>
       </section>
     </main>
 
@@ -903,13 +1009,9 @@
     </footer>
   </div>
   <script src="./js/jquery-1.11.3.min.js"></script>
-  <!-- Swiper JS -->
-  <script src="./js/swiper-bundle.min.js"></script>
+  <!-- Swiper JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="./js/all.js"></script>
-
-
-
-
 </body>
 
 </html>

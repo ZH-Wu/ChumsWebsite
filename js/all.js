@@ -1,11 +1,33 @@
 $(function () {
+  // /* OffCanvas 主選單 */
+  $('.nav figure').click(function () {
+    $('.slide-menu').animate({ right: '0%' }, 800);
+  });
+  $('.slide-menu span').click(function () {
+    $('.slide-menu').animate({ right: '-100%' }, 800);
+  });
+
+  //RWD OffCanvas主選單之ChatGpt優化程式碼
+  const $navRwd = $('.nav_rwd');
+  const $menuL = $navRwd.find('.menuL');
+  const $back = $navRwd.find('.back');
+  const $slideMenuM = $('.slide-menuM');
+
+  $navRwd.on('click', '.menuL, .back', () => {
+    $menuL.add($back).add($slideMenuM).toggleClass('active');
+  });
+
+  // RWD OffCanvas主選單原始程式碼
+  // $('.nav_rwd .menuL, .nav_rwd .back').click(() => {
+  //   $('.nav_rwd .menuL, .nav_rwd .back, .slide-menuM').toggleClass('active');
+  // });
 
   // 指定卷軸到指定高度再執行淡入淡出效果
   $(window).scroll(function () {
     var scrollTop = $(this).scrollTop();
-  
+
     $('.aboutUs').stop().toggleClass('animate__bounceInDown', scrollTop > 700);
-    $('.logo_2, .birdOnThePath').stop().toggleClass('animate__tada', scrollTop > 700);
+    $('.logo_2, .welcomeBird').stop().toggleClass('animate__tada', scrollTop > 700);
     $('.c2').stop().toggle(scrollTop > 1300, 80);
     $('.c1').stop().toggle(scrollTop > 1700, 80);
     $('.c3').stop().toggle(scrollTop > 2000, 80);
@@ -24,19 +46,13 @@ $(function () {
     $(this).siblings('.product-box').toggle(500);
   });
 
-
-  // 碰到吉他鳥會左右晃動
-  $('.birdWithGuitar').hover(function () {
-    $(this).toggleClass('animate__wobble');
-  });
-
   // 點擊立即購買出現下滑選單
-  $('.enter').click(function() {
-    $(this).siblings('.floatBox').toggleClass('active');
-    
+  $('.buy').click(function () {
+    $(this).siblings('.slideBox').toggleClass('active');
+
   });
 
-  $('.return').click(function() {
+  $('.return').click(function () {
     $(this).parent().toggleClass('active');
   });
 
@@ -56,93 +72,39 @@ $(function () {
     } else {
       fixedTop.fadeOut(200);
     }
-  });     
-          
+  });
 });
 
-var swiper = new Swiper(".slide-content", {
-  slidesPerView: 3,
-  spaceBetween: 50,
-  freeMode: true,
-  loop: true,
-  fade: true,
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
   grabCursor: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
+  allowTouchMove: true,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    pauseOnMouseEnter: true,
+    disableOnInteraction: true,
   },
+  freeMode: {
+    momentumBounce: true,
+  },
+
+  // If we need pagination
+  // pagination: {
+  //   el: '.swiper-pagination',
+  //   clickable :true,
+  //   dynamicBullets: true,
+  // },
+
+  // Navigation arrows
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
-  autoplay: {
-    delay: 2000,
-    pauseOnMouseEnter:true,
-    disableOnInteraction:false,
-    
-  }  
-  
+
 });
 
-// RWD js
 
-var swiper = new Swiper(".pSwiper>.slide-content", {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  freeMode: true,
-  loop: true,
-  fade: true,
-  grabCursor: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  autoplay: {
-    delay: 2000,
-    pauseOnMouseEnter:true,
-    disableOnInteraction:false,
-    
-  }  
-  
-});
-
-var swiper = new Swiper(".newsM .slide-content", {
-  slidesPerView: 2,
-  slidesPerGroup: 2,
-  freeMode: true,
-  loop: true,
-  fade: true,
-  grabCursor: true,
-  autoplay: {
-    delay: 2000,
-    pauseOnMouseEnter:true,
-    disableOnInteraction:false,
-    
-  }  
-  
-});
-
-var swiper = new Swiper(".shopM .slide-content", {
-  slidesPerView: 2,
-  slidesPerGroup: 2,
-  freeMode: true,
-  loop: true,
-  fade: true,
-  grabCursor: true,
-  autoplay: {
-    delay: 2000,
-    pauseOnMouseEnter:true,
-    disableOnInteraction:false,
-    
-  }  
-  
-});
 
 
 
@@ -189,12 +151,12 @@ var swiper = new Swiper(".shopM .slide-content", {
           // });
 
 
-// $('.enter').click(() => {
-          //   $('.floatBox').addClass('active');
+// $('.buy').click(() => {
+          //   $('.slideBox').addClass('active');
           // });
 
           // $('.return').click(() => {
-          //   $('.floatBox').removeClass('active');
+          //   $('.slideBox').removeClass('active');
           // });
 
 // $('html,body').append('<div id="fixedTop"></div>');
