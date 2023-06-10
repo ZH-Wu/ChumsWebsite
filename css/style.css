@@ -194,9 +194,10 @@ header {
   color: #fff;
   padding-bottom: 10px;
 }
-.upper li a:hover {
+.upper li:hover a {
   border-bottom: 2px solid #fff;
 }
+
 
 .lower {
   width: 100%;
