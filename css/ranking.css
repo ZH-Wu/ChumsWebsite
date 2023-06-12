@@ -7,7 +7,7 @@
 
 html,
 body {
-  position: relative;
+  /* position: relative; */
   height: 100%;
 
 }
@@ -34,15 +34,11 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  font-family: GenSenRounded;
-
 }
 
 .menu {
   display: flex;
   justify-content: space-evenly;
-
-
 }
 
 .dropdown {
@@ -51,8 +47,6 @@ header {
   color: #B61C31;
   width: 100px;
   padding: 10px 10px 10px 10px;
-  /*   border: 1px solid #000; */
-
 }
 
 .dropdown:hover,
@@ -65,7 +59,6 @@ header {
   background-repeat: no-repeat;
   background-size: 80px;
   background-position: top center;
-
 }
 
 .dropdown-item {
@@ -73,7 +66,6 @@ header {
   text-align: center;
   display: none;
   background-color: #F5DEA8;
-
 }
 
 .dropdown-item a {
@@ -84,8 +76,7 @@ header {
 
 .logo {
   margin-top: 12px;
-  width: 100px;
-
+  width: 5%;
 }
 
 .searchbar {
@@ -111,7 +102,6 @@ input {
   background-color: rgba(255, 255, 255, 0.8);
   border: none;
   box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  -webkit-transition: width .35s ease-in-out;
   transition: width .35s ease-in-out;
 
 }
@@ -149,72 +139,12 @@ input:focus {
 
 /* 主要內容區 */
 
-.swiper {
-  padding-top: 100px;
-  max-width: 100%;
-  height: 93vh;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(245, 222, 168, 1) 58%);
+main{
+  /* padding-top: 120px; */
+  background-color: rgba(245, 222, 168, 1);
   position: relative;
 }
 
-.cloud {
-  width: 150px;
-  /* 絕對定位於main */
-  position: absolute;
-  z-index: 1;
-
-
-}
-
-@keyframes moving {
-  from {
-    left: 0px;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-.cloud1 {
-  top: 150px;
-  right: 550px;
-  animation-name: moving;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-
-}
-
-@keyframes moving2 {
-  from {
-    right: 0px;
-  }
-
-  to {
-    right: 100%;
-  }
-}
-
-.cloud2 {
-  top: 100px;
-  right: 200px;
-  animation-name: moving2;
-  animation-duration: 20s;
-  animation-delay: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.cloud3 {
-  top: 30px;
-  right: 400px;
-  animation-name: moving2;
-  animation-duration: 20s;
-  animation-delay: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
 
 .sidebar {
   width: 80px;
@@ -233,11 +163,6 @@ input:focus {
 .sidebar:hover {
   left: -1px;
   cursor: pointer;
-}
-
-.sidebar a.active {
-  display: inline-block;
-  
 }
 
 .sidebar img {
@@ -262,63 +187,44 @@ input:focus {
 }
 
 
-.swiper-wrapper {
-  /* border: 1px solid #000; */
-  align-items: flex-end;
-  width: 85%;
-  height: 85%;
-  z-index: 3;
+/* Swiper */
 
+.swiper>h3 {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 50px;
+  left: 20px;
+  z-index: 1;
+}
+
+.swiper>img {
+  position: absolute;
+  width: 10%;
+  left: 50px;
+  top: 10px;
 }
 
 .swiper-slide {
-  max-width: 456px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 70vh;
+}
+
+.slide-content {
+  width: 456px;
   height: 546px;
   border-radius: 250px 250px 45px 45px;
   background: #fff;
   transition: all .5s;
+  position: relative;
+  
 }
 
-.swiper-slide:hover {
+.slide-content:hover {
   transform: translateY(-20px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
-.swiper-button-prev {
-  width: 100px;
-  top: 93%;
-  left: 46%;
-
-}
-
-.swiper-button-next {
-  width: 100px;
-  top: 93%;
-  right: 44%;
-
-}
-
-.swiper-button-prev:after {
-  font-size: 3rem;
-  color: #fff;
-  content: '\f5d2';
-  transform: rotate(-90deg);
-  /* content: '\eaa7'; */
-  font-family: Material Symbols Outlined;
-
-}
-
-
-.swiper-button-next:after {
-  font-size: 3rem;
-  color: #fff;
-  content: '\f5d2';
-  transform: rotate(90deg);
-  /* content: '\eaaa'; */
-  font-family: Material Symbols Outlined;
-}
-
-
 
 .color {
   display: flex;
@@ -422,10 +328,11 @@ input:focus {
 }
 
 .tent {
+  width: 98%;
   position: absolute;
   height: 80%;
-  left: -160px;
-  top: 200px;
+  left: -130px;
+  top: 240px;
   
 
 }
@@ -541,28 +448,37 @@ input:focus {
   left: -40px;
 }
 
-.forest,
-.lawn {
-  position: absolute;
+
+.swiper-button-prev, .swiper-button-next {
+  width: 100px;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after  {
+  font-size: 3rem;
+  color: #B61C31;
+  content: '\f5d2';
+  transform: rotate(-90deg);
+  font-family: Material Symbols Outlined;
 
 }
 
-.forest {
-  bottom: 180px;
+.swiper-button-next:after {
+  transform: rotate(90deg);
+}
+
+footer {
+  height: 20vh;
+  position: relative;
+}
+
+.grass {
+  position: absolute;
+  top: -55%;
   z-index: 2;
 }
 
 .lawn {
-  bottom: 0px;
+  position: absolute;
+  bottom: 0;
   z-index: 1;
-}
-
-.footprint {
-  width: 150px;
-  height: 180px;
-  position: absolute;
-  right: 50px;
-  bottom: 30px;
-  transform: rotate(50deg);
-  z-index: 2;
 }

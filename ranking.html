@@ -6,11 +6,13 @@
   <title>Ranking tent</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
-  <!-- Link Swiper's CSS -->
+
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="stylesheet" href="./css/reset.css">
+  <!-- Swiper CSS  -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- Lightbox CSS -->
   <link rel="stylesheet" href="./css/lightbox.min.css">
   <link rel="stylesheet" href="./css/ranking.css">
 </head>
@@ -69,11 +71,8 @@
     </div>
   </header>
 
-  <!-- Swiper -->
-  <main class="swiper mySwiper">
-    <img src="./images/cloud.svg" alt="雲" class="cloud cloud1">
-    <img src="./images/cloud.svg" alt="雲" class="cloud cloud2">
-    <img src="./images/cloud.svg" alt="雲" class="cloud cloud3">
+  <main>
+    <!-- 側邊浮動選單 -->
     <div class="sidebar">
       <div class="upper">
         <a href="#" class="shirt"><img src="./images/shirt.png" alt=""></a>
@@ -86,717 +85,783 @@
         <a href="index.html"><img src="./images/home.png" alt=""></a>
       </div>
     </div>
-    <div class="swiper-wrapper">
-      <div class="swiper-slide campTent">
-        <!-- 排名圖示 -->
-        <img src="./images/top1.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>Beetle Tent Ⅲ 帳篷 </h3>
-          <p>建議售價</p>
-          <span>NT 11,800</span>
+    <!-- Swiper 帳篷排行-->
+    <div class="swiper">
+        <h3>帳篷排行</h3>
+        <img src="./images/shadowy_cloud.svg" alt="">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide campTent">
+          <div class="slide-content">
+            <!-- 排名圖示 -->
+            <img src="./images/top1.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>Beetle Tent Ⅲ 帳篷 </h3>
+              <p>建議售價</p>
+              <span>NT 11,800</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="tent tent_1">
+              <a class="example-image-link" href="./images/booby tent.png" data-lightbox="top_1"><img
+                  src="./images/booby tent.png" alt="image-1" style="width: 90%;" /></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div class="slide-content">
+            <!-- 排名圖示 -->
+            <img src="./images/top2.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>CHUMS A Frame Tent T/C 4 帳蓬 (兩箱/組) </h3>
+              <p>建議售價</p>
+              <span>NT 37,980</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="tent tent_2">
+              <a class="example-image-link" href="./images/A Frame Tent.png" data-lightbox="top_2"><img
+                  src="./images/A Frame Tent.png" alt="image-1" /></a>
+              <a class="example-image-link" href="./images/A Frame Tent-2.png" data-lightbox="top_2"></a>
+              <a class="example-image-link" href="./images/A Frame Tent-3.png" data-lightbox="top_2"></a>
+              <a class="example-image-link" href="./images/A Frame Tent-4.png" data-lightbox="top_2"></a>
+              <a class="example-image-link" href="./images/A Frame Tent-5.png" data-lightbox="top_2"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div class="slide-content">
+            <!-- 排名圖示 -->
+            <img src="./images/top3.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>CHUMS Booby Sunshade 帳篷 米/紅</h3>
+              <p>建議售價</p>
+              <span>NT 5,980</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="tent tent_3">
+              <a class="example-image-link" href="./images/booby sunshade.png" data-lightbox="top_3"><img
+                  src="./images/booby sunshade.png" alt="image-1" /></a>
+              <a class="example-image-link" href="images/booby sunshade2.png" data-lightbox="top_3"></a>
+              <a class="example-image-link" href="images/booby sunshade3.png" data-lightbox="top_3"></a>
+              <a class="example-image-link" href="images/booby sunshade4.png" data-lightbox="top_3"></a>
+              <a class="example-image-link" href="images/booby sunshade5.png" data-lightbox="top_3"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
         </div>
-        <!-- 產品圖片 -->
-        <div class="tent tent_1">
-          <a class="example-image-link" href="./images/booby tent.png" data-lightbox="top_1"><img
-              src="./images/booby tent.png" alt="image-1" style="width: 90%;" /></a>
+        <div class="swiper-slide campTent">
+          <div class="slide-content">
+            <!-- 排名圖示 -->
+            <img src="./images/top4.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>CHUMS Pop Up Sunshade 2 快收帳</h3>
+              <p>建議售價</p>
+              <span>NT 2,480</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="tent tent_4">
+              <a class="example-image-link" href="./images/booby bbq2.png" data-lightbox="top_4"><img
+                  src="./images/booby bbq2.png" alt="image-1" /></a>
+              <a class="example-image-link" href="images/booby bbq2-2.png" data-lightbox="top_4"></a>
+              <a class="example-image-link" href="images/booby bbq2-3.png" data-lightbox="top_4"></a>
+              <a class="example-image-link" href="images/booby bbq2-4.png" data-lightbox="top_4"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div class="slide-content">
+            <!-- 排名圖示 -->
+            <img src="./images/top5.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>CHUMS Pop Up Sunshade 3 快收帳</h3>
+              <p>建議售價</p>
+              <span>NT 2,880</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="tent tent_5">
+              <a class="example-image-link" href="./images/booby bbq.png" data-lightbox="top_5"><img
+                  src="./images/booby bbq.png" alt="image-1" /></a>
+              <a class="example-image-link" href="images/booby bbq-1.png" data-lightbox="top_5"></a>
+              <a class="example-image-link" href="images/booby bbq-2.png" data-lightbox="top_5"></a>
+              <a class="example-image-link" href="images/booby bbq-3.png" data-lightbox="top_5"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
         </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a></li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
       </div>
-      <div class="swiper-slide campTent">
-        <!-- 排名圖示 -->
-        <img src="./images/top2.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>CHUMS A Frame Tent T/C 4 帳蓬 (兩箱/組) </h3>
-          <p>建議售價</p>
-          <span>NT 37,980</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="tent tent_2">
-          <a class="example-image-link" href="./images/A Frame Tent.png" data-lightbox="top_2"><img
-              src="./images/A Frame Tent.png" alt="image-1" /></a>
-          <a class="example-image-link" href="./images/A Frame Tent-2.png" data-lightbox="top_2"></a>
-          <a class="example-image-link" href="./images/A Frame Tent-3.png" data-lightbox="top_2"></a>
-          <a class="example-image-link" href="./images/A Frame Tent-4.png" data-lightbox="top_2"></a>
-          <a class="example-image-link" href="./images/A Frame Tent-5.png" data-lightbox="top_2"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-      <div class="swiper-slide campTent">
-        <!-- 排名圖示 -->
-        <img src="./images/top3.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>CHUMS Booby Sunshade 帳篷 米/紅</h3>
-          <p>建議售價</p>
-          <span>NT 5,980</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="tent tent_3">
-          <a class="example-image-link" href="./images/booby sunshade.png" data-lightbox="top_3"><img
-              src="./images/booby sunshade.png" alt="image-1" /></a>
-          <a class="example-image-link" href="images/booby sunshade2.png" data-lightbox="top_3"></a>
-          <a class="example-image-link" href="images/booby sunshade3.png" data-lightbox="top_3"></a>
-          <a class="example-image-link" href="images/booby sunshade4.png" data-lightbox="top_3"></a>
-          <a class="example-image-link" href="images/booby sunshade5.png" data-lightbox="top_3"></a>
-        </div>
-
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-      <div class="swiper-slide campTent">
-        <!-- 排名圖示 -->
-        <img src="./images/top4.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>CHUMS Pop Up Sunshade 2 快收帳</h3>
-          <p>建議售價</p>
-          <span>NT 2,480</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="tent tent_4">
-          <a class="example-image-link" href="./images/booby bbq2.png" data-lightbox="top_4"><img
-              src="./images/booby bbq2.png" alt="image-1" /></a>
-          <a class="example-image-link" href="images/booby bbq2-2.png" data-lightbox="top_4"></a>
-          <a class="example-image-link" href="images/booby bbq2-3.png" data-lightbox="top_4"></a>
-          <a class="example-image-link" href="images/booby bbq2-4.png" data-lightbox="top_4"></a>
-        </div>
-
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a></li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-      <div class="swiper-slide campTent">
-        <!-- 排名圖示 -->
-        <img src="./images/top5.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>CHUMS Pop Up Sunshade 3 快收帳</h3>
-          <p>建議售價</p>
-          <span>NT 2,880</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="tent tent_5">
-          <a class="example-image-link" href="./images/booby bbq.png" data-lightbox="top_5"><img
-              src="./images/booby bbq.png" alt="image-1" /></a>
-          <a class="example-image-link" href="images/booby bbq-1.png" data-lightbox="top_5"></a>
-          <a class="example-image-link" href="images/booby bbq-2.png" data-lightbox="top_5"></a>
-          <a class="example-image-link" href="images/booby bbq-3.png" data-lightbox="top_5"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-
-      <div class="swiper-slide shirt">
-        <!-- 排名圖示 -->
-        <img src="./images/top1.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>Bonding Fleece <br> 刷毛連帽外套</h3>
-          <p>建議售價</p>
-          <span>NT 4,580</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="clothing">
-          <a class="example-image-link" href="./images/fleece1.jpg" data-lightbox="shirt1">
-            <img src="./images/Bonding Fleece.png" alt="image-1" />
-          </a>
-          <a class="example-image-link" href="images/fleece2.jpg" data-lightbox="shirt1"></a>
-          <a class="example-image-link" href="images/fleece3.jpg" data-lightbox="shirt1"></a>
-          <a class="example-image-link" href="images/fleece4.jpg" data-lightbox="shirt1"></a>
-          <a class="example-image-link" href="images/fleece5.jpg" data-lightbox="shirt1"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-
-      <div class="swiper-slide shirt">
-        <!-- 排名圖示 -->
-        <img src="./images/top2.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>Camping Parka <br> 風格外套</h3>
-          <p>建議售價</p>
-          <span>NT 4,880</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="clothing parka">
-          <a class="example-image-link" href="images/parka1.jpg" data-lightbox="shirt2">
-            <img src="images/parka.png" alt="image-1" />
-          </a>
-          <a class="example-image-link" href="images/parka2.jpg" data-lightbox="shirt2"></a>
-          <a class="example-image-link" href="images/parka3.jpg" data-lightbox="shirt2"></a>
-          <a class="example-image-link" href="images/parka4.jpg" data-lightbox="shirt2"></a>
-          <a class="example-image-link" href="images/fleece5.jpg" data-lightbox="shirt2"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-
-      <div class="swiper-slide shirt">
-        <!-- 排名圖示 -->
-        <img src="./images/top3.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>Gore-Tex 輕量防水外套</h3>
-          <p>建議售價</p>
-          <span>NT 10,880</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="clothing goretex">
-          <a class="example-image-link" href="images/goretex1.jpg" data-lightbox="shirt3">
-            <img src="images/goretex.png" alt="image-1" />
-          </a>
-          <a class="example-image-link" href="images/goretex2.jpg" data-lightbox="shirt3"></a>
-          <a class="example-image-link" href="images/goretex3.jpg" data-lightbox="shirt3"></a>
-          <a class="example-image-link" href="images/goretex4.jpg" data-lightbox="shirt3"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-      <div class="swiper-slide shirt">
-        <!-- 排名圖示 -->
-        <img src="./images/top4.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>40周年紀念T-Shirt</h3>
-          <p>建議售價</p>
-          <span>NT 1,380</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="clothing tshirt">
-          <a class="example-image-link" href="images/tshirt.jpg" data-lightbox="shirt4">
-            <img src="images/tshirt1.png" alt="image-1" />
-          </a>
-          <a class="example-image-link" href="images/tshirt2.jpg" data-lightbox="shirt4"></a>
-          <a class="example-image-link" href="images/tshirt3.jpg" data-lightbox="shirt4"></a>
-          <a class="example-image-link" href="images/tshirt4.jpg" data-lightbox="shirt4"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-      <div class="swiper-slide shirt">
-        <!-- 排名圖示 -->
-        <img src="./images/top5.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>Bonding Fleece 刷毛連帽外套</h3>
-          <p>建議售價</p>
-          <span>NT 4,580</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="clothing vest">
-          <a class="example-image-link" href="./images/flame vest.jpg" data-lightbox="shirt5">
-            <img src="./images/flame vest1.png" alt="image-1" />
-          </a>
-          <a class="example-image-link" href="images/flame vest2.jpg" data-lightbox="shirt5"></a>
-          <a class="example-image-link" href="images/flame vest 3.jpg" data-lightbox="shirt5"></a>
-          <a class="example-image-link" href="images/flame vest 4.jpg" data-lightbox="shirt5"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-
-      <div class="swiper-slide hat">
-        <!-- 排名圖示 -->
-        <img src="./images/top1.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>CHUMS 雙面休閒帽</h3>
-          <p>建議售價</p>
-          <span>NT 1,280</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="cap">
-          <a class="example-image-link" href="./images/buckethat1.png" data-lightbox="hat1">
-            <img src="./images/buckethat.png" alt="image-1" />
-          </a>
-          <a class="example-image-link" href="images/buckethat2.png" data-lightbox="hat1"></a>
-          <a class="example-image-link" href="images/buckethat3.png" data-lightbox="hat1"></a>
-          <a class="example-image-link" href="images/buckethat4.png" data-lightbox="hat1"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-
-      <div class="swiper-slide hat">
-        <!-- 排名圖示 -->
-        <img src="./images/top2.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>CHUMS 雙面風格帽</h3>
-          <p>建議售價</p>
-          <span>NT 1,280</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="cap cap2">
-          <a class="example-image-link" href="images/cap.png" data-lightbox="hat2">
-            <img src="images/cap.png" alt="image-1" />
-          </a>
-          <a class="example-image-link" href="images/cap1.jpg" data-lightbox="hat2"></a>
-          <a class="example-image-link" href="images/cap2.jpg" data-lightbox="hat2"></a>
-          <a class="example-image-link" href="images/cap3.jpg" data-lightbox="hat2"></a>
-          <a class="example-image-link" href="images/cap4.jpg" data-lightbox="hat2"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-
-      <div class="swiper-slide hat">
-        <!-- 排名圖示 -->
-        <img src="./images/top3.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>CHUMS Fes Hat 休閒帽</h3>
-          <p>建議售價</p>
-          <span>NT 10,880</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="cap cap3">
-          <a class="example-image-link" href="images/feshat.jpg" data-lightbox="hat3">
-            <img src="images/hat.png" alt="image-1" />
-          </a>
-          <a class="example-image-link" href="images/feshat2.jpg" data-lightbox="hat3"></a>
-          <a class="example-image-link" href="images/feshat3.jpg" data-lightbox="hat3"></a>
-          <a class="example-image-link" href="images/feshat4.jpg" data-lightbox="hat3"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-      <div class="swiper-slide hat">
-        <!-- 排名圖示 -->
-        <img src="./images/top4.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>Chums 防火休閒帽</h3>
-          <p>建議售價</p>
-          <span>NT 1,480</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="cap cap4">
-          <a class="example-image-link" href="images/flamehat1.jpg" data-lightbox="cap4">
-            <img src="images/flamehat.png" alt="image-1" />
-          </a>
-          <a class="example-image-link" href="images/flamehat2.jpg" data-lightbox="cap4"></a>
-          <a class="example-image-link" href="images/flamehat3.jpg" data-lightbox="cap4"></a>
-          <a class="example-image-link" href="images/flamehat4.jpg" data-lightbox="cap4"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-      <div class="swiper-slide hat">
-        <!-- 排名圖示 -->
-        <img src="./images/top5.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>Chums Bush Pilot 棒球帽</h3>
-          <p>建議售價</p>
-          <span>NT 4,580</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="cap cap5">
-          <a class="example-image-link" href="./images/bscap1.jpg" data-lightbox="cap5">
-            <img src="./images/bscap.png" alt="image-1" />
-          </a>
-          <a class="example-image-link" href="images/bscap2.jpg" data-lightbox="cap5"></a>
-          <a class="example-image-link" href="images/bscap3.jpg" data-lightbox="cap5"></a>
-          <a class="example-image-link" href="images/bscap4.jpg" data-lightbox="cap5"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-
-      <div class="swiper-slide bag">
-        <!-- 排名圖示 -->
-        <img src="./images/top1.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>Monkey Magic 後背包</h3>
-          <p>建議售價</p>
-          <span>NT 4,580</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="pack pack1">
-          <a class="example-image-link" href="./images/bag1.jpg" data-lightbox="bag1">
-            <img src="./images/bag.png" alt="image-1" />
-          </a>
-          <a class="example-image-link" href="images/bag2.jpg" data-lightbox="bag1"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-      <div class="swiper-slide bag">
-        <!-- 排名圖示 -->
-        <img src="./images/top2.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>Mini Pouch 側背包</h3>
-          <p>建議售價</p>
-          <span>NT 680</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="pack pack2">
-          <a class="example-image-link" href="./images/minipouch.png" data-lightbox="bag2">
-            <img src="./images/minipouch.png" alt="image-1" />
-          </a>
-          <a class="example-image-link" href="images/minipouch2.png" data-lightbox="bag2"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-      <div class="swiper-slide bag">
-        <!-- 排名圖示 -->
-        <img src="./images/top3.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>Boston 兩用旅行包</h3>
-          <p>建議售價</p>
-          <span>NT 2,704</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="pack pack3">
-          <a class="example-image-link" href="./images/pack1.jpg" data-lightbox="bag3">
-            <img src="./images/pack.jpg" alt="image-1" />
-          </a>
-          <a class="example-image-link" href="images/pack2.jpg" data-lightbox="bag3"></a>
-          <a class="example-image-link" href="images/pack3.jpg" data-lightbox="bag3"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-
-      <div class="swiper-slide chair">
-        <!-- 排名圖示 -->
-        <img src="./images/top1.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>Canvas 帆布露營椅</h3>
-          <p>建議售價</p>
-          <span>NT 3,580</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="campChair chair1">
-          <a class="example-image-link" href="./images/canvas1.jpg" data-lightbox="chair1">
-            <img src="./images/canvas chair.png" alt="image-1" />
-          </a>
-          <a class="example-image-link" href="images/canvas2.jpg" data-lightbox="chair1"></a>
-          <a class="example-image-link" href="images/canvas3.jpg" data-lightbox="chair1"></a>
-          <a class="example-image-link" href="images/canvas4.jpg" data-lightbox="chair1"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-      <div class="swiper-slide chair">
-        <!-- 排名圖示 -->
-        <img src="./images/top2.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>Foot Low 收納折疊椅</h3>
-          <p>建議售價</p>
-          <span>NT 3,280</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="campChair chair2">
-          <a class="example-image-link" href="./images/compact1.jpg" data-lightbox="chair2">
-            <img src="./images/compact.png" alt="image-1" />
-          </a>
-          <a class="example-image-link" href="images/compact2.jpg" data-lightbox="chair2"></a>
-          <a class="example-image-link" href="images/compact3.jpg" data-lightbox="chair2"></a>
-          <a class="example-image-link" href="images/compact4.jpg" data-lightbox="chair2"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-      <div class="swiper-slide chair">
-        <!-- 排名圖示 -->
-        <img src="./images/top3.svg" alt="排名" class="ranking">
-        <!-- 產品資訊 -->
-        <div class="info">
-          <h3>Easy Chair 輕便露營椅</h3>
-          <p>建議售價</p>
-          <span>NT 1,880</span>
-        </div>
-        <!-- 產品圖片 -->
-        <div class="campChair chair3">
-          <a class="example-image-link" href="./images/easy1.jpg" data-lightbox="chair3">
-            <img src="./images/camp chair red.png" alt="image-1" />
-          </a>
-          <a class="example-image-link" href="images/easy2.jpg" data-lightbox="chair3"></a>
-          <a class="example-image-link" href="images/easy3.jpg" data-lightbox="chair3"></a>
-          <a class="example-image-link" href="images/easy4.jpg" data-lightbox="chair3"></a>
-        </div>
-        <!-- 色票選擇 -->
-        <ul class="color">
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-        </ul>
-        <!-- 按鈕 -->
-        <ul class="list">
-          <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
-          <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
-          </li>
-          <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
-          <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
-        </ul>
-      </div>
-    </div>
-    <!-- Navigation buttons -->
-    <div class="swiper-button">
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Navigation buttons -->
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
+      <!-- Scrollbar -->
+      <div class="swiper-scrollbar"></div>
     </div>
-    <img src="./images/grass.svg" alt="" class="forest">
-    <img src="./images/lawn.svg" alt="" class="lawn">
-    <img src="./images/footprint.svg" alt="" class="footprint">
+    <div class="swiper">
+      <h3>帽子排行</h3>
+        <img src="./images/shadowy_cloud.svg" alt="">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide hat">
+          <div class="slide-content hat">
+            <!-- 排名圖示 -->
+            <img src="./images/top1.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>CHUMS 雙面休閒帽</h3>
+              <p>建議售價</p>
+              <span>NT 1,280</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="cap">
+              <a class="example-image-link" href="./images/buckethat1.png" data-lightbox="hat1">
+                <img src="./images/buckethat.png" alt="image-1" />
+              </a>
+              <a class="example-image-link" href="images/buckethat2.png" data-lightbox="hat1"></a>
+              <a class="example-image-link" href="images/buckethat3.png" data-lightbox="hat1"></a>
+              <a class="example-image-link" href="images/buckethat4.png" data-lightbox="hat1"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div class="slide-content hat">
+            <!-- 排名圖示 -->
+            <img src="./images/top2.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>CHUMS 雙面風格帽</h3>
+              <p>建議售價</p>
+              <span>NT 1,280</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="cap cap2">
+              <a class="example-image-link" href="images/cap.png" data-lightbox="hat2">
+                <img src="images/cap.png" alt="image-1" />
+              </a>
+              <a class="example-image-link" href="images/cap1.jpg" data-lightbox="hat2"></a>
+              <a class="example-image-link" href="images/cap2.jpg" data-lightbox="hat2"></a>
+              <a class="example-image-link" href="images/cap3.jpg" data-lightbox="hat2"></a>
+              <a class="example-image-link" href="images/cap4.jpg" data-lightbox="hat2"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div class="slide-content hat">
+            <!-- 排名圖示 -->
+            <img src="./images/top3.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>CHUMS Fes Hat 休閒帽</h3>
+              <p>建議售價</p>
+              <span>NT 10,880</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="cap cap3">
+              <a class="example-image-link" href="images/feshat.jpg" data-lightbox="hat3">
+                <img src="images/hat.png" alt="image-1" />
+              </a>
+              <a class="example-image-link" href="images/feshat2.jpg" data-lightbox="hat3"></a>
+              <a class="example-image-link" href="images/feshat3.jpg" data-lightbox="hat3"></a>
+              <a class="example-image-link" href="images/feshat4.jpg" data-lightbox="hat3"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="swiper-slide hat">
+          <div class="slide-content hat">
+            <!-- 排名圖示 -->
+            <img src="./images/top4.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>Chums 防火休閒帽</h3>
+              <p>建議售價</p>
+              <span>NT 1,480</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="cap cap4">
+              <a class="example-image-link" href="images/flamehat1.jpg" data-lightbox="cap4">
+                <img src="images/flamehat.png" alt="image-1" />
+              </a>
+              <a class="example-image-link" href="images/flamehat2.jpg" data-lightbox="cap4"></a>
+              <a class="example-image-link" href="images/flamehat3.jpg" data-lightbox="cap4"></a>
+              <a class="example-image-link" href="images/flamehat4.jpg" data-lightbox="cap4"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div class="slide-content hat">
+            <!-- 排名圖示 -->
+            <img src="./images/top5.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>Chums Bush Pilot 棒球帽</h3>
+              <p>建議售價</p>
+              <span>NT 4,580</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="cap cap5">
+              <a class="example-image-link" href="./images/bscap1.jpg" data-lightbox="cap5">
+                <img src="./images/bscap.png" alt="image-1" />
+              </a>
+              <a class="example-image-link" href="images/bscap2.jpg" data-lightbox="cap5"></a>
+              <a class="example-image-link" href="images/bscap3.jpg" data-lightbox="cap5"></a>
+              <a class="example-image-link" href="images/bscap4.jpg" data-lightbox="cap5"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Navigation buttons -->
+      <div class="swiper-button">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <div class="swiper">
+      <h3>外套排行</h3>
+        <img src="./images/shadowy_cloud.svg" alt="">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide shirt">
+          <div class="slide-content">
+            <!-- 排名圖示 -->
+            <img src="./images/top1.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>Bonding Fleece <br> 刷毛連帽外套</h3>
+              <p>建議售價</p>
+              <span>NT 4,580</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="clothing">
+              <a class="example-image-link" href="./images/fleece1.jpg" data-lightbox="shirt1">
+                <img src="./images/Bonding Fleece.png" alt="image-1" />
+              </a>
+              <a class="example-image-link" href="images/fleece2.jpg" data-lightbox="shirt1"></a>
+              <a class="example-image-link" href="images/fleece3.jpg" data-lightbox="shirt1"></a>
+              <a class="example-image-link" href="images/fleece4.jpg" data-lightbox="shirt1"></a>
+              <a class="example-image-link" href="images/fleece5.jpg" data-lightbox="shirt1"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div class="slide-content">
+            <!-- 排名圖示 -->
+            <img src="./images/top2.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>Camping Parka <br> 風格外套</h3>
+              <p>建議售價</p>
+              <span>NT 4,880</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="clothing parka">
+              <a class="example-image-link" href="images/parka1.jpg" data-lightbox="shirt2">
+                <img src="images/parka.png" alt="image-1" />
+              </a>
+              <a class="example-image-link" href="images/parka2.jpg" data-lightbox="shirt2"></a>
+              <a class="example-image-link" href="images/parka3.jpg" data-lightbox="shirt2"></a>
+              <a class="example-image-link" href="images/parka4.jpg" data-lightbox="shirt2"></a>
+              <a class="example-image-link" href="images/fleece5.jpg" data-lightbox="shirt2"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div class="slide-content">
+            <!-- 排名圖示 -->
+            <img src="./images/top3.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>Gore-Tex 輕量防水外套</h3>
+              <p>建議售價</p>
+              <span>NT 10,880</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="clothing goretex">
+              <a class="example-image-link" href="images/goretex1.jpg" data-lightbox="shirt3">
+                <img src="images/goretex.png" alt="image-1" />
+              </a>
+              <a class="example-image-link" href="images/goretex2.jpg" data-lightbox="shirt3"></a>
+              <a class="example-image-link" href="images/goretex3.jpg" data-lightbox="shirt3"></a>
+              <a class="example-image-link" href="images/goretex4.jpg" data-lightbox="shirt3"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="swiper-slide shirt">
+          <div class="slide-content">
+            <!-- 排名圖示 -->
+            <img src="./images/top4.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>40周年紀念T-Shirt</h3>
+              <p>建議售價</p>
+              <span>NT 1,380</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="clothing tshirt">
+              <a class="example-image-link" href="images/tshirt.jpg" data-lightbox="shirt4">
+                <img src="images/tshirt1.png" alt="image-1" />
+              </a>
+              <a class="example-image-link" href="images/tshirt2.jpg" data-lightbox="shirt4"></a>
+              <a class="example-image-link" href="images/tshirt3.jpg" data-lightbox="shirt4"></a>
+              <a class="example-image-link" href="images/tshirt4.jpg" data-lightbox="shirt4"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div class="slide-content">
+            <!-- 排名圖示 -->
+            <img src="./images/top5.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>Bonding Fleece 刷毛連帽外套</h3>
+              <p>建議售價</p>
+              <span>NT 4,580</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="clothing vest">
+              <a class="example-image-link" href="./images/flame vest.jpg" data-lightbox="shirt5">
+                <img src="./images/flame vest1.png" alt="image-1" />
+              </a>
+              <a class="example-image-link" href="images/flame vest2.jpg" data-lightbox="shirt5"></a>
+              <a class="example-image-link" href="images/flame vest 3.jpg" data-lightbox="shirt5"></a>
+              <a class="example-image-link" href="images/flame vest 4.jpg" data-lightbox="shirt5"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Navigation buttons -->
+      <div class="swiper-button">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <div class="swiper">
+      <h3>背包排行</h3>
+        <img src="./images/shadowy_cloud.svg" alt="">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide bag">
+          <div class="slide-content">
+            <!-- 排名圖示 -->
+            <img src="./images/top1.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>Monkey Magic 後背包</h3>
+              <p>建議售價</p>
+              <span>NT 4,580</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="pack pack1">
+              <a class="example-image-link" href="./images/bag1.jpg" data-lightbox="bag1">
+                <img src="./images/bag.png" alt="image-1" />
+              </a>
+              <a class="example-image-link" href="images/bag2.jpg" data-lightbox="bag1"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div class="slide-content">
+            <!-- 排名圖示 -->
+            <img src="./images/top2.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>Mini Pouch 側背包</h3>
+              <p>建議售價</p>
+              <span>NT 680</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="pack pack2">
+              <a class="example-image-link" href="./images/minipouch.png" data-lightbox="bag2">
+                <img src="./images/minipouch.png" alt="image-1" />
+              </a>
+              <a class="example-image-link" href="images/minipouch2.png" data-lightbox="bag2"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div class="slide-content">
+            <!-- 排名圖示 -->
+            <img src="./images/top3.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>Boston 兩用旅行包</h3>
+              <p>建議售價</p>
+              <span>NT 2,704</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="pack pack3">
+              <a class="example-image-link" href="./images/pack1.jpg" data-lightbox="bag3">
+                <img src="./images/pack.jpg" alt="image-1" />
+              </a>
+              <a class="example-image-link" href="images/pack2.jpg" data-lightbox="bag3"></a>
+              <a class="example-image-link" href="images/pack3.jpg" data-lightbox="bag3"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Navigation buttons -->
+      <div class="swiper-button">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <div class="swiper">
+      <h3>折椅排行</h3>
+        <img src="./images/shadowy_cloud.svg" alt="">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide chair">
+          <div class="slide-content">
+            <!-- 排名圖示 -->
+            <img src="./images/top1.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>Canvas 帆布露營椅</h3>
+              <p>建議售價</p>
+              <span>NT 3,580</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="campChair chair1">
+              <a class="example-image-link" href="./images/canvas1.jpg" data-lightbox="chair1">
+                <img src="./images/canvas chair.png" alt="image-1" />
+              </a>
+              <a class="example-image-link" href="images/canvas2.jpg" data-lightbox="chair1"></a>
+              <a class="example-image-link" href="images/canvas3.jpg" data-lightbox="chair1"></a>
+              <a class="example-image-link" href="images/canvas4.jpg" data-lightbox="chair1"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div class="slide-content">
+            <!-- 排名圖示 -->
+            <img src="./images/top2.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>Foot Low 收納折疊椅</h3>
+              <p>建議售價</p>
+              <span>NT 3,280</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="campChair chair2">
+              <a class="example-image-link" href="./images/compact1.jpg" data-lightbox="chair2">
+                <img src="./images/compact.png" alt="image-1" />
+              </a>
+              <a class="example-image-link" href="images/compact2.jpg" data-lightbox="chair2"></a>
+              <a class="example-image-link" href="images/compact3.jpg" data-lightbox="chair2"></a>
+              <a class="example-image-link" href="images/compact4.jpg" data-lightbox="chair2"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div class="slide-content">
+            <!-- 排名圖示 -->
+            <img src="./images/top3.svg" alt="排名" class="ranking">
+            <!-- 產品資訊 -->
+            <div class="info">
+              <h3>Easy Chair 輕便露營椅</h3>
+              <p>建議售價</p>
+              <span>NT 1,880</span>
+            </div>
+            <!-- 產品圖片 -->
+            <div class="campChair chair3">
+              <a class="example-image-link" href="./images/easy1.jpg" data-lightbox="chair3">
+                <img src="./images/camp chair red.png" alt="image-1" />
+              </a>
+              <a class="example-image-link" href="images/easy2.jpg" data-lightbox="chair3"></a>
+              <a class="example-image-link" href="images/easy3.jpg" data-lightbox="chair3"></a>
+              <a class="example-image-link" href="images/easy4.jpg" data-lightbox="chair3"></a>
+            </div>
+            <!-- 色票選擇 -->
+            <ul class="color">
+              <li class="color1"></li>
+              <li class="color2"></li>
+              <li class="color3"></li>
+            </ul>
+            <!-- 按鈕 -->
+            <ul class="list">
+              <li id="shopee"><a href="https://shopee.tw/search?keyword=chums" target="_blank"></a></li>
+              <li id="momentum"><a href="https://www.momentum.com.tw/products?categories=chums" target="_blank"></a>
+              </li>
+              <li id="books"><a href="https://www.books.com.tw/web/sys_brand/0/0000013968" target="_blank"></a></li>
+              <li id="pcHome"><a href="https://24h.pchome.com.tw/store/DXBY44" target="_blank"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Navigation buttons -->
+      <div class="swiper-button">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+
   </main>
+
+  <footer>
+    <img src="./images/grass.svg" alt="" class="grass">
+    <img src="./images/lawn.svg" alt="" class="lawn">
+  </footer>
 
   <script src="./js/jquery-1.11.3.min.js"></script>
   <script src="./js/lightbox-plus-jquery.min.js"></script>
   <!-- Swiper JS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="./js/ranking.js"></script>
-  
+
 </body>
 
 </html>

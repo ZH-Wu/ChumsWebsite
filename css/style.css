@@ -558,6 +558,7 @@ header {
   .nav_rwd .back {
     width: 10%;
     position: absolute;
+    left: 25px;
     opacity: 0;
     
   }
