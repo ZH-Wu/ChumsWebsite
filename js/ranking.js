@@ -1,8 +1,42 @@
 $(function () {
+  // navBar
   $('.dropdown').click(function () {
     $(this).toggleClass('active').parent().siblings().find('.dropdown').removeClass('active').siblings().slideUp();
     $(this).siblings().slideToggle();
   });
+
+  // 滑動至指定區塊
+  $('.upper a').click(function () {
+    let btn = $(this).attr('href');
+    let pos = $(btn).offset();
+    $('html, body').animate({ scrollTop: pos.top }, 1500);
+  });
+
+  // 讓側邊欄跟著卷軸移動
+  $('.wrapper').scroll(function () {
+    let scrollPos = $(window).scrollTop();
+    $(".sidebar").css("top", scrollPos + "px");
+  });
+
+  // goTop按鈕
+  $('html,body').append('<div id="fixedTop"></div>');
+  let fixedTop = $('#fixedTop');
+  fixedTop.on('click', function () {
+    $('html,body').animate({ scrollTop: '0' }, 500);
+  });
+
+  // 當視窗變數載入時(網頁開啟時、捲動、調整大小時)，執行...
+  $(window).on('load scroll resize', function () {
+    let showTop = 800;
+    let curScrollTop = $(window).scrollTop();
+    if (curScrollTop > showTop) {
+      fixedTop.fadeIn(200);
+    } else {
+      fixedTop.fadeOut(200);
+    }
+  });
+
+
 });
 
 

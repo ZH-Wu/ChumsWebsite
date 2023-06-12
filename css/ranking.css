@@ -5,12 +5,6 @@
   src: url(../webfonts/ttc/GenSenRounded-R.ttc);
 }
 
-html,
-body {
-  /* position: relative; */
-  height: 100%;
-
-}
 
 *,
 *::before,
@@ -19,9 +13,29 @@ body {
   font-family: GenSenRounded;
 }
 
+.wrapper {
+  max-width: 1920px;
+}
+
 img {
   display: block;
   width: 100%;
+}
+
+/* goTop按鈕 */
+#fixedTop {
+  display: none;
+  cursor: pointer;
+  width: 5%;
+  height: 100px;
+  background-image: url(../images/top.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 10;
+
 }
 
 header {
@@ -32,51 +46,49 @@ header {
   display: flex;
   justify-content: space-between;
   position: sticky;
-  top: 0;
   z-index: 10;
 }
 
 .menu {
   display: flex;
-  justify-content: space-evenly;
+  
 }
 
-.dropdown {
+.menu a {
+  display: inline-block;
   text-decoration: none;
-  text-align: center;
+  padding: 0 10px;
+  font-size: 1.2rem;
   color: #B61C31;
-  width: 100px;
-  padding: 10px 10px 10px 10px;
+  text-align: center;
+  /* border: 1px solid #000; */
 }
 
-.dropdown:hover,
-.dropdown-item a:hover {
+.menu .dropdown:hover, .menu .dropdown.active {
   border-bottom: 2px solid #B61C31;
 }
 
-.dropdown.active {
-  background-image: url(https://raw.githubusercontent.com/ZH-Wu/ChumsWebsite/4f2fa97c396196264d4c3efd869231757d5afc20/img/circle.svg);
-  background-repeat: no-repeat;
-  background-size: 80px;
-  background-position: top center;
-}
-
-.dropdown-item {
-  margin-top: 0.5px;
-  text-align: center;
+.menu ul {
   display: none;
   background-color: #F5DEA8;
 }
 
-.dropdown-item a {
+.menu ul li a{
+  display: block;
   text-decoration: none;
-  color: #000;
-  padding: 10px 0;
+  color: #B61C31;
+  text-align: center;
+}
+
+.dropdown-item {
+  border-radius: 0 0 10px 10px;
 }
 
 .logo {
   margin-top: 12px;
-  width: 5%;
+  margin-right: 170px;
+  width: 100px;
+
 }
 
 .searchbar {
@@ -102,6 +114,7 @@ input {
   background-color: rgba(255, 255, 255, 0.8);
   border: none;
   box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: width .35s ease-in-out;
   transition: width .35s ease-in-out;
 
 }
@@ -134,14 +147,14 @@ input:focus {
 
 .cart {
   width: 45px;
-
+  height: 45px;
 }
 
 /* 主要內容區 */
 
-main{
-  /* padding-top: 120px; */
-  background-color: rgba(245, 222, 168, 1);
+main {
+  padding-top: 50px;
+  background: linear-gradient(179.57deg, #FDF8EE 10.49%, #F8E9C5 50.63%, #F5DEA8 100.34%);
   position: relative;
 }
 
@@ -152,7 +165,7 @@ main{
   border: 2px solid #CC4058;
   border-radius: 0px 30px 30px 0px;
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   left: -70px;
   top: 120px;
   transition: all 0.5s;
@@ -188,20 +201,50 @@ main{
 
 
 /* Swiper */
+.swiper::after {
+  content: "";
+  margin-top: 10px;
+  display: block;
+  width: 60%;
+  height: 3px;
+  margin: 0 auto;
+  background-color: #B61C31;
+  /* transform-origin: bottom;
+  transition: 1.5s; */
+}
+/* .swiper:hover::after {
+  transform: perspective(500px) rotateX(20deg) skewX(-20deg);
+} */
 
 .swiper>h3 {
   position: absolute;
   font-size: 1.5rem;
   top: 50px;
-  left: 20px;
-  z-index: 1;
+  left: 50px;
+  z-index: 2;
+}
+
+.swiper>h3::after {
+  content: "";
+  margin-top: 10px;
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #B61C31;
+
+}
+
+.swiper>h3:hover::after {
+  width: 100%;
+  transition: all 0.35s;
 }
 
 .swiper>img {
   position: absolute;
-  width: 10%;
-  left: 50px;
+  width: 9%;
+  left: 100px;
   top: 10px;
+  z-index: 1;
 }
 
 .swiper-slide {
@@ -218,12 +261,14 @@ main{
   background: #fff;
   transition: all .5s;
   position: relative;
-  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
 }
 
 .slide-content:hover {
   transform: translateY(-20px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  box-shadow: 10px 10px rgba(204, 64, 88, .8);
 }
 
 .color {
@@ -316,6 +361,11 @@ main{
   padding-bottom: 20px;
 }
 
+.info h3,
+.info p {
+  color: #4c4c4c;
+}
+
 .info p {
   font-size: 14px;
   padding-bottom: 10px;
@@ -333,7 +383,7 @@ main{
   height: 80%;
   left: -130px;
   top: 240px;
-  
+
 
 }
 
@@ -341,7 +391,7 @@ main{
   width: 105%;
   left: -180px;
   top: 80px;
-  
+
 }
 
 .tent_3 {
@@ -371,7 +421,7 @@ main{
   left: -50px;
   top: 210px;
   overflow: hidden;
-  
+
 }
 
 .parka {
@@ -402,7 +452,7 @@ main{
   width: 60%;
   top: 220px;
   left: -30px;
-} 
+}
 
 .cap3 {
   top: 250px;
@@ -410,7 +460,7 @@ main{
 
 .cap4 {
   top: 230px;
-  
+
 }
 
 .cap5 {
@@ -449,11 +499,13 @@ main{
 }
 
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   width: 100px;
 }
 
-.swiper-button-prev:after, .swiper-button-next:after  {
+.swiper-button-prev:after,
+.swiper-button-next:after {
   font-size: 3rem;
   color: #B61C31;
   content: '\f5d2';
