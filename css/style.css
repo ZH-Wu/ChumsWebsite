@@ -1629,7 +1629,7 @@ footer {
 }
 
 .link a:hover {
-  background-image: url(https://raw.githubusercontent.com/ZH-Wu/ChumsWebsite/4f2fa97c396196264d4c3efd869231757d5afc20/img/circle.svg);
+  background-image: url(../images/circle.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -1671,33 +1671,33 @@ footer {
 }
 
 .fb {
-  background-image: url(/images/fb.svg);
+  background-image: url(../images/fb.svg);
 }
 
 .fb:hover {
-  background-image: url(/images/fb_2.svg);
+  background-image: url(../images/fb_2.svg);
 }
 
 .line {
-  background-image: url(/images/line.svg);
+  background-image: url(../images/line.svg);
 }
 
 .line:hover {
-  background-image: url(/images/line-y.svg);
+  background-image: url(../images/line-y.svg);
 }
 
 .ig {
-  background-image: url(/images/ig.svg);
+  background-image: url(../images/ig.svg);
 }
 
 .ig:hover {
-  background-image: url(/images/ig-y.svg);
+  background-image: url(../images/ig-y.svg);
 }
 
 .yt {
-  background-image: url(/images/yt.svg);
+  background-image: url(../images/yt.svg);
 }
 
 .yt:hover {
-  background-image: url(/images/yt_2.svg);
+  background-image: url(../images/yt_2.svg);
 }
