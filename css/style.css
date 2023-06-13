@@ -694,7 +694,7 @@ main {
 .aboutUs {
   max-width: 960px;
   height: 80vh;
-  background-image: url(/images/branches.svg);
+  background-image: url(../images/branches.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
