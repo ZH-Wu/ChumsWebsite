@@ -201,20 +201,23 @@ main {
 
 
 /* Swiper */
+.swiper {
+  margin-bottom: 20px;
+}
 .swiper::after {
   content: "";
   margin-top: 10px;
   display: block;
   width: 60%;
-  height: 3px;
+  height: 5px;
   margin: 0 auto;
-  background-color: #B61C31;
-  /* transform-origin: bottom;
-  transition: 1.5s; */
+  background-color: rgba(182, 28, 49, .2);
+  transform-origin: bottom;
+  transition: 1.5s;
 }
-/* .swiper:hover::after {
+.swiper:hover::after {
   transform: perspective(500px) rotateX(20deg) skewX(-20deg);
-} */
+}
 
 .swiper>h3 {
   position: absolute;

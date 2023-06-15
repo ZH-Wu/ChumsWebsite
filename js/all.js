@@ -83,7 +83,7 @@ const swiper = new Swiper('.swiper', {
   autoplay: {
     delay: 3000,
     pauseOnMouseEnter: true,
-    disableOnInteraction: true,
+    disableOnInteraction: false,
   },
   freeMode: {
     momentumBounce: true,

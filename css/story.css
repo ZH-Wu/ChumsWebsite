@@ -68,6 +68,7 @@ header {
 .menu ul {
   display: none;
   background-color: #F5DEA8;
+  border-radius: 0 0 12px 12px;
 }
 
 .menu ul li a {
@@ -146,6 +147,7 @@ input:focus {
 /* Header RWD */
 
 @media (min-width: 769px) {
+
   .menuL,
   .back,
   .magXs {
@@ -189,7 +191,7 @@ input:focus {
   }
 
   .magXs {
-    width: 6%;
+    width: 5%;
     padding-top: 5px;
     transform: rotate(-20deg);
   }
@@ -490,6 +492,7 @@ main {
 }
 
 @media (max-width: 768px) {
+
   #upperPart,
   #lowerPart {
     width: 100%;
@@ -497,6 +500,7 @@ main {
 }
 
 @media (max-width: 576px) {
+
   #upperPart,
   #lowerPart {
     width: 100%;
@@ -537,7 +541,7 @@ main {
 }
 
 iframe {
-  width: 80%; 
+  width: 80%;
   height: 540px;
   border-radius: 10px;
 }
@@ -613,6 +617,13 @@ iframe {
   position: relative;
   transition: .5s;
   box-shadow: 3px 0px 5px 0px rgb(76, 76, 76, .5);
+}
+
+@media (max-width: 768px) {
+  .list li a:active {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 10px #4c4c4c;
+  }
 }
 
 @media (max-width: 576px) {
@@ -698,14 +709,25 @@ iframe {
 }
 
 #lowerPart .slogan {
-  width: 10%;
+  width: 15%;
   transform: scale(1.5);
   margin-bottom: 100px;
 }
 
-@media (min-width: 577px) {
+@media (min-width: 769px) {
   #lowerPart .vertical {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #lowerPart .horizontal {
+    display: none;
+  }
+
+  #lowerPart .slogan {
+    width: 30%;
+    margin-bottom: 60px;
   }
 }
 
@@ -713,10 +735,6 @@ iframe {
   #lowerPart .slogan {
     width: 30%;
     margin-bottom: 60px;
-  }
-
-  #lowerPart .horizontal {
-    display: none;
   }
 
   #lowerPart .vertical {
@@ -745,6 +763,15 @@ footer {
   top: 20px;
 }
 
+@media (max-width: 768px) {
+  #birdwithbrand {
+    width: 20%;
+    position: absolute;
+    left: 70px;
+    top: 30px;
+  }
+}
+
 @media (max-width: 576px) {
   #birdwithbrand {
     width: 30%;
@@ -760,6 +787,14 @@ footer {
   width: 5%;
   transform: rotate(-10deg);
 }
+
+@media (max-width: 768px) {
+  #footprintleft {
+    bottom: 20px;
+    width: 15%;
+  }
+}
+
 
 @media (max-width: 576px) {
   #footprintleft {
