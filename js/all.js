@@ -26,13 +26,15 @@ $(function () {
   $(window).scroll(function () {
     var scrollTop = $(this).scrollTop();
 
-    $('.aboutUs').stop().toggleClass('animate__bounceInDown', scrollTop > 700);
-    $('.logo_2, .welcomeBird').stop().toggleClass('animate__tada', scrollTop > 700);
-    $('.c2').stop().toggle(scrollTop > 1300, 80);
-    $('.c1').stop().toggle(scrollTop > 1800, 80);
-    $('.c3').stop().toggle(scrollTop > 2200, 80);
-    $('.c5').stop().toggle(scrollTop > 2400, 80).delay(100);
-    $('.c4').stop().toggle(scrollTop > 2800, 80);
+    if ($(window).innerWidth > 768) {
+      $('.aboutUs').stop().toggleClass('animate__bounceInDown', scrollTop > 700);
+      $('.logo_2, .welcomeBird').stop().toggleClass('animate__tada', scrollTop > 700);
+      $('.c2').stop().toggle(scrollTop > 1300, 80);
+      $('.c1').stop().toggle(scrollTop > 1800, 80);
+      $('.c3').stop().toggle(scrollTop > 2200, 80);
+      $('.c5').stop().toggle(scrollTop > 2400, 80).delay(100);
+      $('.c4').stop().toggle(scrollTop > 2800, 80);
+    }
   });
 
   // 碰到放大鏡顯示對話框

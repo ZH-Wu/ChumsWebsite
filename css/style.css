@@ -22,7 +22,7 @@
 }
 
 /* 最外圍容器設定 */
-.box {
+.container {
   max-width: 1920px;
   margin: 0 auto;
   overflow: hidden;
@@ -108,7 +108,7 @@ header {
 
   .slide-menuM {
     position: absolute;
-    top: 70px;
+    top: 50px;
     right: -100%;
     width: 100%;
     height: 954px;
@@ -565,11 +565,11 @@ header {
   }
 
   .nav .ribbon {
-    top: 70px;
+    top: 50px;
   }
 
   .nav_rwd {
-    height: 70px;
+    height: 50px;
     padding-right: 8px;
     background-color: #F0DAA5;
     display: flex;
@@ -578,7 +578,7 @@ header {
   }
 
   .nav_rwd .menuL {
-    width: 10%;
+    width: 8%;
   }
 
   .nav_rwd .menuL.active {
@@ -586,9 +586,9 @@ header {
   }
 
   .nav_rwd .back {
-    width: 7%;
+    width: 6%;
     position: absolute;
-    left: 10px;
+    left: 6px;
     opacity: 0;
 
   }
@@ -598,11 +598,11 @@ header {
   }
 
   .nav_rwd .logo {
-    width: 15%;
+    width: 11%;
   }
 
   .nav_rwd .magXs {
-    width: 5%;
+    width: 3%;
     margin-right: 8px;
     padding-top: 5px;
     transform: rotate(-20deg);
@@ -2222,7 +2222,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 30px;
-  transition: all .5s;
+  transition: .5s;
 }
 @media (max-width: 768px) {
   .share a {
