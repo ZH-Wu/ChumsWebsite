@@ -38,7 +38,6 @@ header {
   background-color: #F5DEA8;
   padding: 0px 10px;
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
   position: sticky;
   top: 0px;
@@ -80,7 +79,7 @@ header {
 
 .logo {
   margin-top: 12px;
-  margin-right: 170px;
+  margin-right: 55px;
   width: 100px;
 
 }
@@ -147,7 +146,6 @@ input:focus {
 /* Header RWD */
 
 @media (min-width: 769px) {
-
   .menuL,
   .back,
   .magXs {
@@ -157,8 +155,12 @@ input:focus {
 
 @media (max-width: 768px) {
   header {
+    height: 50px;
+    padding: 0;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding-right: 20px;
   }
 
   nav,
@@ -167,7 +169,7 @@ input:focus {
   }
 
   .menuL {
-    width: 10%;
+    width: 8%;
   }
 
   .menuL.active {
@@ -175,9 +177,9 @@ input:focus {
   }
 
   .back {
-    width: 7%;
+    width: 6%;
     position: absolute;
-    left: 15px;
+    left: 6px;
     opacity: 0;
   }
 
@@ -186,13 +188,15 @@ input:focus {
   }
 
   .logo {
-    width: 15%;
+    width: 11%;
     margin: 0;
+    margin-right: 20px;
   }
 
   .magXs {
-    width: 5%;
+    width: 3%;
     padding-top: 5px;
+    margin-right: 5px;
     transform: rotate(-20deg);
   }
 
@@ -202,7 +206,6 @@ input:focus {
   header {
     height: 50px;
     align-items: center;
-    padding-right: 20px;
   }
 
   nav,
@@ -214,30 +217,18 @@ input:focus {
     width: 15%;
   }
 
-  .menuL.active {
-    opacity: 0;
-  }
-
   .back {
     width: 10%;
-    position: absolute;
-    left: 15px;
-    opacity: 0;
-  }
-
-  .back.active {
-    opacity: 1;
+    left: 8px;
   }
 
   .logo {
     width: 20%;
-    margin: 0;
   }
 
   .magXs {
     width: 6%;
     padding-top: 5px;
-    transform: rotate(-20deg);
   }
 
 }
@@ -253,14 +244,13 @@ input:focus {
 @media (max-width: 768px) {
   .slide-menuM {
     position: absolute;
-    top: 70px;
+    top: 50px;
     right: -100%;
     width: 100%;
-    height: 954px;
+    height: 974px;
     background-color: rgba(245, 222, 168, 1);
     z-index: 20;
     transition: .5s;
-    overflow: hidden;
   }
 
   .slide-menuM.active {
@@ -268,83 +258,119 @@ input:focus {
   }
 
   .slide-menuM .upper {
-    height: 70%;
-    padding-top: 50px;
+    height: 60%;
+    padding-top: 30px;
   }
 
   .slide-menuM .upper ul {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 20px 0;
   }
 
   .slide-menuM .upper ul li {
-    width: 220px;
-    height: 220px;
-    padding-top: 90px;
-    text-align: center;
+    width: 250px;
+    height: 250px;
     background-image: url(../images/foot.svg);
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-position: center;
-    font-size: 1.3rem;
+    padding-right: 10px;
   }
 
   .slide-menuM .upper li a {
+    display: block;
+    width: 50%;
+    font-size: 1.4em;
+    text-align: center;
     text-decoration: none;
+    margin: 0 auto;
+    margin-top: 110px;
     color: #fff;
   }
 
-  .slide-menuM .lower {
-    width: 100%;
-    position: relative;
-    height: 30%;
+  .slide-menuM .upper li a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin: 0 auto;
+    background-color: #fff;
+    transition: .5s;
   }
 
-  #bg {
-    height: 100%;
-    position: absolute;
-    z-index: 2;
+  .upper li:hover a::after {
+    width: 90%;
+  }
+
+  .slide-menuM .lower {
+    height: 40%;
+    background-image: url(../images/footer.png);
+    background-size: cover;
+    display: flex;
+    align-items: end;
   }
 
   #booby {
     position: absolute;
-    width: 20%;
-    bottom: 90%;
-    right: 25px;
-    transform: rotate(25deg);
+    width: 25%;
+    bottom: 150px;
+    right: 50px;
     z-index: 1;
+    animation: booby 2s linear infinite alternate;
   }
 
-  .slide-menuM .lower ul {
+  @keyframes booby {
+    0% {
+      right: 0;
+      bottom: 150px;
+    }
+
+    25% {
+      right: 50px;
+      bottom: 140px;
+    }
+
+    50% {
+      right: 75px;
+      bottom: 160px;
+    }
+
+    100% {
+      right: 0px;
+      bottom: 150px;
+    }
+  }
+
+  .slide-menuM .lower .area {
+    width: 60%;
+    height: 70%;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
-    width: 50%;
-    bottom: 20%;
-    left: 25%;
-    position: absolute;
-    z-index: 3;
   }
 
   .slide-menuM .lower .CTA {
-    position: absolute;
-    left: 41%;
-    top: 30%;
-    font-size: 2rem;
-    z-index: 3;
+    font-size: 2.5em;
     font-family: 'Courgette', cursive;
   }
 
-  .slide-menuM .lower a {
+  .slide-menuM .lower .area ul {
+    display: flex;
+    margin-top: 30px;
+  }
+
+  .slide-menuM .lower .area a {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
+    margin: 0 15px;
     text-indent: 101%;
     overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: .5s;
   }
 
   .fb {
@@ -366,119 +392,58 @@ input:focus {
 
 @media (max-width: 576px) {
   .slide-menuM {
-    position: absolute;
-    top: 50px;
-    right: -100%;
-    width: 100%;
     height: 794px;
-    background-color: rgba(245, 222, 168, 1);
-    z-index: 20;
-    transition: .5s;
-    overflow: hidden;
-  }
-
-  .slide-menuM.active {
-    right: 0%;
-  }
-
-  .slide-menuM .upper {
-    height: 70%;
-    padding-top: 50px;
-  }
-
-  .slide-menuM .upper ul {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
   }
 
   .slide-menuM .upper ul li {
     width: 130px;
     height: 130px;
-    padding-top: 40px;
-    text-align: center;
-    transition: all .5s;
-    background-image: url(../images/foot.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-size: .8rem;
+    padding-right: 2px;
   }
 
-  .slide-menuM .upper li a {
-    text-decoration: none;
-    color: #fff;
+  .slide-menuM .upper ul li a {
+    margin-top: 40px;
+    font-size: .7em;
   }
 
-  .slide-menuM .lower {
-    width: 100%;
-    position: relative;
-    height: 30%;
-  }
-
-  #bg {
-    height: 100%;
-    position: absolute;
-    z-index: 2;
+  .slide-menuM .upper li a::after {
+    margin-top: -20px;
   }
 
   #booby {
-    position: absolute;
-    width: 40%;
-    bottom: 100%;
-    right: 25px;
-    transform: rotate(25deg);
-    z-index: 1;
+    width: 20%;
   }
 
-  .slide-menuM .lower ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%;
-    bottom: 15%;
-    left: 10%;
-    font-size: 1.5rem;
-    position: absolute;
-    z-index: 3;
+  @keyframes booby {
+    0% {
+      right: 0;
+      bottom: 150px;
+    }
+
+    25% {
+      right: 25px;
+      bottom: 140px;
+    }
+
+    50% {
+      right: 50px;
+      bottom: 160px;
+    }
+
+    100% {
+      right: 0px;
+      bottom: 150px;
+    }
   }
 
   .slide-menuM .lower .CTA {
-    position: absolute;
-    left: 35%;
-    top: 40%;
-    font-size: 1.5rem;
-    z-index: 3;
-    font-family: 'Courgette', cursive;
+    font-size: 2em;
   }
 
-  .slide-menuM .lower a {
-    display: block;
-    width: 48px;
-    height: 48px;
-    text-indent: 101%;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: cover;
+  .slide-menuM .lower .area a {
+    width: 50px;
+    height: 50px;
   }
-
-  .fb {
-    background-image: url(../images/fb.svg);
-  }
-
-  .line {
-    background-image: url(../images/line.svg);
-  }
-
-  .ig {
-    background-image: url(../images/ig.svg);
-  }
-
-  .yt {
-    background-image: url(../images/yt.svg);
-  }
-
 }
 
 main {

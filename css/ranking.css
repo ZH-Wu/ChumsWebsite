@@ -46,12 +46,13 @@ header {
   display: flex;
   justify-content: space-between;
   position: sticky;
+  top: 0;
   z-index: 10;
 }
 
 .menu {
   display: flex;
-  
+
 }
 
 .menu a {
@@ -64,16 +65,18 @@ header {
   /* border: 1px solid #000; */
 }
 
-.menu .dropdown:hover, .menu .dropdown.active {
+.menu .dropdown:hover,
+.menu .dropdown.active {
   border-bottom: 2px solid #B61C31;
 }
 
 .menu ul {
   display: none;
   background-color: #F5DEA8;
+  border-radius: 0 0 12px 12px;
 }
 
-.menu ul li a{
+.menu ul li a {
   display: block;
   text-decoration: none;
   color: #B61C31;
@@ -86,7 +89,7 @@ header {
 
 .logo {
   margin-top: 12px;
-  margin-right: 170px;
+  margin-right: 80px;
   width: 100px;
 
 }
@@ -150,6 +153,106 @@ input:focus {
   height: 45px;
 }
 
+@media (min-width: 769px) {
+
+  .menuL,
+  .back,
+  .magXs {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    align-items: center;
+    padding-right: 20px;
+  }
+
+  nav,
+  .searchbar {
+    display: none;
+  }
+
+  .menuL {
+    width: 10%;
+  }
+
+  .menuL.active {
+    opacity: 0;
+  }
+
+  .back {
+    width: 7%;
+    position: absolute;
+    left: 15px;
+    opacity: 0;
+  }
+
+  .back.active {
+    opacity: 1;
+  }
+
+  .logo {
+    width: 15%;
+    margin: 0;
+  }
+
+  .magXs {
+    width: 5%;
+    padding-top: 5px;
+    transform: rotate(-20deg);
+  }
+
+}
+
+@media (max-width: 576px) {
+  header {
+    height: 50px;
+    align-items: center;
+    padding-right: 20px;
+  }
+
+  nav,
+  .searchbar {
+    display: none;
+  }
+
+  .menuL {
+    width: 15%;
+  }
+
+  .menuL.active {
+    opacity: 0;
+  }
+
+  .back {
+    width: 10%;
+    position: absolute;
+    left: 15px;
+    opacity: 0;
+  }
+
+  .back.active {
+    opacity: 1;
+  }
+
+  .logo {
+    width: 20%;
+    margin: 0;
+  }
+
+  .magXs {
+    width: 6%;
+    padding-top: 5px;
+    transform: rotate(-20deg);
+  }
+
+}
+
+
+
+
+
 /* 主要內容區 */
 
 main {
@@ -204,6 +307,7 @@ main {
 .swiper {
   margin-bottom: 20px;
 }
+
 .swiper::after {
   content: "";
   margin-top: 10px;
@@ -215,6 +319,7 @@ main {
   transform-origin: bottom;
   transition: 1.5s;
 }
+
 .swiper:hover::after {
   transform: perspective(500px) rotateX(20deg) skewX(-20deg);
 }

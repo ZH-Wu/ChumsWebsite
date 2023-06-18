@@ -252,12 +252,6 @@ header {
   width: 90%;
 }
 
-@media (max-width: 576px) {
-  .upper li:hover a::after {
-    width: 60%;
-  }
-}
-
 .lower {
   height: 50%;
   background-image: url(../images/footer.png);
