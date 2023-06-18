@@ -14,6 +14,10 @@
   src: url(../webfonts/ttc/GenSenRounded-R.ttc);
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 *,
 *::before,
 *::after {
@@ -26,7 +30,7 @@
   max-width: 1920px;
   margin: 0 auto;
   overflow: hidden;
-
+  
 }
 
 /* CSS共用區 */
@@ -86,7 +90,7 @@ header {
 
 /* OffCanvas 主選單 */
 .slide-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -100%;
   width: 100%;
@@ -111,7 +115,7 @@ header {
     top: 50px;
     right: -100%;
     width: 100%;
-    height: 954px;
+    height: 974px;
     background-color: rgba(245, 222, 168, 1);
     z-index: 20;
     transition: .5s;
@@ -124,19 +128,9 @@ header {
 
 @media (max-width: 576px) {
   .slide-menuM {
-    position: absolute;
-    top: 50px;
-    right: -100%;
-    width: 100%;
     height: 794px;
-    background-color: rgba(245, 222, 168, 1);
-    z-index: 20;
-    transition: .5s;
   }
 
-  .slide-menuM.active {
-    right: 0%;
-  }
 }
 
 .slide-menu span {
@@ -154,12 +148,15 @@ header {
   padding-top: 30px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .slide-menuM .upper {
     height: 70%;
-    padding-top: 50px;
   }
-
+}
+@media (max-width: 576px) {
+  .slide-menuM .upper {
+    height: 60%;
+  }
 }
 
 .upper h2 {
@@ -177,7 +174,7 @@ header {
 
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .slide-menuM .upper ul {
     width: 100%;
     justify-content: center;
@@ -186,25 +183,29 @@ header {
 }
 
 .upper li {
-  width: 200px;
-  height: 200px;
-  padding-top: 105px;
+  width: 250px;
+  height: 250px;
   color: #fff;
   text-align: center;
-  transition: all .5s;
   background-image: url(../images/foot.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 120% 120%;
+  font-size: 1.4em;
+  transition: .5s;
+}
+
+@media (max-width: 768px) {
+  .upper ul li {
+    background-size: 110% 110%;
+  }
 }
 
 @media (max-width: 576px) {
-  .slide-menuM .upper ul li {
+  .upper ul li {
     width: 130px;
     height: 130px;
-    padding-top: 65px;
-    background-size: contain;
-    font-size: .8rem;
+    background-size: 120% 120%;  
   }
 }
 
@@ -213,106 +214,155 @@ header {
 }
 
 .upper li a {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 130px;
   text-decoration: none;
   color: #fff;
-  padding-bottom: 10px;
-}
-
-.upper li:hover a {
-  border-bottom: 2px solid #fff;
-}
-
-
-.lower {
-  width: 100%;
-  height: 50%;
-  position: relative;
-
+  
 }
 
 @media (max-width: 576px) {
+  .upper li a {
+    font-size: .6em;
+    width: 60%;
+    margin-top: 70px;
+  }
+}
+
+.upper li a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin: 0 auto;
+  margin-top: 10px;
+  background-color: #fff;
+  transition: .5s;
+}
+
+.upper li:hover a::after {
+  width: 90%;
+}
+
+@media (max-width: 576px) {
+  .upper li:hover a::after {
+    width: 60%;
+  }
+}
+
+.lower {
+  height: 50%;
+  background-image: url(../images/footer.png);
+  background-size: cover;
+  display: flex;
+  align-items: end;
+}
+
+@media (max-width: 768px) {
   .slide-menuM .lower {
     height: 30%;
   }
 }
 
-#bg {
-  height: 100%;
-  position: absolute;
-  z-index: 2;
+@media (max-width: 576px) {
+  .slide-menuM .lower {
+    height: 40%;
+  }
 }
 
 #booby {
-  width: 20%;
+  width: 15%;
   position: absolute;
   bottom: 150px;
   right: 50px;
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  #booby {
+    width: 25%;
+  }
+}
+
 @media (max-width: 576px) {
   #booby {
-    width: 40%;
-    bottom: 100%;
+    width: 30%;
+    bottom: 30%;
     right: 25px;
     transform: rotate(25deg);
   }
 }
 
-.lower ul {
+.lower .area {
+  width: 60%;
+  height: 70%;
+  margin: 0 auto;
+  padding-top: 50px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  padding-top: 285px;
-  width: 30%;
-  font-size: 1.5rem;
-  position: absolute;
-  left: 35%;
-  z-index: 3;
-
 }
 
-@media (max-width: 576px) {
-  .slide-menuM .lower ul {
-    width: 80%;
-    bottom: 15%;
-    left: 10%;
+@media (max-width: 768px) {
+  .lower .area {
     padding-top: 0;
   }
 }
 
 .CTA {
   font-family: 'Courgette', cursive;
+  font-size: 3em;
 }
 
+@media (max-width: 768px) {
+  .slide-menuM .lower .CTA {
+    font-size: 2.5em;
+  }
+}
 @media (max-width: 576px) {
   .slide-menuM .lower .CTA {
-    position: absolute;
-    left: 35%;
-    top: 40%;
-    font-size: 1.5rem;
-    z-index: 3;
+    font-size: 2em;
+    margin-top: 20px;
   }
 }
 
-.lower a {
+.lower .area ul {
+  display: flex;
+  margin-top: 70px;
+}
+
+@media (max-width: 768px) {
+  .lower .area ul {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .lower .area ul {
+    margin-top: 50px;
+  }
+}
+
+.lower .area a {
   display: block;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
+  margin: 0 15px;
   text-indent: 101%;
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: all .5s;
+  transition: .5s;
 }
 
 @media (max-width: 576px) {
-  .slide-menuM .lower a {
-    width: 48px;
-    height: 48px;
+  .lower .area a {
+    width: 50px;
+    height: 50px;
   }
 }
-
 .lower a:hover {
   transform: translateY(-15px);
 }
@@ -904,13 +954,6 @@ main {
   margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-  .aboutUs h2 {
-    font-size: 2rem;
-    text-shadow: 2px 2px #fff, -2px 2px #fff, 3px 3px #CC4058, -3px 3px #CC4058;
-  }
-}
-
 .aboutUs p {
   font-size: 1.5rem;
   color: #364F0B;
@@ -1130,21 +1173,21 @@ main {
 
 @keyframes birdWithGuitar {
   0% {
-    right: 10%;
+    right: 0%;
   }
 
   25% {
-    right: 22%;
+    right: 10%;
     rotate: -50deg;
   }
 
   50% {
-    right: 22%;
+    right: 10%;
     rotate: -30deg
   }
 
   100% {
-    right: 10%;
+    right: 0%;
   }
 }
 
@@ -1158,7 +1201,6 @@ main {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-
 
 .chatBox {
   display: none;
@@ -1424,7 +1466,6 @@ main {
 @media (max-width: 768px) {
   .product {
     height: 55%;
-    border: 1px solid #000;
   }
 
   .product h2 {
@@ -1432,14 +1473,28 @@ main {
     left: 25%;
   }
 
-  .group4,
-  .group5 {
-    display: none;
-  }
-
   .birdWithGuitar {
-    top: 85%;
-    width: 25%;
+    top: 92%;
+    width: 15%;
+  }
+  @keyframes birdWithGuitar {
+    0% {
+      right: 0%;
+    }
+  
+    25% {
+      right: 15%;
+      rotate: -50deg;
+    }
+  
+    50% {
+      right: 20%;
+      rotate: -30deg
+    }
+  
+    100% {
+      right: 0%;
+    }
   }
 
   .magnifier {
@@ -1467,6 +1522,15 @@ main {
     left: 88%;
   }
 
+  .m4 {
+    top: 59%;
+    left: 37%;
+  }
+
+  .m5 {
+    bottom: 27%;
+  }
+
   .c1 {
     top: 15%;
     left: 2%;
@@ -1480,6 +1544,16 @@ main {
   .c3 {
     top: 35%;
     left: 55%;
+  }
+
+  .c4 {
+    top: 50%;
+    left: 2%;
+  }
+
+  .c5 {
+    right: 10%;
+    bottom: 29%;
   }
 
   .product-box {
@@ -1501,6 +1575,16 @@ main {
     top: 43%;
     left: 50%;
   }
+
+  .hat {
+    bottom: 20%;
+    left: 5%;
+  }
+
+  .bag {
+    bottom: 10%;
+    right: 10%;
+  }
 }
 
 
@@ -1520,17 +1604,15 @@ main {
   }
 
   .productM h2 {
-    font-size: 3rem;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .productM .swiper {
-    height: 80%;
+    height: 70%;
   }
 
   .productM .slide-content {
-    width: 100%;
     height: 100%;
   }
 
@@ -1541,22 +1623,47 @@ main {
     position: relative;
     /* 因.product-box預設是display: none */
     display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .productM .product-box .txt {
+    margin-bottom: 10px;
+    
+  }
+  
+  .productM .product-box .tentM {
+    margin-top: 30px;
   }
 
-  .productM .product-box .tentM {
-    transform: scale(1.1);
-    margin-top: 60px;
-    margin-bottom: 45px;
+  .productM .product-box .fleeceM {
+    width: 75%;
+  }
+  
+  .productM .product-box .bagM {
+    margin-top: 10px;
+    width: 70%;
+    height: 60%;
   }
 
   .productM .product-box .hatM {
-    margin-top: 55px;
-    margin-bottom: 50px;
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 
   .productM .product-box .chairM {
-    height: 75%;
-    transform: scale(.9);
+    width: 70%;
+    height: 70%;
+    margin-top: -20px;
+    
+  }
+
+  .productM .slideBox ul {
+    margin-top: 60px;
+    margin-bottom: 20px;
   }
 
 
@@ -1621,7 +1728,7 @@ main {
 
   #billboard a {
     width: 100%;
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
   #billboard a::after {
@@ -1629,7 +1736,7 @@ main {
     width: 5%;
     position: absolute;
     top: 1px;
-    right: 45px;
+    right: 40px;
   }
 
   #hill {
@@ -1740,58 +1847,63 @@ main {
 }
 
 @media (min-width: 769px) {
-  .newsM {
+  .newsP, .newsM {
     display: none;
   }
 }
 
 @media (max-width: 768px) {
-
   .news,
   .flag_news {
     display: none;
   }
 
   .newsM {
+    display: none;
+  }
+
+  .newsP {
+    display: block;
+  }
+
+  .newsP {
     padding-top: 20px;
     height: 15%;
   }
 
-  .newsM h2.title {
+  .newsP h2.title {
     text-align: center;
   }
 
-  .newsM .swiper {
+  .newsP .swiper {
     height: 75%;
   }
 
-  .newsM .swiper-slide {
+  .newsP .swiper-slide {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
   }
 
-  .newsM .slide-content {
-    width: 48%;
+  .newsP .slide-content {
+    width: 30%;
     position: relative;
-    overflow: hidden;
-    border-radius: 25px;
   }
 
-  .newsM .slide-content figure {
+  .newsP .slide-content figure {
     border-radius: 25px;
     overflow: hidden;
     border: 5px solid #fff;
 
   }
 
-  .newsM .slide-content a {
+  .newsP .slide-content a {
     display: block;
-    width: 97%;
+    width: 96%;
     text-decoration: none;
     border-radius: 0 0 20px 20px;
     font-size: 1.2em;
-    padding: 20px 0;
+    padding: 15px 0;
     letter-spacing: 2px;
     background: #605221;
     color: #fff;
@@ -1804,7 +1916,12 @@ main {
 }
 
 @media (max-width: 576px) {
+  .news, .newsP {
+    display: none;
+  }
+
   .newsM {
+    display: block;
     height: 20%;
   }
 
@@ -1819,15 +1936,13 @@ main {
 
   .newsM .swiper-slide {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
   }
 
   .newsM .slide-content {
     width: 48%;
     position: relative;
-    overflow: hidden;
-    border-radius: 25px;
   }
 
   .newsM .slide-content figure {
@@ -1839,7 +1954,7 @@ main {
 
   .newsM .slide-content a {
     display: block;
-    width: 95%;
+    width: 94%;
     text-decoration: none;
     border-radius: 0 0 20px 20px;
     font-size: .8em;
@@ -1927,46 +2042,47 @@ span {
 
 
 @media (min-width: 769px) {
-  .shopM {
+  .shopP, .shopM {
     display: none;
   }
 }
 
 @media (max-width: 768px) {
-  .shop {
+  .shop, .shopM {
     display: none;
   }
 
-  .shopM {
+  .shopP {
     display: block;
     height: 15%;
-
   }
 
-  .shopM h2.title {
+  .shopP h2.title {
     text-align: center;
   }
 
-  .shopM .swiper {
-    height: 75%;
+  .shopP .swiper {
+    height: 70%;
   }
 
-  .shopM .swiper-slide {
+  .shopP .swiper-slide {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
   }
 
-  .shopM .slide-content {
-    width: 48%;
-    height: 90%;
+  .shopP .slide-content {
+    width: 30%;
+    height: 70%;
     border-radius: 20px;
     background: #fff;
     position: relative;
   }
 
-  .shopM .slide-content figure {
-    margin: 20px auto;
+  .shopP .slide-content figure {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
     width: 90%;
     height: 40%;
     border-radius: 20px;
@@ -1975,29 +2091,25 @@ span {
 
   }
 
-  .shopM .slide-content figure img {
+  .shopP .slide-content figure img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
   }
 
-  .shopM .info {
-    padding-top: 10px;
-  }
-
-  .shopM .info h2 {
+  .shopP .info h2 {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.1em;
   }
 
-  .shopM .slide-content .info a {
+  .shopP .slide-content .info a {
     margin: 0;
     display: block;
     width: 100%;
     text-decoration: none;
     border-radius: 0 0 20px 20px;
-    padding: 25px 0;
+    padding: 15px 0;
     background: #605221;
     font-size: 1.2em;
     letter-spacing: 2px;
@@ -2011,17 +2123,22 @@ span {
 }
 
 @media (max-width: 576px) {
+  .shop, .shopP {
+    display: none;
+  }
 
   .shopM {
+    display: block;
     height: 20%;
   }
 
   .shopM h2.title {
     text-align: center;
+    margin-bottom: 20px;
   }
 
   .shopM .swiper {
-    height: 60%;
+    height: 50%;
   }
 
   .shopM .swiper-slide {
@@ -2031,7 +2148,7 @@ span {
   }
 
   .shopM .slide-content {
-    width: 48%;
+    width: 45%;
     height: 100%;
     border-radius: 20px;
     background: #fff;
@@ -2056,9 +2173,9 @@ span {
   }
 
   .shopM .info h2 {
-    font-size: .9em;
+    font-size: .8em;
+    text-align: center;
     padding: 0;
-    margin: 0;
   }
 
   .shopM .slide-content .info a {
@@ -2067,7 +2184,7 @@ span {
     width: 100%;
     text-decoration: none;
     border-radius: 0 0 20px 20px;
-    padding: 12px 0;
+    padding: 10px 0;
     background: #605221;
     color: #fff;
     text-align: center;
