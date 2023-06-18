@@ -25,7 +25,7 @@ $(function () {
   // 指定卷軸到指定高度再執行淡入淡出效果
   $(window).scroll(function () {
     var scrollTop = $(this).scrollTop();
-
+    if (innerWidth > 769) {
       $('.aboutUs').stop().toggleClass('animate__bounceInDown', scrollTop > 700);
       $('.logo_2, .welcomeBird').stop().toggleClass('animate__tada', scrollTop > 700);
       $('.c2').stop().toggle(scrollTop > 1300, 80);
@@ -33,16 +33,18 @@ $(function () {
       $('.c3').stop().toggle(scrollTop > 2200, 80);
       $('.c5').stop().toggle(scrollTop > 2400, 80).delay(100);
       $('.c4').stop().toggle(scrollTop > 2800, 80);
-  
+    } else if (innerWidth > 576 && innerWidth <= 768) {
+      $('.aboutUs').stop().toggleClass('animate__bounceInDown', scrollTop > 300);
+      $('.logo_2, .welcomeBird').stop().toggleClass('animate__tada', scrollTop > 300);
+      $('.c2').stop().toggle(scrollTop > 600, 80);
+      $('.c1').stop().toggle(scrollTop > 800, 80).delay(200);
+      $('.c3').stop().toggle(scrollTop > 1000, 80).delay(200);
+      $('.c4').stop().toggle(scrollTop > 1200, 80).delay(200);
+      $('.c5').stop().toggle(scrollTop > 1500, 80).delay(200);
+    }
   });
 
-  // 碰到放大鏡顯示對話框
-  $('.magnifier').hover(function () {
-    $(this).siblings('.chatBox').fadeToggle();
-  });
-
-
-  // 點擊放大鏡顯示商品
+  // 點擊放大鏡顯示及關閉商品
   $('.magnifier').click(function () {
     $(this).siblings('.product-box').toggle(500);
   });
@@ -50,7 +52,6 @@ $(function () {
   // 點擊立即購買出現下滑選單
   $('.buy').click(function () {
     $(this).siblings('.slideBox').toggleClass('active');
-
   });
 
   $('.return').click(function () {
