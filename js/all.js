@@ -35,7 +35,7 @@ $(function () {
       $('.c4').stop().toggle(scrollTop > 2800, 80);
     } else if (innerWidth > 576 && innerWidth <= 768) {
       $('.aboutUs').stop().toggleClass('animate__bounceInDown', scrollTop > 300);
-      $('.logo_2, .welcomeBird').stop().toggleClass('animate__tada', scrollTop > 300);
+      $('.logo_2, .welcomeBird, .footprint').stop().toggleClass('animate__tada', scrollTop > 300);
       $('.c2').stop().toggle(scrollTop > 600, 80);
       $('.c1').stop().toggle(scrollTop > 800, 80).delay(200);
       $('.c3').stop().toggle(scrollTop > 1000, 80).delay(200);

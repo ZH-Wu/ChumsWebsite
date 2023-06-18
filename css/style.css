@@ -1109,6 +1109,7 @@ main {
   top: 20px;
   width: 50%;
   transform: rotate(344deg);
+  opacity: 0;
 
 }
 
@@ -1124,6 +1125,7 @@ main {
   bottom: 30px;
   left: 40px;
   width: 80%;
+  opacity: 0;
 }
 
 @media (max-width: 768px) {
@@ -1134,20 +1136,21 @@ main {
   }
 }
 
-/* 由JavaScript控制的CSS動畫效果 */
-.animate__tada {
-  animation-duration: 1200ms;
-  animation-iteration-count: 2;
-
-}
-
 .footprint {
   position: absolute;
   bottom: 12px;
   right: 40px;
   width: 25%;
   transform: rotate(156deg);
+  opacity: 0;
 
+}
+
+/* 由JavaScript控制的CSS動畫效果 */
+.animate__tada {
+  animation-duration: 1200ms;
+  animation-iteration-count: 2;
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
