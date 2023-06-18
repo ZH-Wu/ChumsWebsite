@@ -150,7 +150,7 @@ header {
 
 @media (max-width: 768px) {
   .slide-menuM .upper {
-    height: 70%;
+    height: 60%;
   }
 }
 @media (max-width: 576px) {
@@ -268,7 +268,7 @@ header {
 
 @media (max-width: 768px) {
   .slide-menuM .lower {
-    height: 30%;
+    height: 40%;
   }
 }
 
@@ -1804,7 +1804,7 @@ main {
     position: absolute;
     top: 1px;
     right: 40px;
-    animation: billboard .9s infinite;
+    animation: billboard .6s infinite alternate;
   }
 
   @keyframes billboard {
