@@ -51,11 +51,11 @@ const swiper = new Swiper('.swiper', {
   grabCursor: true,
   allowTouchMove: true,
   loop: true,
-  // autoplay: {
-  //   delay: 3000,
-  //   pauseOnMouseEnter: true,
-  //   disableOnInteraction: true,
-  // },
+  autoplay: {
+    delay: 3000,
+    pauseOnMouseEnter: true,
+    disableOnInteraction: true,
+  },
   freeMode: {
     momentumBounce: true,
   },
