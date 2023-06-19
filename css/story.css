@@ -42,46 +42,61 @@ header {
   position: sticky;
   top: 0px;
   z-index: 10;
+  font-family: GenSenRounded;
 }
 
 .menu {
   display: flex;
-
 }
 
-.menu a {
+.dropdown {
   display: inline-block;
   text-decoration: none;
   padding: 0 10px;
   font-size: 1.2rem;
   color: #B61C31;
   text-align: center;
-  /* border: 1px solid #000; */
 }
 
-.menu .dropdown:hover,
-.menu .dropdown.active {
-  border-bottom: 2px solid #B61C31;
+.dropdown:hover {
+  background-image: url(../images/circle.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
-.menu ul {
+.dropdown-item {
   display: none;
   background-color: #F5DEA8;
   border-radius: 0 0 12px 12px;
+  text-align: center;
 }
 
-.menu ul li a {
+.dropdown-item a {
   display: block;
   text-decoration: none;
   color: #B61C31;
-  text-align: center;
+}
+
+.dropdown-item a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #B61C31;
+  transition: .5s;
+  margin: 0 auto;
+  margin-top: -15px;
+}
+
+.dropdown-item a:hover::after {
+  width: 70%;
 }
 
 .logo {
   margin-top: 12px;
   margin-right: 55px;
   width: 100px;
-
 }
 
 .searchbar {
@@ -89,7 +104,6 @@ header {
   justify-content: space-evenly;
   align-items: center;
 }
-
 
 #search {
   position: relative;
