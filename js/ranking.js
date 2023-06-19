@@ -64,6 +64,7 @@ const swiper = new Swiper('.swiper', {
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
+    clickable :true,
   },
 
   // Navigation arrows
@@ -71,12 +72,6 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  // Scrollbar
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  //   draggable: true,
-  //   hide: false,
-  // },
 });
 
 lightbox.option({
