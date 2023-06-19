@@ -5,6 +5,11 @@ $(function () {
     $(this).siblings().slideToggle();
   });
 
+  // offcanvas_RWD滑動式選單
+  $('.menuL, .back').click(function() {
+    $('.menuL, .back, .slide-menuM').toggleClass('active');
+  });
+
   // 滑動至指定區塊
   $('.upper a').click(function () {
     let btn = $(this).attr('href');
