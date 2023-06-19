@@ -44,6 +44,11 @@ img {
   z-index: 10;
 
 }
+@media (max-width: 768px) {
+  #fixedTop {
+    width: 12%;
+  }
+}
 
 header {
   height: 70px;
@@ -52,8 +57,6 @@ header {
   padding: 0px 10px;
   display: flex;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
   z-index: 10;
 }
 
@@ -163,6 +166,98 @@ input:focus {
 /* Header RWD */
 
 @media (min-width: 769px) {
+
+  .menuL,
+  .back,
+  .magXs {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 50px;
+    padding: 0;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav,
+  .searchbar {
+    display: none;
+  }
+
+  .menuL {
+    width: 8%;
+  }
+
+  .menuL.active {
+    opacity: 0;
+  }
+
+  .back {
+    width: 6%;
+    position: absolute;
+    left: 6px;
+    opacity: 0;
+  }
+
+  .back.active {
+    opacity: 1;
+  }
+
+  .logo {
+    width: 11%;
+    margin: 0;
+    margin-right: 20px;
+  }
+
+  .magXs {
+    width: 3%;
+    padding-top: 5px;
+    margin-right: 5px;
+    transform: rotate(-20deg);
+  }
+
+}
+
+@media (max-width: 576px) {
+  header {
+    height: 50px;
+    align-items: center;
+  }
+
+  nav,
+  .searchbar {
+    display: none;
+  }
+
+  .menuL {
+    width: 15%;
+  }
+
+  .back {
+    width: 10%;
+    left: 8px;
+  }
+
+  .logo {
+    width: 20%;
+  }
+
+  .magXs {
+    width: 6%;
+    padding-top: 5px;
+  }
+
+}
+
+/* Header RWD */
+
+@media (min-width: 769px) {
+
   .menuL,
   .back,
   .magXs {
@@ -463,6 +558,7 @@ input:focus {
   }
 }
 
+
 /* 主要內容區 */
 
 main {
@@ -514,8 +610,20 @@ main {
 
 
 /* Swiper */
-.swiper {
-  margin-bottom: 20px;
+
+@media (min-width: 769px) {
+  .campTentP, .HatP, .ShirtP, .PackP, .ChairP {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .campTent, .Hat, .Shirt, .Pack, .Chair {
+    display: none;
+  }
+  .campTentP, .HatP, .ShirtP, .PackP, .ChairP {
+    display: block;
+  }
 }
 
 .swiper::after {
@@ -526,7 +634,7 @@ main {
   height: 5px;
   margin: 0 auto;
   background-color: rgba(182, 28, 49, .2);
-  
+
 }
 
 .swiper>h3 {
@@ -567,6 +675,7 @@ main {
   height: 70vh;
 }
 
+
 .slide-content {
   width: 456px;
   height: 546px;
@@ -575,21 +684,21 @@ main {
   transition: all .5s;
   position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-
 }
+
 @media (max-width: 768px) {
   .slide-content {
     width: 320px;
     height: 382px;
-    transition: none;
-    border-radius: 200px 200px 40px 40px;
   }
+
 }
 
 .slide-content:hover {
   transform: translateY(-20px);
   box-shadow: 10px 10px rgba(204, 64, 88, .8);
 }
+
 @media (max-width: 768px) {
   .slide-content:hover {
     transform: none;
@@ -602,11 +711,10 @@ main {
   width: 108px;
   justify-content: space-between;
   margin-left: 300px;
-
 }
 @media (max-width: 768px) {
   .color {
-    margin-left: 180px;
+    margin-left: 190px;
     margin-top: -30px;
   }
 }
@@ -637,8 +745,7 @@ main {
 
 @media (max-width: 768px) {
   .list {
-    margin-top: 50px;
-    margin-left: 180px;
+    margin-left: 185px;
   }
 }
 
@@ -654,13 +761,11 @@ main {
   box-shadow: 0px 3px #F5DEA8;
 
 }
-
 @media (max-width: 768px) {
   .list li {
     width: 120px;
-    height: 30px;
-    border-radius: 20px;
-    margin-bottom: 8px;
+    height: 40px;
+    margin-bottom: 10px;
   }
 }
 
@@ -695,12 +800,13 @@ main {
   right: 12%;
   top: 50px;
 }
+
 @media (max-width: 768px) {
   .ranking {
     width: 80px;
     height: 80px;
-    top: -5%;
-    right: 5%;
+    right: 20px;
+    top: -30px;
   }
 }
 
@@ -712,25 +818,32 @@ main {
   font-size: 20px;
   font-weight: 700;
 }
+
 @media (max-width: 768px) {
   .info {
     margin-left: 50px;
     margin-top: 60px;
+    font-size: 16px;
   }
 }
 
 .info>* {
   padding-bottom: 20px;
 }
+@media (max-width: 768px) {
+  .info>* {
+    padding: 0;
+  }
+}
 
 .info h3,
 .info p {
   color: #4c4c4c;
 }
-
 @media (max-width: 768px) {
   .info h3 {
-    font-size: .8em;
+    font-size: .8rem;
+    margin-bottom: .5em;
   }
 }
 
@@ -743,6 +856,7 @@ main {
   color: #B61C31;
   font-size: 1.5rem;
 }
+
 @media (max-width: 768px) {
   .info span {
     font-size: 1.2rem;
@@ -750,32 +864,31 @@ main {
 }
 
 .tent {
-  position: absolute;
   width: 98%;
+  position: absolute;
   height: 80%;
   left: -130px;
   top: 240px;
 }
+
 @media (max-width: 768px) {
   .tent {
     width: 85%;
-    left: -50px;
-    top: 190px;
+    left: -45px;
+    top: 180px;
   }
 }
-
 
 .tent_2 {
   width: 105%;
   left: -180px;
   top: 80px;
 }
-
 @media (max-width: 768px) {
   .tent_2 {
-    width: 80%;
-    left: -70px;
-    top: 120px;
+    width: 85%;
+    left: -60px;
+    top: 100px;
   }
 }
 
@@ -784,11 +897,24 @@ main {
   left: -130px;
   top: 120px;
 }
+@media (max-width: 768px) {
+  .tent_3 {
+    width: 85%;
+    left: -80px;
+    top: 100px;
+  }
+}
 
 .tent_4 {
   width: 70%;
   left: -70px;
   top: 190px;
+}
+@media (max-width: 768px) {
+  .tent_4 {
+    top: 150px;
+    left: -50px;
+  }
 }
 
 .tent_5 {
@@ -796,8 +922,64 @@ main {
   left: -50px;
   top: 180px;
 }
+@media (max-width: 768px) {
+  .tent_5 {
+    top: 130px;
+  }
+}
 
+.cap {
+  position: absolute;
+  width: 70%;
+  left: -20px;
+}
+@media (max-width: 768px) {
+  .cap {
+    top: 170px;
+    left: -25px;
+  }
+}
 
+.cap2 {
+  width: 60%;
+  top: 220px;
+  left: -30px;
+}
+@media (max-width: 768px) {
+  .cap2 {
+    top: 160px;
+  }
+}
+
+.cap3 {
+  top: 250px;
+}
+@media (max-width: 768px) {
+  .cap3 {
+    top: 180px;
+    left: -50px;
+    transform: scale(1.2);
+  }
+}
+
+.cap4 {
+  top: 230px;
+}
+@media (max-width: 768px) {
+  .cap4 {
+    top: 160px;
+  }
+}
+
+.cap5 {
+  top: 200px;
+  left: -50px;
+}
+@media (max-width: 768px) {
+  .cap5 {
+    top: 160px;
+  }
+}
 
 .clothing {
   width: 70%;
@@ -806,18 +988,20 @@ main {
   left: -50px;
   top: 210px;
   overflow: hidden;
-
+}
+@media (max-width: 768px) {
+  .clothing{
+    top: 160px;
+  }
 }
 
 .parka {
   width: 60%;
-  top: 210px;
   left: -30px;
 }
 
 .goretex {
   width: 60%;
-  top: 210px;
   left: -30px;
 }
 
@@ -826,31 +1010,11 @@ main {
   top: 220px;
   left: 10px;
 }
-
-.cap {
-  position: absolute;
-  width: 70%;
-  left: -20px;
-}
-
-.cap2 {
-  width: 60%;
-  top: 220px;
-  left: -30px;
-}
-
-.cap3 {
-  top: 250px;
-}
-
-.cap4 {
-  top: 230px;
-
-}
-
-.cap5 {
-  top: 200px;
-  left: -50px;
+@media (max-width: 768px) {
+  .vest {
+    top: 150px;
+    left: 0;
+  }
 }
 
 .pack {
@@ -862,16 +1026,32 @@ main {
 .pack2 {
   top: 250px;
 }
+@media (max-width: 768px) {
+  .pack2 {
+    top: 180px;
+  }
+}
 
 .pack3 {
   top: 150px;
   left: -80px;
+}
+@media (max-width: 768px) {
+  .pack3 {
+    top: 100px;
+  }
 }
 
 .campChair {
   position: absolute;
   width: 70%;
   top: 180px;
+}
+@media (max-width: 768px) {
+  .campChair {
+    top: 130px;
+    left: -10px;
+  }
 }
 
 .chair2 {
@@ -896,7 +1076,6 @@ main {
   content: '\f5d2';
   transform: rotate(-90deg);
   font-family: Material Symbols Outlined;
-
 }
 
 .swiper-button-next:after {
@@ -904,18 +1083,16 @@ main {
 }
 
 footer {
-  height: 20vh;
-  position: relative;
+  height: 30vh;
+  background-image: url(../images/footer.png);
+  background-color: rgba(245, 222, 168);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
 }
-
-.grass {
-  position: absolute;
-  top: -55%;
-  z-index: 2;
-}
-
-.lawn {
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
+@media (max-width: 768px) {
+  footer {
+    height: 20vh;
+    background-image: url(../images/grass_rwd.svg);
+  }
 }

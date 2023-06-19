@@ -72,11 +72,11 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
   // Scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    draggable: true,
-    hide: false,
-  },
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  //   draggable: true,
+  //   hide: false,
+  // },
 });
 
 lightbox.option({
