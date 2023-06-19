@@ -13,7 +13,6 @@
   src: url(../webfonts/ttc/GenSenRounded-R.ttc);
 }
 
-
 *,
 *::before,
 *::after {
@@ -527,12 +526,7 @@ main {
   height: 5px;
   margin: 0 auto;
   background-color: rgba(182, 28, 49, .2);
-  transform-origin: bottom;
-  transition: 1.5s;
-}
-
-.swiper:hover::after {
-  transform: perspective(500px) rotateX(20deg) skewX(-20deg);
+  
 }
 
 .swiper>h3 {
@@ -583,11 +577,24 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 
 }
+@media (max-width: 768px) {
+  .slide-content {
+    width: 320px;
+    height: 382px;
+    transition: none;
+    border-radius: 200px 200px 40px 40px;
+  }
+}
 
 .slide-content:hover {
   transform: translateY(-20px);
-
   box-shadow: 10px 10px rgba(204, 64, 88, .8);
+}
+@media (max-width: 768px) {
+  .slide-content:hover {
+    transform: none;
+    box-shadow: 8px 8px rgba(204, 64, 88, .8);
+  }
 }
 
 .color {
@@ -596,6 +603,12 @@ main {
   justify-content: space-between;
   margin-left: 300px;
 
+}
+@media (max-width: 768px) {
+  .color {
+    margin-left: 180px;
+    margin-top: -30px;
+  }
 }
 
 .color li {
@@ -622,6 +635,13 @@ main {
   margin-left: 285px;
 }
 
+@media (max-width: 768px) {
+  .list {
+    margin-top: 50px;
+    margin-left: 180px;
+  }
+}
+
 .list li {
   width: 140px;
   height: 50px;
@@ -633,6 +653,15 @@ main {
   background-position: center;
   box-shadow: 0px 3px #F5DEA8;
 
+}
+
+@media (max-width: 768px) {
+  .list li {
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+  }
 }
 
 .list li a {
@@ -666,6 +695,14 @@ main {
   right: 12%;
   top: 50px;
 }
+@media (max-width: 768px) {
+  .ranking {
+    width: 80px;
+    height: 80px;
+    top: -5%;
+    right: 5%;
+  }
+}
 
 .info {
   margin-left: 100px;
@@ -674,6 +711,12 @@ main {
   color: #000;
   font-size: 20px;
   font-weight: 700;
+}
+@media (max-width: 768px) {
+  .info {
+    margin-left: 50px;
+    margin-top: 60px;
+  }
 }
 
 .info>* {
@@ -685,6 +728,12 @@ main {
   color: #4c4c4c;
 }
 
+@media (max-width: 768px) {
+  .info h3 {
+    font-size: .8em;
+  }
+}
+
 .info p {
   font-size: 14px;
   padding-bottom: 10px;
@@ -693,24 +742,41 @@ main {
 .info span {
   color: #B61C31;
   font-size: 1.5rem;
-
+}
+@media (max-width: 768px) {
+  .info span {
+    font-size: 1.2rem;
+  }
 }
 
 .tent {
-  width: 98%;
   position: absolute;
+  width: 98%;
   height: 80%;
   left: -130px;
   top: 240px;
-
-
 }
+@media (max-width: 768px) {
+  .tent {
+    width: 85%;
+    left: -50px;
+    top: 190px;
+  }
+}
+
 
 .tent_2 {
   width: 105%;
   left: -180px;
   top: 80px;
+}
 
+@media (max-width: 768px) {
+  .tent_2 {
+    width: 80%;
+    left: -70px;
+    top: 120px;
+  }
 }
 
 .tent_3 {
