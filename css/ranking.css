@@ -716,7 +716,7 @@ main {
 @media (max-width: 768px) {
   .slide-content:hover {
     transform: none;
-    box-shadow: 8px 8px rgba(204, 64, 88, .8);
+    box-shadow: none;
   }
 }
 
@@ -1101,8 +1101,8 @@ main {
 }
 
 .swiper-pagination-bullet {
-  width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,12px));
-  height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,12px));
+  width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,16px));
+  height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,16px));
   background: #EE4E2E;
 }
 footer {
