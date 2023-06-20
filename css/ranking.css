@@ -1216,7 +1216,7 @@ main {
 }
 footer {
   height: 30vh;
-  background-image: url(../images/footer.png);
+  background-image: url(../images/grass_3.svg);
   background-color: rgba(245, 222, 168);
   background-repeat: no-repeat;
   background-size: cover;
