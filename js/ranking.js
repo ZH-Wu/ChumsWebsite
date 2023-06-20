@@ -74,6 +74,8 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+
+
 lightbox.option({
   'resizeDuration': 500,
   'wrapAround': true

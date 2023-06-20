@@ -49,6 +49,11 @@ img {
     width: 12%;
   }
 }
+@media (max-width: 576px) {
+  #fixedTop {
+    width: 20%;
+  }
+}
 
 header {
   height: 70px;
@@ -58,6 +63,7 @@ header {
   display: flex;
   justify-content: space-between;
   z-index: 10;
+  font-family: GenSenRounded;
 }
 
 .menu {
@@ -65,36 +71,48 @@ header {
 
 }
 
-.menu a {
+.dropdown {
   display: inline-block;
   text-decoration: none;
   padding: 0 10px;
   font-size: 1.2rem;
   color: #B61C31;
   text-align: center;
-  /* border: 1px solid #000; */
 }
 
-.menu .dropdown:hover,
-.menu .dropdown.active {
-  border-bottom: 2px solid #B61C31;
-}
-
-.menu ul {
-  display: none;
-  background-color: #F5DEA8;
-  border-radius: 0 0 12px 12px;
-}
-
-.menu ul li a {
-  display: block;
-  text-decoration: none;
-  color: #B61C31;
-  text-align: center;
+.dropdown:hover {
+  background-image: url(../images/circle.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .dropdown-item {
-  border-radius: 0 0 10px 10px;
+  display: none;
+  background-color: #F5DEA8;
+  border-radius: 0 0 12px 12px;
+  text-align: center;
+}
+
+.dropdown-item a {
+  display: block;
+  text-decoration: none;
+  color: #B61C31;
+}
+
+.dropdown-item a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #B61C31;
+  transition: .5s;
+  margin: 0 auto;
+  margin-top: -15px;
+}
+
+.dropdown-item a:hover::after {
+  width: 70%;
 }
 
 .logo {
@@ -617,17 +635,31 @@ main {
 /* Swiper */
 
 @media (min-width: 769px) {
-  .campTentP, .HatP, .ShirtP, .PackP, .ChairP {
+  #campTentP, #HatP, #ShirtP, #PackP, #ChairP,
+  #campTentM, #HatM, #ShirtM, #PackM, #ChairM  {
     display: none;
   }
 }
 
 @media (max-width: 768px) {
-  .campTent, .Hat, .Shirt, .Pack, .Chair {
+  #campTent, #Hat, #Shirt, #Pack, #Chair,
+  #campTentM, #HatM, #ShirtM, #PackM, #ChairM {
     display: none;
   }
-  .campTentP, .HatP, .ShirtP, .PackP, .ChairP {
+  #campTentP, #HatP, #ShirtP, #PackP, #ChairP {
     display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  #campTentP, #HatP, #ShirtP, #PackP, #ChairP {
+    display: none;
+  }
+  #campTentM, #HatM, #ShirtM, #PackM, #ChairM {
+    display: block;
+  }
+  .swiper {
+    height: 70vh;
   }
 }
 
@@ -641,6 +673,11 @@ main {
   background-color: rgba(182, 28, 49, .2);
 
 }
+@media (max-width: 768px) {
+  .swiper::after {
+    display: none;
+  }
+}
 
 .swiper>h3 {
   position: absolute;
@@ -648,6 +685,13 @@ main {
   top: 50px;
   left: 50px;
   z-index: 2;
+}
+@media (max-width: 576px) {
+  .swiper>h3 {
+    font-size: 1.2rem;
+    top: 40px;
+    left: 35px;
+  }
 }
 
 
@@ -679,6 +723,14 @@ main {
   .swiper>img {
     width: 25%;
     left: 50px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .swiper>img {
+    width: 35%;
+    left: 20px;
   }
 }
 
@@ -908,6 +960,12 @@ main {
     top: 100px;
   }
 }
+@media (max-width: 576px) {
+  .tent_2 {
+    transform: scale(.9);
+    left: -55px;
+  }
+}
 
 .tent_3 {
   width: 90%;
@@ -919,6 +977,12 @@ main {
     width: 85%;
     left: -80px;
     top: 100px;
+  }
+}
+@media (max-width: 576px) {
+  .tent_3 {
+    transform: scale(.8);
+    left: -60px;
   }
 }
 
@@ -933,6 +997,11 @@ main {
     left: -50px;
   }
 }
+@media (max-width: 576px) {
+  .tent_4 {
+    left: -35px;
+  }
+}
 
 .tent_5 {
   width: 70%;
@@ -942,6 +1011,11 @@ main {
 @media (max-width: 768px) {
   .tent_5 {
     top: 130px;
+  }
+}
+@media (max-width: 576px) {
+  .tent_5 {
+    left: -30px;
   }
 }
 
@@ -978,6 +1052,12 @@ main {
     transform: scale(1.2);
   }
 }
+@media (max-width: 576px) {
+  .cap3 {
+    transform: scale(1);
+    left: -30px;
+  }
+}
 
 .cap4 {
   top: 230px;
@@ -997,6 +1077,12 @@ main {
     top: 160px;
   }
 }
+@media (max-width: 576px) {
+  .cap5 {
+    transform: scale(.9);
+    left: -30px;
+  }
+}
 
 .clothing {
   width: 70%;
@@ -1009,6 +1095,11 @@ main {
 @media (max-width: 768px) {
   .clothing{
     top: 160px;
+  }
+}
+@media (max-width: 576px) {
+  .clothing {
+    left: -30px;
   }
 }
 
@@ -1048,6 +1139,11 @@ main {
     top: 180px;
   }
 }
+@media (max-width: 576px) {
+  .pack2 {
+    transform: scale(.9);
+  }
+}
 
 .pack3 {
   top: 150px;
@@ -1056,6 +1152,12 @@ main {
 @media (max-width: 768px) {
   .pack3 {
     top: 100px;
+  }
+}
+@media (max-width: 576px) {
+  .pack3 {
+    transform: scale(.9);
+    left: -60px;
   }
 }
 
@@ -1080,7 +1182,6 @@ main {
   left: -40px;
 }
 
-
 .swiper-button-prev,
 .swiper-button-next {
   width: 100px;
@@ -1101,6 +1202,11 @@ main {
 
 .swiper-horizontal>.swiper-pagination-bullets {
   bottom: var(--swiper-pagination-bottom,100px);
+}
+@media (max-width: 576px) {
+  .swiper-horizontal>.swiper-pagination-bullets {
+    bottom: var(--swiper-pagination-bottom,50px);
+  }
 }
 
 .swiper-pagination-bullet {

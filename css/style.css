@@ -952,7 +952,7 @@ main {
   }
 }
 
-.about {
+#about {
   height: 100vh;
   display: flex;
   justify-content: space-around;
@@ -960,7 +960,7 @@ main {
 }
 
 @media (max-width: 768px) {
-  .about {
+  #about {
     height: 15%;
     justify-content: space-between;
   }
@@ -1156,13 +1156,13 @@ main {
 }
 
 @media (min-width: 577px) {
-  .about .birdWithGuitar {
+  #about .birdWithGuitar {
     display: none;
   }
 }
 
 @media (max-width: 576px) {
-  .about {
+  #about {
     height: 30%;
     align-items: start;
   }
@@ -1207,7 +1207,7 @@ main {
     display: none;
   }
 
-  .about .birdWithGuitar {
+  #about .birdWithGuitar {
     display: block;
     width: 25%;
     top: 22%;
@@ -1218,12 +1218,12 @@ main {
 
 /*產品資訊區*/
 
-.product {
+#product {
   height: 180vh;
   position: relative;
 }
 
-.product h2 {
+#product h2 {
   position: absolute;
   top: 10%;
   left: 30%;
@@ -1528,11 +1528,11 @@ main {
 }
 
 @media (max-width: 768px) {
-  .product {
+  #product {
     height: 55%;
   }
 
-  .product h2 {
+  #product h2 {
     top: 0;
     left: 25%;
   }
@@ -1653,34 +1653,34 @@ main {
 
 
 @media (min-width: 577px) {
-  .productM {
+  #productM {
     display: none;
   }
 }
 
 @media (max-width: 576px) {
-  .product {
+  #product {
     display: none;
   }
 
-  .productM {
+  #productM {
     height: 30%;
   }
 
-  .productM h2 {
+  #productM h2 {
     text-align: center;
     margin-bottom: 30px;
   }
 
-  .productM .swiper {
+  #productM .swiper {
     height: 70%;
   }
 
-  .productM .slide-content {
+  #productM .slide-content {
     height: 100%;
   }
 
-  .productM .product-box {
+  #productM .product-box {
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -1693,39 +1693,39 @@ main {
     align-items: center;
 
   }
-  .productM .product-box .txt {
+  #productM .product-box .txt {
     margin-bottom: 10px;
     
   }
   
-  .productM .product-box .tentM {
+  #productM .product-box .tentM {
     margin-top: 30px;
   }
 
-  .productM .product-box .fleeceM {
+  #productM .product-box .fleeceM {
     width: 75%;
   }
   
-  .productM .product-box .bagM {
+  #productM .product-box .bagM {
     margin-top: 10px;
     width: 70%;
     height: 60%;
   }
 
-  .productM .product-box .hatM {
+  #productM .product-box .hatM {
     width: 80%;
     margin-top: 40px;
     margin-bottom: 20px;
   }
 
-  .productM .product-box .chairM {
+  #productM .product-box .chairM {
     width: 70%;
     height: 70%;
     margin-top: -20px;
     
   }
 
-  .productM .slideBox ul {
+  #productM .slideBox ul {
     margin-top: 60px;
     margin-bottom: 20px;
   }
@@ -1830,8 +1830,8 @@ main {
 
 
 /* 最新消息區 */
-.news,
-.shop {
+#news,
+#shop {
   position: relative;
   width: 100%;
   height: 80vh;
@@ -1843,15 +1843,15 @@ main {
   left: 1%;
 }
 
-.news .swiper-slide,
-.shop .swiper-slide {
+#news .swiper-slide,
+#shop .swiper-slide {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 50px;
 }
 
-.news .slide-content {
+#news .slide-content {
   width: 380px;
   height: 380px;
   position: relative;
@@ -1859,14 +1859,14 @@ main {
   border-radius: 25px;
 }
 
-.news .slide-content figure {
+#news .slide-content figure {
   border-radius: 25px;
   overflow: hidden;
   border: 5px solid #fff;
 
 }
 
-.news .slide-content a {
+#news .slide-content a {
   display: block;
   width: 370px;
   text-decoration: none;
@@ -1883,19 +1883,19 @@ main {
 
 }
 
-.news .slide-content:hover a {
+#news .slide-content:hover a {
   bottom: 0;
 }
 
-.news .swiper-navBtn,
-.shop .swiper-navBtn {
+#news .swiper-navBtn,
+#shop .swiper-navBtn {
   --swiper-navigation-size: 50px;
   --swiper-navigation-color: #b61c31;
 
 }
 
-.news .swiper-navBtn:hover,
-.shop .swiper-navBtn:hover {
+#news .swiper-navBtn:hover,
+#shop .swiper-navBtn:hover {
   color: #4070F4;
 }
 
@@ -1921,57 +1921,57 @@ main {
 }
 
 @media (min-width: 769px) {
-  .newsP, .newsM {
+  #newsP, #newsM {
     display: none;
   }
 }
 
 @media (max-width: 768px) {
-  .news,
+  #news,
   .flag_news {
     display: none;
   }
 
-  .newsM {
+  #newsM {
     display: none;
   }
 
-  .newsP {
+  #newsP {
     display: block;
   }
 
-  .newsP {
+  #newsP {
     padding-top: 20px;
     height: 15%;
   }
 
-  .newsP h2.title {
+  #newsP h2.title {
     text-align: center;
   }
 
-  .newsP .swiper {
+  #newsP .swiper {
     height: 75%;
   }
 
-  .newsP .swiper-slide {
+  #newsP .swiper-slide {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
 
-  .newsP .slide-content {
+  #newsP .slide-content {
     width: 30%;
     position: relative;
   }
 
-  .newsP .slide-content figure {
+  #newsP .slide-content figure {
     border-radius: 25px;
     overflow: hidden;
     border: 5px solid #fff;
 
   }
 
-  .newsP .slide-content a {
+  #newsP .slide-content a {
     display: block;
     width: 96%;
     text-decoration: none;
@@ -1990,43 +1990,43 @@ main {
 }
 
 @media (max-width: 576px) {
-  .news, .newsP {
+  #news, #newsP {
     display: none;
   }
 
-  .newsM {
+  #newsM {
     display: block;
     height: 20%;
   }
 
-  .newsM h2.title {
+  #newsM h2.title {
     text-align: center;
     margin-bottom: 20px;
   }
 
-  .newsM .swiper {
+  #newsM .swiper {
     height: 60%;
   }
 
-  .newsM .swiper-slide {
+  #newsM .swiper-slide {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
 
-  .newsM .slide-content {
+  #newsM .slide-content {
     width: 48%;
     position: relative;
   }
 
-  .newsM .slide-content figure {
+  #newsM .slide-content figure {
     border-radius: 25px;
     overflow: hidden;
     border: 5px solid #fff;
 
   }
 
-  .newsM .slide-content a {
+  #newsM .slide-content a {
     display: block;
     width: 94%;
     text-decoration: none;
@@ -2050,7 +2050,7 @@ main {
   right: 0%;
 }
 
-.shop .slide-content {
+#shop .slide-content {
   width: 360px;
   height: 360px;
   border-radius: 25px;
@@ -2058,7 +2058,7 @@ main {
   box-shadow: 10px 10px #CC4058;
 }
 
-.shop .slide-content figure {
+#shop .slide-content figure {
   margin: 10px auto;
   width: 90%;
   height: 35%;
@@ -2068,7 +2068,7 @@ main {
 
 }
 
-.shop .slide-content figure img {
+#shop .slide-content figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2116,36 +2116,36 @@ span {
 
 
 @media (min-width: 769px) {
-  .shopP, .shopM {
+  #shopP, #shopM {
     display: none;
   }
 }
 
 @media (max-width: 768px) {
-  .shop, .shopM {
+  #shop, #shopM {
     display: none;
   }
 
-  .shopP {
+  #shopP {
     display: block;
     height: 15%;
   }
 
-  .shopP h2.title {
+  #shopP h2.title {
     text-align: center;
   }
 
-  .shopP .swiper {
+  #shopP .swiper {
     height: 70%;
   }
 
-  .shopP .swiper-slide {
+  #shopP .swiper-slide {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
 
-  .shopP .slide-content {
+  #shopP .slide-content {
     width: 30%;
     height: 70%;
     border-radius: 20px;
@@ -2153,7 +2153,7 @@ span {
     position: relative;
   }
 
-  .shopP .slide-content figure {
+  #shopP .slide-content figure {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -2165,19 +2165,19 @@ span {
 
   }
 
-  .shopP .slide-content figure img {
+  #shopP .slide-content figure img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
   }
 
-  .shopP .info h2 {
+  #shopP .info h2 {
     text-align: center;
     font-size: 1.1em;
   }
 
-  .shopP .slide-content .info a {
+  #shopP .slide-content .info a {
     margin: 0;
     display: block;
     width: 100%;
@@ -2197,31 +2197,31 @@ span {
 }
 
 @media (max-width: 576px) {
-  .shop, .shopP {
+  #shop, #shopP {
     display: none;
   }
 
-  .shopM {
+  #shopM {
     display: block;
     height: 20%;
   }
 
-  .shopM h2.title {
+  #shopM h2.title {
     text-align: center;
     margin-bottom: 20px;
   }
 
-  .shopM .swiper {
+  #shopM .swiper {
     height: 50%;
   }
 
-  .shopM .swiper-slide {
+  #shopM .swiper-slide {
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
 
-  .shopM .slide-content {
+  #shopM .slide-content {
     width: 45%;
     height: 100%;
     border-radius: 20px;
@@ -2229,7 +2229,7 @@ span {
     position: relative;
   }
 
-  .shopM .slide-content figure {
+  #shopM .slide-content figure {
     margin: 10px auto;
     width: 90%;
     height: 40%;
@@ -2239,20 +2239,20 @@ span {
 
   }
 
-  .shopM .slide-content figure img {
+  #shopM .slide-content figure img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
   }
 
-  .shopM .info h2 {
+  #shopM .info h2 {
     font-size: .8em;
     text-align: center;
     padding: 0;
   }
 
-  .shopM .slide-content .info a {
+  #shopM .slide-content .info a {
     margin: 0;
     display: block;
     width: 100%;
@@ -2438,8 +2438,6 @@ footer {
     height: 40px;
   }
 }
-
-
 
 .share a:hover {
   transform: translateY(-10px);
