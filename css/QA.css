@@ -146,6 +146,7 @@ body {
   background: linear-gradient(to bottom, #ffffff, #F5DEA8);
   font-family: "GenSenRounded", sans-serif;
   overflow: hidden;
+  max-width: 1920px;
 }
 
 /* header */
@@ -155,6 +156,7 @@ img {
 }
 
 header {
+  max-width: 1920px;
   height: 70px;
   line-height: 70px;
   background-color: #F5DEA8;
@@ -162,58 +164,63 @@ header {
   display: flex;
   justify-content: space-between;
   position: sticky;
-  top: 0;
+  top: 0px;
   z-index: 10;
-  font-family: GenSenRounded;
-
+  font-family: "GenSenRounded";
 }
 
 .menu {
   display: flex;
-  justify-content: space-evenly;
-
 
 }
 
 .dropdown {
+  display: inline-block;
   text-decoration: none;
-  text-align: center;
+  padding: 0 10px;
+  font-size: 1.2rem;
   color: #B61C31;
-  width: 100px;
-  padding: 10px 10px 10px 10px;
-  /*   border: 1px solid #000; */
-
+  text-align: center;
 }
 
-.dropdown:hover,
-.dropdown-item a:hover {
-  border-bottom: 2px solid #B61C31;
-}
-
-.dropdown.active {
-  background-image: url(https://raw.githubusercontent.com/ZH-Wu/ChumsWebsite/4f2fa97c396196264d4c3efd869231757d5afc20/img/circle.svg);
+.dropdown:hover {
+  background-image: url(../image/circle.svg);
   background-repeat: no-repeat;
-  background-size: 80px;
-  background-position: top center;
-
+  background-size: contain;
+  background-position: center;
 }
 
 .dropdown-item {
-  margin-top: 0.5px;
-  text-align: center;
   display: none;
   background-color: #F5DEA8;
-
+  border-radius: 0 0 12px 12px;
+  text-align: center;
 }
 
 .dropdown-item a {
+  display: block;
   text-decoration: none;
-  color: #000;
-  padding: 10px 0;
+  color: #B61C31;
+}
+
+.dropdown-item a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #B61C31;
+  transition: .5s;
+  margin: 0 auto;
+  margin-top: -15px;
+}
+
+.dropdown-item a:hover::after {
+  width: 70%;
 }
 
 .logo {
   margin-top: 12px;
+  margin-right: 170px;
   width: 100px;
 
 }
@@ -274,12 +281,317 @@ input:focus {
 
 .cart {
   width: 45px;
+  height: 45px;
+}
 
+/* Header RWD */
+
+@media (min-width: 769px) {
+
+  .menuL,
+  .back,
+  .magXs {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 50px;
+    padding: 0;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav,
+  .searchbar {
+    display: none;
+  }
+
+  .menuL {
+    width: 8%;
+  }
+
+  .menuL.active {
+    opacity: 0;
+  }
+
+  .back {
+    width: 6%;
+    position: absolute;
+    left: 6px;
+    opacity: 0;
+  }
+
+  .back.active {
+    opacity: 1;
+  }
+
+  .logo {
+    width: 11%;
+    margin: 0;
+    margin-right: 20px;
+  }
+
+  .magXs {
+    width: 3%;
+    padding-top: 5px;
+    margin-right: 5px;
+    transform: rotate(-20deg);
+  }
+
+}
+
+@media (max-width: 576px) {
+  header {
+    height: 50px;
+    align-items: center;
+  }
+
+  nav,
+  .searchbar {
+    display: none;
+  }
+
+  .menuL {
+    width: 15%;
+  }
+
+  .back {
+    width: 10%;
+    left: 8px;
+  }
+
+  .logo {
+    width: 20%;
+  }
+
+  .magXs {
+    width: 6%;
+    padding-top: 5px;
+  }
+
+}
+
+/* Offcanvas 主選單 */
+
+@media (min-width: 769px) {
+  .slide-menuM {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-menuM {
+    position: absolute;
+    top: 50px;
+    right: -100%;
+    width: 100%;
+    height: 974px;
+    background-color: rgba(245, 222, 168, 1);
+    z-index: 20;
+    transition: .5s;
+  }
+
+  .slide-menuM.active {
+    right: 0%;
+  }
+
+  .slide-menuM .upper {
+    height: 60%;
+    padding-top: 30px;
+  }
+
+  .slide-menuM .upper ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+  }
+
+  .slide-menuM .upper ul li {
+    width: 250px;
+    height: 250px;
+    background-image: url(../image/foot.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-right: 10px;
+  }
+
+  .slide-menuM .upper li a {
+    display: block;
+    width: 50%;
+    font-size: 1.4em;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 auto;
+    margin-top: 110px;
+    color: #fff;
+  }
+
+  .slide-menuM .upper li a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin: 0 auto;
+    background-color: #fff;
+    transition: .5s;
+  }
+
+  .upper li:hover a::after {
+    width: 90%;
+  }
+
+  .slide-menuM .lower {
+    height: 40%;
+    background-image: url(../image/footer.png);
+    background-size: cover;
+    display: flex;
+    align-items: end;
+  }
+
+  #booby {
+    position: absolute;
+    width: 25%;
+    bottom: 150px;
+    right: 50px;
+    z-index: 1;
+    animation: booby 2s linear infinite alternate;
+  }
+
+  @keyframes booby {
+    0% {
+      right: 0;
+      bottom: 150px;
+    }
+
+    25% {
+      right: 50px;
+      bottom: 140px;
+    }
+
+    50% {
+      right: 75px;
+      bottom: 160px;
+    }
+
+    100% {
+      right: 0px;
+      bottom: 150px;
+    }
+  }
+
+  .slide-menuM .lower .area {
+    width: 60%;
+    height: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slide-menuM .lower .CTA {
+    font-size: 2.5em;
+    font-family: 'Courgette', cursive;
+  }
+
+  .slide-menuM .lower .area ul {
+    display: flex;
+    margin-top: 30px;
+  }
+
+  .slide-menuM .lower .area a {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 15px;
+    text-indent: 101%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: .5s;
+  }
+
+  .fb {
+    background-image: url(../image/fb.svg);
+  }
+
+  .line {
+    background-image: url(../image/line.svg);
+  }
+
+  .ig {
+    background-image: url(../image/ig.svg);
+  }
+
+  .yt {
+    background-image: url(../image/yt.svg);
+  }
+}
+
+@media (max-width: 576px) {
+  .slide-menuM {
+    height: 794px;
+  }
+
+  .slide-menuM .upper ul li {
+    width: 130px;
+    height: 130px;
+    padding-right: 2px;
+  }
+
+  .slide-menuM .upper ul li a {
+    margin-top: 40px;
+    font-size: .7em;
+  }
+
+  .slide-menuM .upper li a::after {
+    margin-top: -20px;
+  }
+
+  #booby {
+    width: 20%;
+  }
+
+  @keyframes booby {
+    0% {
+      right: 0;
+      bottom: 150px;
+    }
+
+    25% {
+      right: 25px;
+      bottom: 140px;
+    }
+
+    50% {
+      right: 50px;
+      bottom: 160px;
+    }
+
+    100% {
+      right: 0px;
+      bottom: 150px;
+    }
+  }
+
+  .slide-menuM .lower .CTA {
+    font-size: 2em;
+  }
+
+  .slide-menuM .lower .area a {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /* body區 */
 main {
   height: 100vh;
+  overflow: hidden;
 }
 
 section {
@@ -303,8 +615,9 @@ h1 {
 }
 
 #accordionOne.accordion .accordion-item {
-  margin-bottom: 80px;
+  margin-bottom: 90px;
   height: 52px;
+  box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 3px;
 }
 
 #headingOne.accordion-header,
@@ -330,6 +643,9 @@ h1 {
   height: 80px;
   line-height: 1.6rem;
   padding: 10px;
+  align-items: center;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 3px;
 }
 
 .accordion-body p {
@@ -397,4 +713,132 @@ h1 {
   right: 50px;
   bottom: 50px;
   position: fixed;
+}
+
+@media (max-width:768px) {
+  #accordionOne.accordion {
+    width: 500px;
+  }
+
+  h1 {
+    margin: 4% 0 3% 0;
+  }
+
+  .slide-menuM {
+    display: none;
+    transition: .5s;
+    z-index: 999;
+  }
+
+  .slide-menuM.active {
+    display: block;
+    z-index: 999;
+  }
+
+  .cloud1 {
+    animation: ani 5s linear infinite;
+  }
+
+  .cloud2 {
+    animation: ani2 5s linear infinite;
+  }
+
+  @keyframes ani {
+    from {
+      left: 0px;
+    }
+
+    to {
+      left: 80%;
+    }
+  }
+
+  @keyframes ani2 {
+    from {
+      right: 0px;
+    }
+
+    to {
+      right: 80%;
+    }
+  }
+
+  #accordionOne.accordion .accordion-item {
+    margin-bottom: 95px;
+  }
+
+  .accordion-body {
+    height: 94px;
+  }
+
+  .footer {
+    background-image: url(../image/草皮2.svg);
+  }
+
+  .footprint {
+    width: 10vh;
+    bottom: 45px;
+    right: 50px;
+  }
+
+  .bird {
+    width: 20vh;
+  }
+
+}
+
+@media(max-width:576px) {
+  h1 {
+    font-size: large;
+    margin: 4% 0 0 0;
+  }
+
+  #accordionOne.accordion {
+    width: 300px;
+  }
+
+  @keyframes ani {
+    from {
+      left: 0px;
+    }
+
+    to {
+      left: 60%;
+    }
+  }
+
+  @keyframes ani2 {
+    from {
+      right: 0px;
+    }
+
+    to {
+      right: 60%;
+    }
+  }
+
+  #accordionOne.accordion .accordion-item {
+    margin-bottom: 75px;
+  }
+
+  #headingOne.accordion-header .accordion-button,
+  #headingTwo.accordion-header .accordion-button,
+  #headingThree.accordion-header .accordion-button,
+  #headingFour.accordion-header .accordion-button,
+  #headingFive.accordion-header .accordion-button {
+    font-size: small;
+  }
+
+  .accordion-body {
+    line-height: 1.2em;
+    height: 70px;
+  }
+
+  .accordion-body p {
+    font-size: xx-small;
+  }
+
+  .footer {
+    background-image: url(../image/草皮2.svg);
+  }
 }

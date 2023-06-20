@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>露營小常識</title>
     <link rel="shortcut icon" href="./image/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/know.css">
 </head>
 
-<body>
-    <!-- header -->
+<body><!-- 頁首 -->
     <header>
         <nav>
             <ul class="menu">
@@ -26,19 +26,11 @@
                 </li>
                 <!-- 商品資訊 -->
                 <li>
-                    <a href="#" class="dropdown">商品資訊</a>
-                    <ul class="dropdown-item">
-                        <li><a href="#">露營用品</a></li>
-                        <li><a href="#">流行服飾</a></li>
-                    </ul>
+                    <a href="#" class="dropdown">熱銷排行</a>
                 </li>
                 <!-- 最新消息 -->
                 <li>
                     <a href="#" class="dropdown">最新消息</a>
-                    <ul class="dropdown-item">
-                        <li><a href="#">優惠情報</a></li>
-                        <li><a href="#">熱銷排行</a></li>
-                    </ul>
                 </li>
                 <!-- 門市資訊 -->
                 <li>
@@ -51,10 +43,12 @@
                 </li>
             </ul>
         </nav>
-        <a href="index.html" class="logo"><img src="./image/logo.svg" alt="logo"></a>
+        <img src="./image/menuL.png" alt="主選單" class="menuL">
+        <img src="./image/return.png" alt="" class="back">
+        <a href="#" class="logo"><img src="./image/logo.svg" alt="logo"></a>
         <div class="searchbar">
             <form name="search" id="search" role="search">
-                <input type="search" placeholder="輸入關鍵字">
+                <input type="search" placeholder="找找看">
                 <button class="search_btn" type="submit"><img src="./image/magnifier.svg" alt="搜尋"></button>
             </form>
             <ul class="icon">
@@ -62,13 +56,40 @@
                 <li><a href="#"><img src="./image/cart.svg" alt="購物車圖示" class="cart"></a></li>
             </ul>
         </div>
+        <a href="#" class="magXs"><img src="./image/magnifierXs.svg" alt="search"></a>
+        <div class="slide-menuM">
+            <div class="upper">
+                <ul>
+                    <li><a href="#">關於我們</a></li>
+                    <li><a href="#">商品資訊</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">最新消息</a></li>
+                    <li><a href="#">門市資訊</a></li>
+                    <li><a href="#">聯絡我們</a></li>
+                </ul>
+            </div>
+            <div class="lower">
+                <img src="./image/bird_hi.svg" alt="" id="booby">
+                <div class="area">
+                    <h3 class="CTA">Follow Us</h3>
+                    <ul>
+                        <li><a href="#" class="fb">facebook</a></li>
+                        <li><a href="#" class="line">line</a></li>
+                        <li><a href="#" class="yt">Youtube</a></li>
+                        <li><a href="#" class="ig">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </header>
+
     <!-- 內容區 -->
     <main>
         <h1> 露營小常識</h1>
         <img src="./image/雲-陰影02.svg" alt="" class="cloud cloud1">
         <img src="./image/雲-陰影02.svg" alt="" class="cloud cloud2">
-        <section>
+        <section id="section1" class="tab-pane fade in active">
             <div class="list_box">
                 <div class="list_item">
                     <div class="imgl">
@@ -81,7 +102,7 @@
                     </div>
                     <div class="info">
                         <h2>三角旗</h2>
-                        <p>三角旗是一種懸掛的識別標誌，是用來指示露營區域或者表示緊急情況。它能夠提供方向和警告，並且提醒其他露營者與旅行者注意該區域的存在。</p>
+                        <p>三角旗是一種懸掛的識別標誌，是用來指示露營區域或者表示緊急情況。它能夠提供方向和警告。</p>
                     </div>
                 </div>
             </div>
@@ -120,7 +141,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="section2" class="tab-pane fade">
             <div class="list_box">
                 <div class="list_item">
                     <div class="imgl">
@@ -168,13 +189,71 @@
                     <div class="info">
                         <h2>熊鈴</h2>
 
-                        <p>熊鈴不是說可以驅趕熊或是熊會怕什麼的，只是讓動物們知道有人類過來了，離遠一點唷！
-                            讓雙方不要毫無防備的撞見後大呼小叫。</p>
+                        <p>熊鈴不是說可以驅趕熊或是熊會怕什麼的，只是讓動物們知道有人類過來了，離遠一點唷！</p>
                     </div>
                 </div>
             </div>
 
         </section>
+        <section id="section3">
+            <div class="list_box">
+                <div class="list_item">
+                    <div class="imgl">
+                        <div class="img"><img src="./image/03.png" alt="">
+                        </div>
+                        <a href="#"><button class="img_btn">
+                                <h4>來去逛逛</h4><img src="./image/箭頭.svg" alt="">
+                            </button>
+                        </a>
+                    </div>
+                    <div class="info">
+                        <h2>掛鍊</h2>
+
+                        <p>掛鍊能夠方便將洗完的衣物或是鍋碗瓢盆收納在空中，空出更多空間來活動。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="list_box">
+                <div class="list_item">
+                    <div class="imgl">
+                        <div class="img"><img src="./image/05.png" alt="">
+                        </div>
+                        <a href="#"><button class="img_btn">
+                                <h4>來去逛逛</h4><img src="./image/箭頭.svg" alt="">
+                            </button>
+                        </a>
+                    </div>
+                    <div class="info">
+                        <h2>露營燈串</h2>
+
+                        <p>雖然燈串的實用度或許比不上其它露營燈，但卻最適合重視氣氛的朋友使用</p>
+                    </div>
+                </div>
+            </div>
+            <div class="list_box">
+                <div class="list_item">
+                    <div class="imgl">
+                        <div class="img"><img src="./image/熊鈴.png" alt="">
+                        </div>
+                        <a href="#"><button class="img_btn">
+                                <h4>來去逛逛</h4><img src="./image/箭頭.svg" alt="">
+                            </button>
+                        </a>
+                    </div>
+                    <div class="info">
+                        <h2>熊鈴</h2>
+
+                        <p>熊鈴不是說可以驅趕熊或是熊會怕什麼的，只是讓動物們知道有人類過來了，離遠一點唷！</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="pagination">
+            <a data-toggle="tab" href="#section1" class="1" actiived>1</a>
+            <a data-toggle="tab" href="#section2" class="2">2</a>
+        </div>
         <div class="footer">
             <div class="bird">
                 <img src="./image/資產 65.svg" alt="">
@@ -186,6 +265,9 @@
     </main>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/know.js"></script>
 </body>
 
 </html>
