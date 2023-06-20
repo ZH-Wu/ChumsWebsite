@@ -184,7 +184,7 @@ header {
 }
 
 .dropdown:hover {
-    background-image: url(../image/circle.svg);
+    background-image: url(../images/circle.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -414,7 +414,7 @@ input:focus {
     .slide-menuM .upper ul li {
         width: 250px;
         height: 250px;
-        background-image: url(../image/foot.svg);
+        background-image: url(../images/foot.svg);
         background-size: 100% 100%;
         background-repeat: no-repeat;
         padding-right: 10px;
@@ -447,7 +447,7 @@ input:focus {
 
     .slide-menuM .lower {
         height: 40%;
-        background-image: url(../image/footer.png);
+        background-image: url(../images/footer.png);
         background-size: cover;
         display: flex;
         align-items: end;
@@ -516,19 +516,19 @@ input:focus {
     }
 
     .fb {
-        background-image: url(../image/fb.svg);
+        background-image: url(../images/fb.svg);
     }
 
     .line {
-        background-image: url(../image/line.svg);
+        background-image: url(../images/line.svg);
     }
 
     .ig {
-        background-image: url(../image/ig.svg);
+        background-image: url(../images/ig.svg);
     }
 
     .yt {
-        background-image: url(../image/yt.svg);
+        background-image: url(../images/yt.svg);
     }
 }
 
@@ -754,7 +754,7 @@ p .icon {
     width: 100%;
     margin-top: -23%;
     height: 45%;
-    background-image: url(../image/草皮.svg);
+    background-image: url(../images/grass_3.svg);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -999;
@@ -963,7 +963,7 @@ p .icon {
     }
 
     .footer {
-        background-image: url(../image/草皮2.svg);
+        background-image: url(../images/grass_rwd.svg);
     }
 
     .bike {

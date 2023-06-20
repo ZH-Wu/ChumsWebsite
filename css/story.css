@@ -18,7 +18,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: GenSenRounded;
+  font-family: 'GenSenRounded';
 }
 
 .wrapper {
@@ -69,7 +69,6 @@ header {
   position: sticky;
   top: 0px;
   z-index: 10;
-  font-family: GenSenRounded;
 }
 
 .menu {
