@@ -814,7 +814,7 @@ p {
     width: 5%;
     position: relative;
     left: 50px;
-    bottom: 100px;
+    bottom: 50px;
 }
 
 @keyframes ani3 {

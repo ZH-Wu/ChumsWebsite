@@ -156,6 +156,7 @@ img {
 }
 
 header {
+    max-width: 1920px;
     height: 70px;
     line-height: 70px;
     background-color: #F5DEA8;
@@ -164,7 +165,6 @@ header {
     justify-content: space-between;
     position: sticky;
     top: 0px;
-    left: 0;
     z-index: 10;
     font-family: "GenSenRounded";
 }
@@ -178,7 +178,7 @@ header {
     display: inline-block;
     text-decoration: none;
     padding: 0 10px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #B61C31;
     text-align: center;
 }
@@ -193,6 +193,7 @@ header {
 .dropdown-item {
     display: none;
     background-color: #F5DEA8;
+    border-radius: 0 0 12px 12px;
     text-align: center;
 }
 
@@ -794,6 +795,9 @@ p .icon {
     .img_c,
     .img {
         width: 150px;
+        height: 75px;
+        display: flex;
+        top: -28px;
     }
 
     .cloud {
@@ -803,6 +807,8 @@ p .icon {
         justify-content: center;
         margin-top: -50px;
         z-index: 1;
+        height: 100px;
+
     }
 
     .store {
@@ -822,10 +828,11 @@ p .icon {
 
     .h1_cloud {
         font-size: large;
+        top: 66px;
     }
 
-    .img_t img {
-        display: block;
+    .cloud .img_t img {
+        display: none;
     }
 
     .cloud img {
@@ -843,8 +850,12 @@ p .icon {
         z-index: 999;
     }
 
+    .img_c:hover {
+        transform: none;
+    }
+
     .footer {
-        background-image: url(../image/草皮2.svg);
+        background-image: url(../images/grass_rwd.svg);
     }
 
     .bike {
@@ -884,6 +895,7 @@ p .icon {
         justify-content: center;
         margin-top: -50px;
         z-index: 1;
+        top: 5px;
     }
 
 
@@ -925,9 +937,10 @@ p .icon {
         left: 10%;
     }
 
-    .img_t img {
-        display: block;
+    .cloud .img_t img {
+        display: none;
     }
+
 
     .cloud img {
         width: 80px;
