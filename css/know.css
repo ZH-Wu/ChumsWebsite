@@ -673,12 +673,17 @@ h1 {
     background-color: #ffffff;
     padding: 20px;
     display: flex;
-    border: 1px solid #000000;
+    /* border: 1px solid #000000; */
     border-radius: 10%;
     overflow: hidden;
     height: 250px;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 3px;
+    transition: .5s;
+}
+
+.list_item:hover {
+    transform: translateY(-20px);
 }
 
 .imgl {

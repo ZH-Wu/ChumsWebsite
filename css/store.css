@@ -657,10 +657,11 @@ h1 {
     display: flex;
     float: left;
     align-items: center;
-    border: 1px solid #000000;
+    /* border: 1px solid #000000; */
     border-radius: 20px;
     margin: 0 20vh 5vh 0;
     box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 3px;
+    transition: .5s;
 }
 
 .list_item_m,
@@ -672,11 +673,15 @@ h1 {
     display: flex;
     float: left;
     align-items: center;
-    border: 1px solid #000000;
+    /* border: 1px solid #000000; */
     border-radius: 20px;
     margin: 0 20vh 5vh 0;
     display: none;
     box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 3px;
+    transition: .5s;
+}
+.list_item_n:hover, .list_item_m:hover, .list_item_s:hover {
+    transform: translateY(-20px);
 }
 
 a {
