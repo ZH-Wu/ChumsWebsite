@@ -156,7 +156,6 @@ img {
 }
 
 header {
-    max-width: 1920px;
     height: 70px;
     line-height: 70px;
     background-color: #F5DEA8;
@@ -165,6 +164,7 @@ header {
     justify-content: space-between;
     position: sticky;
     top: 0px;
+    left: 0;
     z-index: 10;
     font-family: "GenSenRounded";
 }
@@ -178,7 +178,7 @@ header {
     display: inline-block;
     text-decoration: none;
     padding: 0 10px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #B61C31;
     text-align: center;
 }
@@ -193,7 +193,6 @@ header {
 .dropdown-item {
     display: none;
     background-color: #F5DEA8;
-    border-radius: 0 0 12px 12px;
     text-align: center;
 }
 

@@ -79,7 +79,7 @@ header {
   display: inline-block;
   text-decoration: none;
   padding: 0 10px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #B61C31;
   text-align: center;
 }
@@ -94,7 +94,6 @@ header {
 .dropdown-item {
   display: none;
   background-color: #F5DEA8;
-  border-radius: 0 0 12px 12px;
   text-align: center;
 }
 
@@ -121,7 +120,7 @@ header {
 
 .logo {
   margin-top: 12px;
-  margin-right: 55px;
+  margin-right: 35px;
   width: 100px;
 }
 

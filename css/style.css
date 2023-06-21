@@ -10,7 +10,7 @@
 
 /* 中文字體 */
 @font-face {
-  font-family: GenSenRounded;
+  font-family: 'GenSenRounded';
   src: url(../webfonts/ttc/GenSenRounded-R.ttc);
 }
 
@@ -22,7 +22,7 @@ body::-webkit-scrollbar {
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: GenSenRounded;
+  font-family: 'GenSenRounded';
 }
 
 /* 最外圍容器設定 */
@@ -41,7 +41,7 @@ img {
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 5rem;
   color: #EB664C;
   font-family: 'Courgette', cursive;
   text-shadow: 4px 4px #fff, -4px 4px #fff, 5px 5px #CC4058, -5px 5px #CC4058;
@@ -191,7 +191,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 120% 120%;
-  font-size: 1.4em;
+  font-size: 1.6em;
   transition: .5s;
 }
 
@@ -1275,7 +1275,7 @@ main {
 }
 
 .chatBox p {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   letter-spacing: 5px;
   color: #B61C31;
   font-weight: 600;
@@ -1418,6 +1418,7 @@ main {
   margin-bottom: 10px;
   color: #B61C31;
   line-height: 1.5;
+  font-size: 1.2rem;
 }
 
 .product-box p {
@@ -1437,6 +1438,7 @@ main {
   cursor: pointer;
   /* 作為偽元素定位使用 */
   position: relative;
+  font-size: 1.1rem;
 }
 
 .buy::after {
@@ -1520,6 +1522,7 @@ main {
   color: #fff;
   letter-spacing: 5px;
   cursor: pointer;
+  font-size: 1.1rem;
 }
 
 .buy:focus,
@@ -1880,11 +1883,12 @@ main {
   left: 5px;
   bottom: -60px;
   transition: .5s linear;
+  font-size: 1.2rem;
 
 }
 
 #news .slide-content:hover a {
-  bottom: 0;
+  bottom: 5px;
 }
 
 #news .swiper-navBtn,
@@ -2092,7 +2096,7 @@ span {
 .info h2 {
   padding-top: 5px;
   padding-left: 5px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #364F0B;
 }
@@ -2100,6 +2104,7 @@ span {
 .info a {
   display: inline-block;
   text-decoration: none;
+  font-size: 1.1rem;
 
 }
 
@@ -2107,9 +2112,10 @@ span {
   text-decoration: underline;
 }
 
-.more {
+.info .more {
   font-weight: 900;
-  margin-left: 85%;
+  font-size: 1.2rem;
+  margin-left: 80%;
   color: #EB664C;
   font-family: 'Courgette', cursive;
 }
@@ -2329,10 +2335,10 @@ footer {
 
 .bird_end {
   position: absolute;
-  top: 55%;
+  top: 45%;
   left: 18%;
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
 }
 
 @media (max-width: 768px) {
@@ -2349,7 +2355,7 @@ footer {
 }
 
 .footer_content {
-  width: 50%;
+  width: 55%;
   margin: 0 auto;
   padding: 10px 20px;
 
@@ -2387,7 +2393,7 @@ footer {
   text-decoration: none;
   color: #364F0B;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   letter-spacing: 3px;
   border-bottom: 2px solid #B61C31;
 }

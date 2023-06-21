@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: GenSenRounded;
+  font-family: 'GenSenRounded';
   src: url(../webfonts/ttc/GenSenRounded-R.ttc);
 }
 
@@ -17,11 +17,12 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: GenSenRounded;
+  font-family: 'GenSenRounded';
 }
 
 .wrapper {
   max-width: 1920px;
+  overflow: hidden;
 }
 
 img {
@@ -62,8 +63,10 @@ header {
   padding: 0px 10px;
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
   z-index: 10;
-  font-family: GenSenRounded;
 }
 
 .menu {
@@ -75,7 +78,7 @@ header {
   display: inline-block;
   text-decoration: none;
   padding: 0 10px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #B61C31;
   text-align: center;
 }
@@ -90,14 +93,15 @@ header {
 .dropdown-item {
   display: none;
   background-color: #F5DEA8;
-  border-radius: 0 0 12px 12px;
   text-align: center;
+  
 }
 
 .dropdown-item a {
   display: block;
   text-decoration: none;
   color: #B61C31;
+
 }
 
 .dropdown-item a::after {
