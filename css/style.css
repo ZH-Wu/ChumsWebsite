@@ -116,7 +116,7 @@ header {
     right: -100%;
     width: 100%;
     height: 974px;
-    background-color: rgba(245, 222, 168, 1);
+    background: linear-gradient(182.18deg, #FFFFFF 6.61%, #FDF8EE 15.88%, #F8E9C5 55.54%, #F5DEA8 77.52%);
     z-index: 20;
     transition: .5s;
   }
@@ -315,12 +315,12 @@ header {
     bottom: 30%;
     right: 25px;
     transform: rotate(25deg);
-    animation: booby 2s linear infinite alternate;
+    animation: booby 1s linear infinite alternate;
   }
   @keyframes booby {
     0% {
       right: 0;
-      bottom: 160px;
+      bottom: 150px;
       
     }
     25% {
@@ -330,12 +330,12 @@ header {
     }
     50% {
       
-      bottom: 150px;
+      bottom: 160px;
       
     }
     100% {
       
-      bottom: 160px;
+      bottom: 150px;
 
     }
   }
@@ -553,7 +553,7 @@ header {
 
 @keyframes cloud3 {
   from {
-    right: 250px;
+    right: 25%;
     top: 450px;
   }
 
@@ -595,12 +595,12 @@ header {
 @keyframes cloud5 {
   from {
     right: 0px;
-    top: 480px;
+    top: 550px;
   }
 
   to {
     right: 100%;
-    top: 480px;
+    top: 550px;
   }
 }
 
@@ -920,12 +920,12 @@ header {
   @keyframes cloud5 {
     from {
       right: 10%;
-      top: 140px;
+      top: 180px;
     }
 
     to {
       right: 100%;
-      top: 140px;
+      top: 180px;
     }
   }
 }
@@ -1009,10 +1009,11 @@ main {
 
 .aboutUs p {
   font-size: 1.5rem;
+  font-weight: 600;
   color: #364F0B;
   width: 70%;
-  line-height: 1.5;
-  letter-spacing: 2px;
+  line-height: 1.6;
+  letter-spacing: 3px;
   padding: 10px 0;
 }
 
@@ -1023,6 +1024,8 @@ main {
 
   .aboutUs .p2 {
     font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: .3em;
     padding: 0;
   }
 }
@@ -1169,13 +1172,14 @@ main {
 
   .aboutUs {
     width: 100%;
-    height: 70%;
-    padding-top: 0px;
+    height: 60%;
+    justify-content: start;
     opacity: 1;
   }
 
   .aboutUs h2 {
     font-size: 3rem;
+    margin-top: 50px;
     margin-bottom: .5rem;
   }
 
@@ -1184,17 +1188,17 @@ main {
   }
 
   .aboutUs .p2 {
-    font-size: .8rem;
-    color: #4c4c4c;
-    font-weight: 500;
+    font-size: .9rem;
+    color: #364F0B;
+    font-weight: 600;
     width: 70%;
     margin-bottom: .5rem;
     padding: 0;
-    text-shadow: 2px 2px #fff;
-
+    letter-spacing: .2em;
   }
 
   .aboutUs .btn {
+    margin-top: .5rem;
     padding: 10px 8px 6px 0px;
     font-size: .8rem;
   }
@@ -1210,7 +1214,7 @@ main {
   #about .birdWithGuitar {
     display: block;
     width: 25%;
-    top: 22%;
+    top: 20%;
   }
   
 
@@ -1413,7 +1417,7 @@ main {
 }
 
 .product-box .txt {
-  width: 90%;
+  width: 78%;
   margin: 0 auto;
   margin-bottom: 10px;
   color: #B61C31;
@@ -1423,6 +1427,25 @@ main {
 
 .product-box p {
   font-weight: 900;
+  position: relative;
+}
+.product-box p::before, .product-box p::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+.product-box p::before {
+  right: 15%;
+  background-color: #273c5b;
+}
+.product-box p::after {
+  right: 0%;
+  background-color: #1a869b;
+  
 }
 
 .buy {
@@ -1570,6 +1593,7 @@ main {
 
   .chatBox {
     width: 40%;
+    font-size: 1.6rem;
     line-height: 130px;
     display: block;
   }
@@ -1773,7 +1797,17 @@ main {
   width: 8%;
   position: absolute;
   right: -10px;
+  top: 1.5px;
+  animation: billboard .6s infinite alternate;
 }
+@keyframes billboard {
+  0% {
+    right: 0px
+  }
+  100% {
+    right: -20px;
+  }
+} 
 
 #hill {
   width: 20%;
@@ -1783,6 +1817,18 @@ main {
   z-index: 2;
 
 }
+.forest {
+  width: 9%;
+  position: absolute;
+  bottom: 55px;
+  right: 13%;
+  z-index: 3;
+}
+.fr {
+  transform: rotateY(180deg) scale(1.1);
+  right: -10px;
+}
+
 
 @media (max-width: 768px) {
   #billboard {
@@ -1799,12 +1845,10 @@ main {
   }
 
   #billboard a::after {
-    content: url(../images/white\ arrow.svg);
     width: 5%;
     position: absolute;
     top: 1px;
     right: 40px;
-    animation: billboard .6s infinite alternate;
   }
 
   @keyframes billboard {
@@ -1821,6 +1865,18 @@ main {
     width: 40%;
     bottom: 0;
   }
+  .forest {
+    width: 15%;
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+  }
+  .fr {
+    transform: scale(1.3) rotateY(180deg);
+    left: 25%;
+    bottom: 10px;
+  }
+  
 }
 
 @media (max-width: 576px) {
@@ -2181,6 +2237,8 @@ span {
   #shopP .info h2 {
     text-align: center;
     font-size: 1.1em;
+    margin-top: 30px;
+    
   }
 
   #shopP .slide-content .info a {
@@ -2256,6 +2314,7 @@ span {
     font-size: .8em;
     text-align: center;
     padding: 0;
+    margin-top: 20px;
   }
 
   #shopM .slide-content .info a {
@@ -2343,7 +2402,7 @@ footer {
 
 @media (max-width: 768px) {
   .bird_end {
-    top: 40%;
+    top: 35%;
     left: 10%;
   }
 }
