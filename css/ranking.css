@@ -381,7 +381,7 @@ input:focus {
     top: 50px;
     right: -100%;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 50px);
     background: linear-gradient(182.18deg, #FFFFFF 6.61%, #FDF8EE 15.88%, #F8E9C5 55.54%, #F5DEA8 77.52%);
     z-index: 20;
     transition: .5s;
