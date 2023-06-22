@@ -47,18 +47,22 @@ $(function () {
 
   // 點擊放大鏡顯示及關閉商品
   $('.magnifier').click(function (e) {
-    // 防止冒泡事件發生，得以讓main被點擊時，程式碼正常執行。
+    // 防止冒泡事件發生，得以讓非.product-box範圍的元素被點擊時，程式碼正常執行。
     e.stopPropagation();
     // 點了.magnifier找到同輩的.product-box並加上transform: scale(1)的屬性，再從父層的同輩找到其他.product-box並加上transform: scale(0)的屬性。
     $(this).siblings('.product-box').css("transform", "scale(1)").parent().siblings().find('.product-box').css("transform", "scale(0)");
   });
-  // 點main範圍內的任何一處都可以把.product-box收起來
-  $('main').click(function () {
-    if (window.innerWidth > 576) {
-      $('.product-box').css("transform", "scale(0)");
+
+  $(document).click(function (e) {
+    // 條件一: 如果點擊的目標沒有.product-box的class名稱而且點擊的目標其所有父元素也沒有.product-box的class名稱
+    if (!$(e.target).hasClass('product-box') && !$(e.target).parents('.product-box').length) {
+      // 條件二: 如果視窗寬度大於576px
+      if (window.innerWidth > 576) {
+        // 符合以上兩項條件才執行程式碼
+        $('.product-box').css("transform", "scale(0)");
+      }
     }
   });
-
 
   // 點擊立即購買出現下滑選單
   $('.buy').click(function () {

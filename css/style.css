@@ -1705,11 +1705,11 @@ main {
     height: 100%;
     margin: 0 auto;
     position: relative;
-    transform: scale(1);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: none;
   }
 
   #productM .product-box .txt {
