@@ -2430,8 +2430,10 @@ footer {
 
 @media (max-width: 768px) {
   .bird_end {
-    top: 35%;
-    left: 10%;
+    width: 150px;
+    height: 150px;
+    top: 38%;
+    left: 12%;
   }
 }
 
