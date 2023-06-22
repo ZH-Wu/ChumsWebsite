@@ -125,6 +125,12 @@ header {
   }
 }
 
+@media (max-width: 576px) {
+  .slide-menuM {
+    height: calc(100vh - 50px);
+  } 
+}
+
 .slide-menu span {
   position: absolute;
   left: 20px;
