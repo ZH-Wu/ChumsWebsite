@@ -17,6 +17,7 @@ $(function () {
     $menuL.add($back).add($slideMenuM).toggleClass('active');
   });
 
+
   // RWD OffCanvas主選單原始程式碼
   // $('.nav_rwd .menuL, .nav_rwd .back').click(() => {
   //   $('.nav_rwd .menuL, .nav_rwd .back, .slide-menuM').toggleClass('active');
@@ -45,9 +46,19 @@ $(function () {
   });
 
   // 點擊放大鏡顯示及關閉商品
-  $('.magnifier').click(function () {
-    $(this).siblings('.product-box').toggle(500);
+  $('.magnifier').click(function (e) {
+    // 防止冒泡事件發生，得以讓main被點擊時，程式碼正常執行。
+    e.stopPropagation();
+    // 點了.magnifier找到同輩的.product-box並加上transform: scale(1)的屬性，再從父層的同輩找到其他.product-box並加上transform: scale(0)的屬性。
+    $(this).siblings('.product-box').css("transform", "scale(1)").parent().siblings().find('.product-box').css("transform", "scale(0)");
   });
+  // 點main範圍內的任何一處都可以把.product-box收起來
+  $('main').click(function () {
+    if (window.innerWidth > 576) {
+      $('.product-box').css("transform", "scale(0)");
+    }
+  });
+
 
   // 點擊立即購買出現下滑選單
   $('.buy').click(function () {
@@ -82,11 +93,11 @@ const swiper = new Swiper('.swiper', {
   grabCursor: true,
   allowTouchMove: true,
   loop: true,
-  // autoplay: {
-  //   delay: 3000,
-  //   pauseOnMouseEnter: true,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 3000,
+    pauseOnMouseEnter: true,
+    disableOnInteraction: false,
+  },
   freeMode: {
     momentumBounce: true,
   },

@@ -1,7 +1,14 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&family=Montserrat&family=Noto+Sans+TC:wght@900&family=Roboto:wght@700&display=swap');
 
+/* 英文字體 */
 @font-face {
-    font-family: GenSenRounded;
+  font-family: 'Courgette', cursive;
+  src: url('https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&family=Montserrat&family=Noto+Sans+TC:wght@900&family=Roboto:wght@700&display=swap');
+}
+/* 中文字體 */
+@font-face {
+    font-family: 'GenSenRounded';
     src: url(../webfonts/ttc/GenSenRounded-R.ttc);
 }
 
@@ -178,7 +185,7 @@ header {
     display: inline-block;
     text-decoration: none;
     padding: 0 10px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #B61C31;
     text-align: center;
 }
@@ -188,6 +195,13 @@ header {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    text-decoration: none;
+    color: #B61C31;
+}
+
+.dropdown:focus, .dropdown:active {
+    text-decoration: none;
+    color: #B61C31;
 }
 
 .dropdown-item {
@@ -195,6 +209,7 @@ header {
     background-color: #F5DEA8;
     border-radius: 0 0 12px 12px;
     text-align: center;
+    
 }
 
 .dropdown-item a {
@@ -220,7 +235,6 @@ header {
 
 .logo {
     margin-top: 12px;
-    margin-right: 170px;
     width: 100px;
 
 }
@@ -332,7 +346,6 @@ input:focus {
     .logo {
         width: 11%;
         margin: 0;
-        margin-right: 20px;
     }
 
     .magXs {

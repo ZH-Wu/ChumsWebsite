@@ -5,23 +5,26 @@
 @font-face {
   font-family: 'Courgette', cursive;
   src: url('https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&family=Montserrat&family=Noto+Sans+TC:wght@900&family=Roboto:wght@700&display=swap');
-
+  unicode-range: U+000-5FF, U+1e00-1fff, U+2000-2300;
 }
 
 /* 中文字體 */
 @font-face {
-  font-family: 'GenSenRounded';
+  font-family: GenSenRounded;
   src: url(../webfonts/ttc/GenSenRounded-R.ttc);
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  font-family: 'GenSenRounded';
 }
 
-.wrapper {
+.container {
   max-width: 1920px;
+  height: 100vh;
   overflow: hidden;
-  font-family: 'GenSenRounded';
   background: linear-gradient(182.18deg, #FFFFFF 6.61%, #FDF8EE 15.88%, #F8E9C5 55.54%, #F5DEA8 77.52%);
 }
 
@@ -31,32 +34,6 @@ img {
   width: 100%;
 }
 
-/* goTop按鈕 */
-#fixedTop {
-  display: none;
-  cursor: pointer;
-  width: 5%;
-  height: 100px;
-  background-image: url(../images/top.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-  z-index: 10;
-
-}
-@media (max-width: 768px) {
-  #fixedTop {
-    width: 12%;
-  }
-}
-@media (max-width: 576px) {
-  #fixedTop {
-    width: 20%;
-  }
-}
-
 header {
   height: 70px;
   line-height: 70px;
@@ -64,7 +41,7 @@ header {
   padding: 0px 10px;
   display: flex;
   justify-content: space-between;
-  position: relative;
+  position: sticky;
   top: 0px;
   z-index: 10;
 }
@@ -92,7 +69,6 @@ header {
 .dropdown-item {
   display: none;
   background-color: #F5DEA8;
-  border-radius: 0 0 12px 12px;
   text-align: center;
 }
 
@@ -285,7 +261,7 @@ input:focus {
     top: 50px;
     right: -100%;
     width: 100%;
-    height: 100vh;
+    height: 974px;
     background: linear-gradient(182.18deg, #FFFFFF 6.61%, #FDF8EE 15.88%, #F8E9C5 55.54%, #F5DEA8 77.52%);
     z-index: 20;
     transition: .5s;
@@ -429,6 +405,10 @@ input:focus {
 }
 
 @media (max-width: 576px) {
+  .slide-menuM {
+    height: 794px;
+  }
+
   .slide-menuM .upper ul li {
     width: 130px;
     height: 130px;
@@ -477,372 +457,5 @@ input:focus {
   .slide-menuM .lower .area a {
     width: 50px;
     height: 50px;
-  }
-}
-
-#upperPart,
-#lowerPart {
-  width: 80%;
-  margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  #upperPart,
-  #lowerPart {
-    width: 100%;
-  }
-}
-
-#upperPart>* {
-  text-align: center;
-}
-
-#upperPart h2 {
-  font-size: 1.5rem;
-  padding: 30px 0;
-  font-weight: 700;
-  color: #4c4c4c;
-}
-
-@media (max-width: 576px) {
-  #upperPart h2 {
-    font-size: 1.2rem;
-    padding: 50px 0;
-  }
-
-}
-
-#upperPart p {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  padding-bottom: 20px;
-}
-
-@media (max-width: 576px) {
-  #upperPart p {
-    font-size: .9rem;
-    padding-bottom: 40px;
-  }
-
-}
-
-iframe {
-  width: 80%;
-  height: 540px;
-  border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-  iframe {
-    width: 90%;
-    height: 450px;
-  }
-}
-
-@media (max-width: 576px) {
-  iframe {
-    width: 90%;
-    height: 200px;
-    margin-bottom: 20px;
-  }
-
-}
-
-@media (min-width: 769px) {
-  #bird_path {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  #bird_path {
-    width: 40%;
-    margin: 50px auto;
-  }
-
-}
-
-@media (max-width: 576px) {
-  #bird_path {
-    width: 35%;
-    margin: 40px auto; 
-  }
-}
-
-.list {
-  display: flex;
-  width: 75%;
-  margin: 50px auto;
-  justify-content: space-between;
-}
-
-@media (max-width: 768px) {
-  .list {
-    width: 95%;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-}
-
-@media (max-width: 576px) {
-  .list {
-    width: 100%;
-    margin: 20px 0;
-  }
-}
-
-.list li a {
-  width: 250px;
-  height: 250px;
-  border-radius: 125px;
-  background-color: #F0DAA5;
-  display: block;
-  text-decoration: none;
-  color: #4c4c4c;
-  position: relative;
-  transition: .5s;
-  box-shadow: 3px 0px 5px 0px rgb(76, 76, 76, .5);
-}
-
-@media (max-width: 768px) {
-  .list li a:active {
-    transform: scale(1.2);
-    box-shadow: 0px 0px 10px #4c4c4c;
-  }
-}
-
-@media (max-width: 576px) {
-  .list li a {
-    width: 160px;
-    height: 160px;
-    margin-bottom: 20px;
-  }
-}
-
-.list li a:hover {
-  transform: scale(1.2);
-  box-shadow: 0px 0px 10px #4c4c4c;
-}
-
-.list li a h3 {
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 40px;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-@media (max-width: 576px) {
-  .list li a h3 {
-    margin-top: 0;
-    padding-top: 20px;
-  }
-}
-
-.list li a img {
-  position: absolute;
-}
-
-.tent {
-  transform: scale(0.8);
-  top: 15px;
-  left: 0px;
-}
-
-@media (max-width: 576px) {
-  .tent {
-    transform: scale(0.7);
-    top: 6px;
-  }
-}
-
-.bell {
-  transform: scale(0.55);
-  top: 2px;
-}
-
-.shirt {
-  transform: scale(.9);
-  top: 15px;
-  left: 10px;
-}
-
-@media (max-width: 576px) {
-  .shirt {
-    left: 5px;
-  }
-}
-
-.bag {
-  transform: scale(.65);
-  top: 25px;
-}
-
-#lowerPart {
-  padding-top: 50px;
-}
-
-@media (max-width: 576px) {
-  #lowerPart {
-    padding-top: 30px;
-    z-index: 1;
-  }
-}
-
-#lowerPart>* {
-  margin: 0 auto;
-
-}
-
-#lowerPart .slogan {
-  width: 15%;
-  transform: scale(0);
-  margin-bottom: 100px;
-  transition: all .8s;
-}
-#lowerPart .slogan.active {
-  transform: scale(1.5);
-}
-
-@media (min-width: 769px) {
-  #lowerPart .vertical {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  #lowerPart .horizontal {
-    display: none;
-  }
-
-  #lowerPart .slogan {
-    width: 30%;
-    margin-bottom: 30px;
-  }
-
-  #lowerPart .vertical {
-    margin-bottom: -30px;
-  }
-
-}
-
-@media (max-width: 576px) {
-  #lowerPart .slogan {
-    margin-bottom: 0px;
-  }
-  #lowerPart .vertical {
-    height: 80vh;
-    margin-bottom: -40px;
-  }
-}
-
-footer {
-  height: 30vh;
-  background-image: url(../images/grass_3.svg);
-  background-size: cover;
-  position: relative;
-}
-
-@media (max-width: 768px) {
-  footer {
-    background-image: url(../images/grass_rwd.svg);
-  }
-}
-
-@media (max-width: 576px) {
-  footer {
-    height: 20vh;
-  }
-}
-
-#birdwithbrand {
-  width: 8%;
-  position: absolute;
-  left: 70px;
-  top: 20px;
-  z-index: 1;
-}
-
-@media (max-width: 768px) {
-  #birdwithbrand {
-    width: 20%;
-    position: absolute;
-    left: 70px;
-    top: 30px;
-  }
-}
-
-@media (max-width: 576px) {
-  #birdwithbrand {
-    width: 30%;
-    left: 30px;
-    top: -10px;
-  }
-}
-
-#footprintleft {
-  position: absolute;
-  right: 50px;
-  bottom: 10px;
-  width: 5%;
-  transform: rotate(-10deg);
-}
-
-@media (max-width: 768px) {
-  #footprintleft {
-    bottom: 20px;
-    width: 15%;
-  }
-}
-
-
-@media (max-width: 576px) {
-  #footprintleft {
-    width: 15%;
-    right: 30px;
-    bottom: 5px;
-  }
-}
-
-.cloud {
-  position: absolute; 
-  width: 5%;
-  
-}
-
-.cloud1 {
-  top: 10%;
-  animation: muvleft 60s infinite alternate linear;
-}
-@keyframes muvleft {
-  0% {
-    left: -10%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-.cloud2 {
-  right: 10%;
-  animation: muvRight 60s infinite alternate linear;
-}
-@keyframes muvRight {
-  0% {
-    right: -10%;
-  }
-  100% {
-    right: 100%;
-  }
-}
-@media (max-width: 768px) {
-  .cloud {
-    width: 20%;
-  }
-  .cloud1 {
-    animation: muvleft 30s infinite alternate linear;
-  }
-  .cloud2 {
-    animation: muvRight 30s infinite alternate linear;
   }
 }
