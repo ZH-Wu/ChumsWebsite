@@ -1602,9 +1602,11 @@ main {
 
   .chatBox {
     width: 40%;
-    font-size: 1.6rem;
-    line-height: 130px;
-    display: block;
+    line-height: 140px;
+    /* display: block; */
+  }
+  .chatBox p {
+    font-size: 1.5rem;
   }
 
   .m1 {
