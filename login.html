@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/login.css">
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -46,7 +48,7 @@
       <a href="index.html" class="logo"><img src="./images/logo.svg" alt="logo"></a>
       <div class="searchbar">
         <form name="search" id="search" role="search">
-          <input type="search" placeholder="找找看">
+          <input type="search" placeholder="輸入關鍵字">
           <button class="search_btn" type="submit"><img src="./images/magnifier.svg" alt="搜尋"></button>
         </form>
         <ul class="icon">
@@ -81,8 +83,43 @@
         </div>
       </div>
     </header>
+    <main>
+      <div class="login_area">
+        <form action="" name="login" id="login" class="form">
+          <h2>會員登入</h2>
+          <div class="group">
+            <label for="userId">會員帳號</label>
+            <input type="email" name="userId" id="userId" placeholder="123@example.com" title="請輸入會員帳號">
+          </div>
+          <div class="group">
+            <label for="userPw">密碼</label>
+            <input type="password" name="userPw" id="userPw" placeholder="請輸入您的會員密碼">
+          </div>
+          <div class="btn-group">
+            <input type="submit" value="登入">
+            <input type="submit" value="取消">
+          </div>
+          <div class="btn-group btn-group-2">
+            <a href="#">忘記密碼?</a>
+            <a href="#">會員註冊</a>
+          </div>
+          <h4>快速登入</h4>
+          <div class="login_account">
+            <div class="login-icon"><a href="#"></a></div>
+            <div class="login-icon"><a href="#"></a></div>
+            <div class="login-icon"><a href="#"></a></div>
+          </div>
+          <small>表單僅為教學展示用，並無蒐集資料功能。</small>
+        </form>
+      </div>
+    </main>
+    <footer>
+
+    </footer>
   </div>
   <script src="./js/jquery-1.11.3.min.js"></script>
+  <script src="./js/header.js"></script>
   <script src="./js/login.js"></script>
 </body>
+
 </html>
