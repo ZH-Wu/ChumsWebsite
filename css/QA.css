@@ -407,7 +407,7 @@ input:focus {
     top: 50px;
     right: -100%;
     width: 100%;
-    height: calc(100vh - 50px);
+    height: 974px;
     background-color: rgba(245, 222, 168, 1);
     z-index: 20;
     transition: .5s;
@@ -551,6 +551,9 @@ input:focus {
 }
 
 @media (max-width: 576px) {
+  .slide-menuM {
+    height: 794px;
+  }
 
   .slide-menuM .upper ul li {
     width: 130px;
@@ -717,8 +720,14 @@ h1 {
 }
 
 .bird {
-  width: 15%;
+  width: 7%;
   left: 50px;
+  bottom: 50px;
+  position: fixed;
+}
+.fire{
+  width: 5%;
+  left: 200px;
   bottom: 50px;
   position: fixed;
 }
@@ -797,7 +806,12 @@ h1 {
   }
 
   .bird {
-    width: 20vh;
+    width: 10vh;
+    left: 20px;
+  }
+  .fire{
+    width: 7vh;
+    left: 120px;
   }
 
 }
