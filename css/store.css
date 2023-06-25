@@ -196,14 +196,11 @@ header {
     background-position: center;
     text-decoration: none;
     color: #B61C31;
-<<<<<<< HEAD
 }
 
 .dropdown:active, .dropdown:focus {
     text-decoration: none;
     color: #B61C31;
-=======
->>>>>>> f009f2b3ee14b75b185899ba5ad93c023b63eeba
 }
 
 .dropdown:active,
