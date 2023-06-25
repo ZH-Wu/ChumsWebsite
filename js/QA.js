@@ -15,3 +15,19 @@ $(function () {
     });
 
 });
+// 開合按鈕
+var btns = document.getElementsByTagName("button");
+
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+        var isActive = this.style.backgroundColor === "rgb(253, 212, 121)";
+        for (var j = 0; j < btns.length; j++) {
+            btns[j].style.backgroundColor = "";
+            btns[j].style.color = "";
+        }
+        if (!isActive) {
+            this.style.backgroundColor = "#FDD479";
+            this.style.color = "black";
+        }
+    });
+}
