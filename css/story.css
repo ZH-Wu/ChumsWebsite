@@ -46,11 +46,13 @@ img {
   z-index: 10;
 
 }
+
 @media (max-width: 768px) {
   #fixedTop {
     width: 12%;
   }
 }
+
 @media (max-width: 576px) {
   #fixedTop {
     width: 20%;
@@ -184,6 +186,7 @@ input:focus {
 /* Header RWD */
 
 @media (min-width: 769px) {
+
   .menuL,
   .back,
   .magXs {
@@ -390,6 +393,7 @@ input:focus {
   }
 
   .slide-menuM .lower .CTA {
+    color: #3d3d3d;
     font-size: 2.5em;
     font-family: 'Courgette', cursive;
   }
@@ -487,6 +491,7 @@ input:focus {
 }
 
 @media (max-width: 768px) {
+
   #upperPart,
   #lowerPart {
     width: 100%;
@@ -565,7 +570,7 @@ iframe {
 @media (max-width: 576px) {
   #bird_path {
     width: 35%;
-    margin: 40px auto; 
+    margin: 40px auto;
   }
 }
 
@@ -701,6 +706,7 @@ iframe {
   margin-bottom: 100px;
   transition: all .8s;
 }
+
 #lowerPart .slogan.active {
   transform: scale(1.5);
 }
@@ -731,6 +737,7 @@ iframe {
   #lowerPart .slogan {
     margin-bottom: 0px;
   }
+
   #lowerPart .vertical {
     height: 80vh;
     margin-bottom: -40px;
@@ -806,42 +813,50 @@ footer {
 }
 
 .cloud {
-  position: absolute; 
+  position: absolute;
   width: 5%;
-  
+
 }
 
 .cloud1 {
   top: 10%;
   animation: muvleft 60s infinite alternate linear;
 }
+
 @keyframes muvleft {
   0% {
     left: -10%;
   }
+
   100% {
     left: 100%;
   }
 }
+
 .cloud2 {
   right: 10%;
   animation: muvRight 60s infinite alternate linear;
 }
+
 @keyframes muvRight {
   0% {
     right: -10%;
   }
+
   100% {
     right: 100%;
   }
 }
+
 @media (max-width: 768px) {
   .cloud {
     width: 20%;
   }
+
   .cloud1 {
     animation: muvleft 30s infinite alternate linear;
   }
+
   .cloud2 {
     animation: muvRight 30s infinite alternate linear;
   }
