@@ -655,10 +655,11 @@ h1 {
 #headingFive.accordion-header .accordion-button {
   font-size: larger;
   background-color: #ffffff;
+  font-weight: bold;
 }
 
 .accordion-body {
-  background-color: #FDD479;
+  background-color: #Fff;
   height: 80px;
   line-height: 1.6rem;
   padding: 10px;
@@ -722,7 +723,7 @@ h1 {
 
 .bird {
   width: 7%;
-  left: 50px;
+  left: 80px;
   bottom: 50px;
   position: fixed;
 }
