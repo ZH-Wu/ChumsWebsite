@@ -3,9 +3,10 @@
 
 /* 英文字體 */
 @font-face {
-  font-family: 'Courgette', cursive;
-  src: url('https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&family=Montserrat&family=Noto+Sans+TC:wght@900&family=Roboto:wght@700&display=swap');
+    font-family: 'Courgette', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&family=Montserrat&family=Noto+Sans+TC:wght@900&family=Roboto:wght@700&display=swap');
 }
+
 /* 中文字體 */
 @font-face {
     font-family: 'GenSenRounded';
@@ -199,7 +200,8 @@ header {
     color: #B61C31;
 }
 
-.dropdown:focus, .dropdown:active {
+.dropdown:focus,
+.dropdown:active {
     text-decoration: none;
     color: #B61C31;
 }
@@ -209,7 +211,7 @@ header {
     background-color: #F5DEA8;
     border-radius: 0 0 12px 12px;
     text-align: center;
-    
+
 }
 
 .dropdown-item a {
@@ -402,7 +404,7 @@ input:focus {
         top: 50px;
         right: -100%;
         width: 100%;
-        height: calc(100vh - 50px);
+        height: 974px;
         background-color: rgba(245, 222, 168, 1);
         z-index: 20;
         transition: .5s;
@@ -547,7 +549,7 @@ input:focus {
 
 @media (max-width: 576px) {
     .slide-menuM {
-        height: calc(100vh - 50px);
+        height: 794px;
     }
 
     .slide-menuM .upper ul li {
@@ -704,6 +706,10 @@ h1 {
     width: 150px;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .img {
     display: block;
     width: 150px;
@@ -713,7 +719,6 @@ h1 {
 }
 
 a {
-    text-decoration: none;
     cursor: pointer;
 }
 
@@ -729,6 +734,7 @@ a {
     border: none;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 3px;
+    text-decoration: none;
 }
 
 h4 {
@@ -836,11 +842,11 @@ p {
 }
 
 @keyframes ani3 {
-    from {
+    0% {
         transform: rotate(-10deg);
     }
 
-    to {
+    100% {
         transform: rotate(10deg);
     }
 }
