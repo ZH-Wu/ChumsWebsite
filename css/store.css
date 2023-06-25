@@ -188,8 +188,15 @@ header {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    text-decoration: none;
+    color: #B61C31;
 }
 
+.dropdown:active,
+.dropdown:focus {
+    text-decoration: none;
+    color: #B61C31;
+}
 
 .dropdown-item {
     display: none;
