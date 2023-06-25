@@ -276,12 +276,36 @@ header {
   bottom: 150px;
   right: 50px;
   z-index: 1;
+  animation: booby 2s linear infinite alternate;
+}
+@keyframes booby {
+  0% {
+    right: 0;
+    bottom: 150px;
+
+  }
+
+  25% {
+    right: 75px;
+    bottom: 140px;
+    
+  }
+
+  50% {
+    right: 150px;
+    bottom: 160px;
+  }
+
+  100% {
+    right: 75px;
+    bottom: 150px;
+
+  }
 }
 
 @media (max-width: 768px) {
   #booby {
     width: 25%;
-    animation: booby 2s linear infinite alternate;
   }
 
   @keyframes booby {
@@ -2391,8 +2415,9 @@ footer small {
   display: block;
   width: 50%;
   text-align: center;
-  margin: 50px auto 0;
+  margin: 30px auto 0;
   color: #3d3d3d;
+  line-height: 1.2;
 }
 
 /* Top按鈕 */
