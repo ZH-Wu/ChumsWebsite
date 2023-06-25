@@ -110,7 +110,7 @@ header {
   margin-right: 10px;
 }
 
-input {
+.searchbar input {
   width: 250px;
   height: 50px;
   border-radius: 22px;
@@ -468,10 +468,11 @@ main {
   color: #4c4c4c;
 
 }
+
 @media (max-width: 576px) {
   main {
     height: 70vh;
-    display: flex;    
+    display: flex;
   }
 }
 
@@ -494,6 +495,7 @@ main {
     margin: 50px auto 0;
   }
 }
+
 @media (max-width: 576px) {
   .login_area {
     margin: 80px auto 0;
@@ -511,9 +513,10 @@ main {
     width: 70%;
   }
 }
+
 @media (max-width: 576px) {
   .form {
-    width: 100%;   
+    width: 100%;
 
   }
 }
@@ -523,6 +526,7 @@ main {
   width: 100%;
   margin-bottom: 20px;
 }
+
 @media (max-width: 576px) {
   .form .group>* {
     margin: 0 auto;
@@ -536,6 +540,7 @@ main {
   margin-top: 10px;
   font-weight: 600;
 }
+
 @media (max-width: 576px) {
   .form h2 {
     font-size: 1.2rem;
@@ -543,6 +548,7 @@ main {
     margin-top: 0;
   }
 }
+
 .form .group label {
   font-size: 1.5rem;
   font-weight: 600;
@@ -550,12 +556,26 @@ main {
   margin-bottom: .5rem;
   text-indent: .5rem;
 }
+
+.form .group input {
+  height: 50px;
+  border-radius: 22px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  backdrop-filter: blur(2px);
+  /*要搭配rgba的背景色語法*/
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 576px) {
   .form .group label {
     font-size: 1rem;
     text-indent: 4rem;
     margin-bottom: .3rem;
   }
+
   .form .group input {
     width: 70%;
     height: 30px;
@@ -575,10 +595,21 @@ main {
 }
 
 .btn-group input {
+  width: 250px;
+  height: 50px;
+  border-radius: 22px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  backdrop-filter: blur(2px);
+  /*要搭配rgba的背景色語法*/
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: #4c4c4c;
   color: #fff;
   transition: all .8s;
 }
+
 @media (max-width: 576px) {
   .btn-group input {
     width: 80px;
@@ -607,6 +638,7 @@ main {
   padding: 10px 15px;
   margin-top: .5rem;
 }
+
 @media (max-width: 576px) {
   .btn-group-2 {
     justify-content: space-evenly;
@@ -622,6 +654,7 @@ main {
   font-size: 1.3rem;
   color: #4c4c4c;
 }
+
 @media (max-width: 576px) {
   .btn-group-2 a {
     font-size: 1rem;
@@ -646,6 +679,7 @@ main {
   font-size: 1.5rem;
   position: relative;
 }
+
 @media (max-width: 576px) {
   .form h4 {
     font-size: 1rem;
@@ -678,6 +712,7 @@ main {
   display: flex;
   justify-content: space-evenly;
 }
+
 @media (max-width: 576px) {
   .login_account {
     margin: 0 auto;
@@ -694,6 +729,7 @@ main {
   border-radius: 50%;
   transition: .5s;
 }
+
 @media (max-width: 576px) {
   .login-icon a {
     width: 30px;
@@ -705,6 +741,7 @@ main {
   background-image: url(../images/google.svg);
   background-size: 40px 40px;
 }
+
 @media (max-width: 576px) {
   .login-icon:first-child a {
     background-size: 20px 20px;
@@ -715,15 +752,18 @@ main {
   background-image: url(../images/fb.svg);
   background-size: 42px 42px;
 }
+
 @media (max-width: 576px) {
   .login-icon:nth-child(2) a {
     background-size: 22px 22px;
   }
 }
+
 .login-icon:last-child a {
   background-size: 40px 40px;
   background-image: url(../images/line-n.svg);
 }
+
 @media (max-width: 576px) {
   .login-icon:last-child a {
     background-size: 20px 20px;
@@ -733,6 +773,7 @@ main {
 .login-icon a:hover {
   transform: scale(1.1);
 }
+
 @media (max-width: 576px) {
   .login-icon a:hover {
     transform: none;
@@ -743,6 +784,7 @@ small {
   display: block;
   text-align: center;
 }
+
 @media (max-width: 576px) {
   small {
     font-size: .8rem;
@@ -761,6 +803,7 @@ footer {
   background-size: cover;
   background-position: 0% 30%;
 }
+
 @media (max-width: 576px) {
   footer {
     height: 30vh;
