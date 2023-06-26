@@ -869,6 +869,9 @@ h1 {
         -webkit-line-clamp: 6;
         line-height: 1;
     }
+    h3{
+        margin: 0 5px 0 0;
+    }
 
     .cloud img {
         width: 100px;
