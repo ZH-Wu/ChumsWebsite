@@ -27,7 +27,7 @@ for (var i = 0; i < btns.length; i++) {
         }
         if (!isActive) {
             this.style.backgroundColor = "#FDD479";
-            this.style.color = "black";
+            this.style.color = "#4c4c4c";
         }
     });
 }
