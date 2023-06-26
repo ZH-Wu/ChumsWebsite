@@ -843,6 +843,7 @@ p .icon {
     /* align-items: center; */
     transform: translateX(100%);
     transition: all .4s ease;
+    display: none;
 }
 
 .offcanvas-map h1 {
@@ -976,6 +977,14 @@ footer {
         position: relative;
     }
 
+    .button1 {
+        margin: 0 0 0 160px;
+    }
+
+    .button2 {
+        margin: 0 0 0 150px;
+    }
+
     /* .imgr{
         width: 250px;
         height: 75px;
@@ -1004,6 +1013,10 @@ footer {
 
     .back1.active {
         opacity: 1;
+    }
+
+    .offcanvas-map {
+        display: block;
     }
 
     #map_m,
@@ -1073,7 +1086,7 @@ footer {
         transform: none;
     }
 
-    .footer {
+    footer {
         background-image: url(../images/grass_rwd.svg);
     }
 
@@ -1246,13 +1259,13 @@ footer {
     .button1 {
         font-size: medium;
         width: 100px;
-        margin: 0 50px;
+        margin: 0 0 0 80px;
     }
 
     .button2 {
         font-size: medium;
         width: 100px;
-        margin: 0 45px;
+        margin: 0 0 0 50px;
     }
 
     #cloud-map1 {

@@ -625,6 +625,7 @@ h1 {
   margin: 1.5% auto;
   font-weight: bold;
   text-align: center;
+  color: #4c4c4c;
 }
 
 #accordionOne.accordion {
@@ -655,10 +656,12 @@ h1 {
 #headingFive.accordion-header .accordion-button {
   font-size: larger;
   background-color: #ffffff;
+  font-weight: bold;
+  color: #4c4c4c;
 }
 
 .accordion-body {
-  background-color: #FDD479;
+  background-color: #Fff;
   height: 80px;
   line-height: 1.6rem;
   padding: 10px;
@@ -678,15 +681,15 @@ h1 {
 }
 
 .cloud1 {
-  top: 100px;
+  top: 200px;
   left: 50px;
-  animation: ani 5s linear infinite;
+  animation: ani 10s linear infinite;
 }
 
 .cloud2 {
-  top: 250px;
+  top: 420px;
   right: 50px;
-  animation: ani2 5s linear infinite;
+  animation: ani2 7s linear infinite;
 }
 
 @keyframes ani {
@@ -722,7 +725,7 @@ h1 {
 
 .bird {
   width: 7%;
-  left: 50px;
+  left: 80px;
   bottom: 50px;
   position: fixed;
 }
