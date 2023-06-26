@@ -433,7 +433,7 @@ header {
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: .5s;
+  transition: .3s;
 }
 
 @media (max-width: 576px) {
@@ -2556,7 +2556,7 @@ footer small {
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 30px;
-  transition: .5s;
+  transition: .3s;
 }
 
 @media (max-width: 768px) {

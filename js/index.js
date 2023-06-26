@@ -29,11 +29,11 @@ $(function () {
     if (innerWidth > 769) {
       $('.aboutUs').stop().toggleClass('animate__bounceInDown', scrollTop > 700);
       $('.logo_2, .welcomeBird, .footprint').stop().toggleClass('animate__tada', scrollTop > 700);
-      $('.c2').stop().toggle(scrollTop > 1300, 80);
-      $('.c1').stop().toggle(scrollTop > 1800, 80);
-      $('.c3').stop().toggle(scrollTop > 2200, 80);
-      $('.c5').stop().toggle(scrollTop > 2400, 80).delay(100);
-      $('.c4').stop().toggle(scrollTop > 2800, 80);
+      $('.c2').stop().toggle(scrollTop > 1300, 80).delay(100);
+      $('.c1').stop().toggle(scrollTop > 1800, 80).delay(200);
+      $('.c3').stop().toggle(scrollTop > 2200, 500).delay(200);
+      $('.c5').stop().toggle(scrollTop > 2400, 800).delay(200);
+      $('.c4').stop().toggle(scrollTop > 2800, 800).delay(200);
     } else if (innerWidth > 576 && innerWidth <= 768) {
       $('.aboutUs').stop().toggleClass('animate__bounceInDown', scrollTop > 300);
       $('.logo_2, .welcomeBird, .footprint').stop().toggleClass('animate__tada', scrollTop > 300);
