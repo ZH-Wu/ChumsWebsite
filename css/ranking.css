@@ -16,13 +16,12 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  
+  font-family: "GenSenRounded";
 }
 
 .wrapper {
   max-width: 1920px;
   overflow: hidden;
-  font-family: "GenSenRounded";
 }
 
 img {
@@ -892,6 +891,7 @@ main {
   color: #000;
   font-size: 20px;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 @media (max-width: 768px) {
@@ -914,6 +914,7 @@ main {
 .info h3,
 .info p {
   color: #4c4c4c;
+  line-height: 1.2;
 }
 @media (max-width: 768px) {
   .info h3 {
@@ -1075,7 +1076,7 @@ main {
 }
 
 .cap5 {
-  top: 200px;
+  top: 230px;
   left: -50px;
 }
 @media (max-width: 768px) {

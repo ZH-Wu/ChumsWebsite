@@ -20,11 +20,14 @@
   box-sizing: border-box;
 }
 
+body {
+  background: linear-gradient(182.18deg, #FFFFFF 6.61%, #FDF8EE 15.88%, #F8E9C5 55.54%, #F5DEA8 77.52%);
+  font-family: 'GenSenRounded';
+}
+
 .container {
   max-width: 1920px;
   overflow: hidden;
-  font-family: 'GenSenRounded';
-  background: linear-gradient(182.18deg, #FFFFFF 6.61%, #FDF8EE 15.88%, #F8E9C5 55.54%, #F5DEA8 77.52%);
 }
 
 
@@ -467,12 +470,16 @@ main {
   height: 80vh;
   color: #4c4c4c;
   position: relative;
+  /* background-image: url(../images/grass_3.svg);
+  background-repeat: no-repeat;
+  background-position: center 150%;
+  background-size: 100%; */
 
 }
 
 @media (max-width: 576px) {
   main {
-    height: 70vh;
+    height: 60vh;
     display: flex;
   }
 }
@@ -484,22 +491,24 @@ main {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  margin: 120px auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 15%;
+  left: 25%;
 }
 
 @media (max-width: 768px) {
   .login_area {
     width: 100%;
-    margin: 50px auto 0;
+    left: 0%;
   }
 }
 
 @media (max-width: 576px) {
   .login_area {
-    margin: 80px auto 0;
+    top: 10%;
   }
 }
 
@@ -670,6 +679,11 @@ main {
   background-color: #fff;
   transition: .5s;
 }
+@media (max-width: 576px) {
+  .btn-group-2 a::after {
+    display: none;
+  }
+}
 
 .btn-group-2 a:hover::after {
   width: 100%;
@@ -798,7 +812,7 @@ small {
 footer {
   width: 100%;
   height: 20vh;
-  background-color: #F5DEA8;
+  
   background-image: url(../images/grass_3.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -807,7 +821,7 @@ footer {
 
 @media (max-width: 576px) {
   footer {
-    height: 30vh;
+    height: 40vh;
     background-position: center top;
 
   }
