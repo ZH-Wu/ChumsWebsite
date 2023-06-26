@@ -53,7 +53,7 @@ openBtn.addEventListener('click', function (e) {
 closeBtn.addEventListener('click', function (e) {
   offcanvasMap.classList.remove('active');
   setTimeout(function () {
-    history.go("store.html");
+    history.go(store.html);
   }, 400);
 });
 otherBtns.forEach(function (btn) {
