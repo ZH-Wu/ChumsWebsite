@@ -625,6 +625,7 @@ h1 {
   margin: 1.5% auto;
   font-weight: bold;
   text-align: center;
+  color: #4c4c4c;
 }
 
 #accordionOne.accordion {
@@ -656,6 +657,7 @@ h1 {
   font-size: larger;
   background-color: #ffffff;
   font-weight: bold;
+  color: #4c4c4c;
 }
 
 .accordion-body {
@@ -679,15 +681,15 @@ h1 {
 }
 
 .cloud1 {
-  top: 100px;
+  top: 200px;
   left: 50px;
-  animation: ani 5s linear infinite;
+  animation: ani 10s linear infinite;
 }
 
 .cloud2 {
-  top: 250px;
+  top: 420px;
   right: 50px;
-  animation: ani2 5s linear infinite;
+  animation: ani2 7s linear infinite;
 }
 
 @keyframes ani {

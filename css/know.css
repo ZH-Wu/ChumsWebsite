@@ -637,15 +637,15 @@ main {
 }
 
 .cloud1 {
-    top: 100px;
+    top: 200px;
     left: 50px;
-    animation: ani 5s linear infinite;
+    animation: ani 10s linear infinite;
 }
 
 .cloud2 {
-    top: 350px;
+    top: 420px;
     right: 50px;
-    animation: ani2 5s linear infinite;
+    animation: ani2 7s linear infinite;
 }
 
 @keyframes ani {
