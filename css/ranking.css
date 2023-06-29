@@ -1230,10 +1230,31 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
+  text-align: center;
+  padding-top: 220px;
 }
 @media (max-width: 768px) {
   footer {
     height: 20vh;
     background-image: url(../images/grass_rwd.svg);
+    padding-top: 120px;
+  }
+}
+@media (max-width: 576px) {
+  footer {
+    padding-top: 80px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 768px) {
+  footer p {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 576px) {
+  footer p {
+    width: 70%;
+    margin: 0 auto;
   }
 }

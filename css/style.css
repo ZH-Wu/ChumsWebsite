@@ -29,7 +29,7 @@ body::-webkit-scrollbar {
   max-width: 1920px;
   margin: 0 auto;
   overflow: hidden;
-  
+
 }
 
 /* CSS共用區 */
@@ -128,7 +128,7 @@ header {
 @media (max-width: 576px) {
   .slide-menuM {
     height: calc(100vh - 50px);
-  } 
+  }
 }
 
 .slide-menu span {
@@ -279,6 +279,7 @@ header {
   z-index: 1;
   animation: booby 2s linear infinite alternate;
 }
+
 @keyframes booby {
   0% {
     right: 0;
@@ -289,7 +290,7 @@ header {
   25% {
     right: 75px;
     bottom: 140px;
-    
+
   }
 
   50% {
@@ -1629,6 +1630,7 @@ main {
     width: 40%;
     line-height: 130px;
   }
+
   .chatBox p {
     font-size: 1.5rem;
   }
@@ -2394,6 +2396,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 250px;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -2412,19 +2415,32 @@ footer {
   }
 }
 
-footer small {
-  display: block;
-  width: 50%;
-  text-align: center;
-  margin: 30px auto 0;
-  color: #3d3d3d;
-  line-height: 1.2;
+footer p {
+  padding-top: 30px;
+  font-size: 1.2rem;
+  margin: 0 auto;
 }
+
 @media (max-width: 768px) {
-  footer small {
-    display: none;
+  footer p {
+    font-size: .8rem;
+    padding-top: 50px;
   }
 }
+
+@media (max-width: 576px) {
+  footer p {
+    width: 70%;
+    padding-top: 5px;
+    /* 多行省略語法 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+}
+
 
 /* Top按鈕 */
 #fixedTop {

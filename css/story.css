@@ -749,17 +749,34 @@ footer {
   background-image: url(../images/grass_3.svg);
   background-size: cover;
   position: relative;
+  padding-top: 220px;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
   footer {
     background-image: url(../images/grass_rwd.svg);
+    padding-top: 180px;
   }
 }
 
 @media (max-width: 576px) {
   footer {
     height: 20vh;
+    padding-top: 70px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer p {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 576px) {
+  footer p {
+    width: 35%;
   }
 }
 
