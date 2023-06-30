@@ -729,7 +729,8 @@ h1 {
   bottom: 50px;
   position: fixed;
 }
-.fire{
+
+.fire {
   width: 5%;
   left: 200px;
   bottom: 50px;
@@ -741,6 +742,15 @@ h1 {
   right: 50px;
   bottom: 20px;
   position: fixed;
+}
+
+.footer p {
+  position: relative;
+  z-index: 999;
+  bottom: -256px;
+  justify-content: center;
+  display: flex;
+  font-size: small;
 }
 
 @media (max-width:768px) {
@@ -813,9 +823,14 @@ h1 {
     width: 10vh;
     left: 20px;
   }
-  .fire{
+
+  .fire {
     width: 7vh;
     left: 120px;
+  }
+  .footer p{
+    bottom: -283px;
+    left: 65px;
   }
 
 }
@@ -873,5 +888,9 @@ h1 {
 
   .footer {
     background-image: url(../images/grass_rwd.svg);
+  }
+  .footer p{
+    bottom: -200px;
+    left: 0;
   }
 }
