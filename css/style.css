@@ -65,11 +65,22 @@ header {
 
 }
 
-.nav .logo {
-  width: 7%;
-  margin: 0 auto;
-  padding: 10px 0;
-  z-index: 2;
+.nav .logo a{
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 46%;
+  width: 130px;
+  height: 60px;
+  z-index: 6;
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-indent: 101%;
+  overflow: hidden;
+  /* 讓文字不換行 */
+  white-space: nowrap;
 }
 
 .nav figure {
@@ -511,9 +522,8 @@ header {
 
 .lowerPart {
   height: 15%;
-  background: url(../images/noise_background.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url(../images/noise_background.png);
+  background-repeat: repeat;
 
 }
 
@@ -970,9 +980,8 @@ header {
 main {
   height: 450vh;
   position: relative;
-  background: url(../images/path15.svg), url(../images/noise_background.png);
+  background-image: url(../images/path15.svg), url(../images/noise_background.png);
   background-repeat: no-repeat, repeat;
-  background-size: contain;
   background-position: center top;
 }
 
