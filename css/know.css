@@ -842,6 +842,15 @@ p {
     bottom: 50px;
 }
 
+.footer p {
+    position: relative;
+    z-index: 999;
+    bottom: 75px;
+    justify-content: center;
+    display: flex;
+    font-size: small;
+}
+
 @keyframes ani3 {
     0% {
         transform: rotate(-10deg);
@@ -957,7 +966,12 @@ p {
         margin-top: -300px;
         align-items: center;
         margin: 0 45%;
-        top: 980px;
+        top: 960px;
+    }
+
+    .footer p {
+        bottom: -255px;
+        margin-left: 60px;
     }
 }
 
@@ -1065,11 +1079,21 @@ p {
         display: none;
     }
 
+    .footprint {
+        bottom: 125px;
+    }
+
     .footprint img {
         width: 10vh;
         transform: scalex(-1);
         position: relative;
         right: -25vh;
         top: 25vh;
+    }
+
+    .footer p {
+        font-size: xx-small;
+        bottom: -85px;
+        margin: 0;
     }
 }
